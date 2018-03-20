@@ -1,6 +1,7 @@
 # Socialt kontrakt
 
-Medlemmar:
+## Medlemmar:
+
 Martin Ahlberger, martin@yzx.se
 
 Anton Albinsson, 
