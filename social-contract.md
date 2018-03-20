@@ -1,5 +1,7 @@
 # Socialt kontrakt
 
+Detta sociala kontrakt utformas för att ena gruppen och få gruppen av sträva åt samma håll. Eftersom olika uppfattningar kan finnas initialt hos gruppmedlemmar fungerar detta som ett stöddokument till vad som ska uppnås. Kontraktet existerar och är relevant på den grund att gruppmedlemmarna har accepterat följande efter det första gruppmötet.
+
 ## Medlemmar:
 
 Martin Ahlberger, martin@yzx.se
