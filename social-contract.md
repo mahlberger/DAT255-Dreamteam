@@ -2,11 +2,17 @@
 
 Medlemmar:
 Martin Ahlberger, martin@yzx.se
+
 Anton Albinsson, 
+
 Mattias Eriksson, 
+
 Staffan Hellsvik, 
+
 Max Nyman, 
+
 Andreas Opedal Eriksson, 
+
 Filip Wendelin, 
 
 # Regler
