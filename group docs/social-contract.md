@@ -29,7 +29,7 @@ Scrum etc. på ett fast veckomöte, förslagsvis onsdagar 10:00, återkommer nä
 ...
 
 ## Närvaro
-Ogiltlig frånvaro krävs på fika
+Den som blir skyldig till ogiltlig frånvaro borde bjuda på fika
 Som ogiltlig frånvaro räknas att man uteblir, utan meddelad orsak eller utom rimlig tid eller sen ankomst med mer än 5 minuter till veckans fasta möte.
 
 ## Ansvarsområden
