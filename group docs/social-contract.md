@@ -23,8 +23,7 @@ Jenny Sorsa, jennyblsorsa@gmail.com
 # Regler
 
 ## Mötesteknik/Sprintar
-Scrum etc. på ett fast veckomöte, förslagsvis onsdagar 10:00
-
+Scrum etc. på ett fast veckomöte, förslagsvis onsdagar 10:00, återkommer nästa möte (29/3)
 
 ### Scrumregler
 ...
