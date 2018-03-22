@@ -16,7 +16,7 @@ Max Nyman, maxonyman@hotmail.com
 
 Andreas Opedal Eriksson, andreas.opedal@outlook.com
 
-Filip Wendelin, filipwendelin@gmail.com
+Filip Wendelin, fendelin@live.se
 
 Jenny Sorsa, jennyblsorsa@gmail.com
 
