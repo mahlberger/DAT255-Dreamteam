@@ -34,9 +34,13 @@ Som ogiltlig frånvaro räknas att man uteblir, utan meddelad orsak eller utom r
 
 ## Ansvarsområden
 Scrum master, Max Nyman - har sista ordet
+
 Boka grupprum, Andreas Opedal Eriksson 
+
 Ansvarig för grupputvärdering och påminnare för egen reflektion, Jenny Sorsa
+
 Sekreterare,
+
 Gitansvarig,
 
 ## Tidslogg och dagbok
