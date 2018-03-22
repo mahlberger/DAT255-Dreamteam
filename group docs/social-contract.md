@@ -16,7 +16,7 @@ Max Nyman,
 
 Andreas Opedal Eriksson, 
 
-Filip Wendelin, 
+Filip Wendelin, fendelin@live.se
 
 # Regler
 
