@@ -30,6 +30,7 @@ Scrum etc. på ett fast veckomöte, förslagsvis onsdagar 10:00, återkommer nä
 
 ## Närvaro
 Den som blir skyldig till ogiltlig frånvaro borde bjuda på fika
+
 Som ogiltlig frånvaro räknas att man uteblir, utan meddelad orsak eller utom rimlig tid eller sen ankomst med mer än 5 minuter till veckans fasta möte.
 
 ## Ansvarsområden
@@ -43,12 +44,15 @@ Sekreterare, Staffan Hellsvik
 
 ## Tidslogg och dagbok
 Tidslogg ska fyllas i och kunna visas upp i valfri programmvara
+
 Individuell reflektion i slutet av varje sprint
 
 ## Dokument och filhantering
 All dokumentation på github alternativt google docs
+
 Kodbas och versionshantering på github
 
 # Ambition
 Lära sig grundläggande metoder för mjukvaruutvecklingsprojekt.
+
 Vi är beredda att jobba för att få betyg 5.
