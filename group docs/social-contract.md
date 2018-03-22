@@ -6,7 +6,7 @@ Detta sociala kontrakt utformas för att ena gruppen och få gruppen av sträva 
 
 Martin Ahlberger, martin@ahlberger.se
 
-Anton Albinsson, 
+Anton Albinsson, albinsson96@gmail.com
 
 Mattias Eriksson, m.ericson1996@gmail.com
 
