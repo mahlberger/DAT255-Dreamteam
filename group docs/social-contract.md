@@ -18,10 +18,13 @@ Andreas Opedal Eriksson,
 
 Filip Wendelin, 
 
+Jenny Sorsa,
+
 # Regler
 
-## Mötesteknik
-Scrum etc. på ett fast veckomöte, förslagsvis måndagar 10:00
+## Mötesteknik/Sprintar
+Scrum etc. på ett fast veckomöte, förslagsvis onsdagar 10:00
+
 
 ### Scrumregler
 ...
@@ -32,7 +35,8 @@ Som ogiltlig frånvaro räknas att man uteblir, utan meddelad orsak eller utom r
 Sen ankomst med mer än 5 minuter räknas också som ogiltlig frånvaro
 
 ## Ansvarsområden
-Scrumare
+Scrum master, Max Nyman
+Boka grupprum, Andreas Opedal Eriksson
 Sekreterare
 Ansvarig(a) för grupputvärdering och påminnare för egen reflektion
 Sista beslutsfattare
@@ -40,11 +44,12 @@ mer...? (Gitansvarig)
 
 ## Tidslogg och dagbok
 Tidslogg ska fyllas i och kunna visas upp i valfri programmvara
-Dagbok enligt scrum
+Individuell reflektion i slutet av varje sprint
 
 ## Dokument och filhantering
 All dokumentation på github alternativt google docs
 Kodbas och versionshantering på github
 
 # Ambition
-Förslag: Tillfredställa uppdragsgivare, praktisera Scrum enligt normen, ha en god gruppsammanhållning.
+Lära sig grundläggande metoder för mjukvaruutvecklingsprojekt.
+Vi är beredda att jobba för att få betyg 5.
