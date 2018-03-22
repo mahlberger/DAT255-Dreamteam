@@ -1,5 +1,7 @@
 # Our first logbook
 
+Test /me
+
 ## Martin's logbook
 19/3 - Föreläsning 13 - 16
 3h
