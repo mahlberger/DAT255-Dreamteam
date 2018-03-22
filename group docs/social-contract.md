@@ -4,21 +4,21 @@ Detta sociala kontrakt utformas för att ena gruppen och få gruppen av sträva 
 
 ## Medlemmar:
 
-Martin Ahlberger, martin@yzx.se
+Martin Ahlberger, martin@ahlberger.se
 
 Anton Albinsson, 
 
-Mattias Eriksson, 
+Mattias Eriksson, m.ericson1996@gmail.com
 
-Staffan Hellsvik, 
+Staffan Hellsvik, staffan.hellsvik@gmail.com
 
-Max Nyman, 
+Max Nyman, maxonyman@hotmail.com
 
-Andreas Opedal Eriksson, 
+Andreas Opedal Eriksson, andreas.opedal@outlook.com
 
-Filip Wendelin, 
+Filip Wendelin, filipwendelin@gmail.com
 
-Jenny Sorsa,
+Jenny Sorsa, jennyblsorsa@gmail.com
 
 # Regler
 
@@ -35,12 +35,11 @@ Som ogiltlig frånvaro räknas att man uteblir, utan meddelad orsak eller utom r
 Sen ankomst med mer än 5 minuter räknas också som ogiltlig frånvaro
 
 ## Ansvarsområden
-Scrum master, Max Nyman
-Boka grupprum, Andreas Opedal Eriksson
-Sekreterare
-Ansvarig(a) för grupputvärdering och påminnare för egen reflektion
-Sista beslutsfattare
-mer...? (Gitansvarig)
+Scrum master, Max Nyman - har sista ordet
+Boka grupprum, Andreas Opedal Eriksson 
+Ansvarig för grupputvärdering och påminnare för egen reflektion, Jenny Sorsa
+Sekreterare,
+Gitansvarig,
 
 ## Tidslogg och dagbok
 Tidslogg ska fyllas i och kunna visas upp i valfri programmvara
