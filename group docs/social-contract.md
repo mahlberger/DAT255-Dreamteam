@@ -6,17 +6,17 @@ Detta sociala kontrakt utformas för att ena gruppen och få gruppen av sträva 
 
 Martin Ahlberger, martin@yzx.se
 
-Anton Albinsson, 
+Anton Albinsson,
 
-Mattias Eriksson, 
+Mattias Eriksson,
 
-Staffan Hellsvik, 
+Staffan Hellsvik,
 
-Max Nyman, 
+Max Nyman,
 
-Andreas Opedal Eriksson, 
+Andreas Opedal Eriksson,
 
-Filip Wendelin, 
+Filip Wendelin, test
 
 # Regler
 
