@@ -4,47 +4,55 @@ Detta sociala kontrakt utformas för att ena gruppen och få gruppen av sträva 
 
 ## Medlemmar:
 
-Martin Ahlberger, martin@yzx.se
+Martin Ahlberger, martin@ahlberger.se
 
-Anton Albinsson, 
+Anton Albinsson, albinsson96@gmail.com
 
-Mattias Eriksson, 
+Mattias Eriksson, m.ericson1996@gmail.com
 
-Staffan Hellsvik, 
+Staffan Hellsvik, staffan.hellsvik@gmail.com
 
-Max Nyman, 
+Max Nyman, maxonyman@hotmail.com
 
-Andreas Opedal Eriksson, 
+Andreas Opedal Eriksson, andreas.opedal@outlook.com
 
-Filip Wendelin, 
+Filip Wendelin, filipwendelin@gmail.com
+
+Jenny Sorsa, jennyblsorsa@gmail.com
 
 # Regler
 
-## Mötesteknik
-Scrum etc. på ett fast veckomöte, förslagsvis måndagar 10:00
+## Mötesteknik/Sprintar
+Scrum etc. på ett fast veckomöte, förslagsvis onsdagar 10:00, återkommer nästa möte (29/3)
 
 ### Scrumregler
 ...
 
 ## Närvaro
-Ogiltlig frånvaro krävs på fika
-Som ogiltlig frånvaro räknas att man uteblir, utan meddelad orsak eller utom rimlig tid, till veckans fasta möte.
-Sen ankomst med mer än 5 minuter räknas också som ogiltlig frånvaro
+Den som blir skyldig till ogiltlig frånvaro borde bjuda på fika
+
+Som ogiltlig frånvaro räknas att man uteblir, utan meddelad orsak eller utom rimlig tid eller sen ankomst med mer än 5 minuter till veckans fasta möte.
 
 ## Ansvarsområden
-Scrumare
-Sekreterare
-Ansvarig(a) för grupputvärdering och påminnare för egen reflektion
-Sista beslutsfattare
-mer...? (Gitansvarig)
+Scrum master, Max Nyman - har sista ordet
+
+Boka grupprum, Andreas Opedal Eriksson 
+
+Ansvarig för grupputvärdering och påminnare för egen reflektion, Jenny Sorsa
+
+Sekreterare, Staffan Hellsvik
 
 ## Tidslogg och dagbok
 Tidslogg ska fyllas i och kunna visas upp i valfri programmvara
-Dagbok enligt scrum
+
+Individuell reflektion i slutet av varje sprint
 
 ## Dokument och filhantering
 All dokumentation på github alternativt google docs
+
 Kodbas och versionshantering på github
 
 # Ambition
-Förslag: Tillfredställa uppdragsgivare, praktisera Scrum enligt normen, ha en god gruppsammanhållning.
+Lära sig grundläggande metoder för mjukvaruutvecklingsprojekt.
+
+Vi är beredda att jobba för att få betyg 5.
