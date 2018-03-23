@@ -1,7 +1,7 @@
 # GIT lathund
 
 ## Allmänna regler (AR#)
-1. Döp brancherna till valfritt namn med understreck, GitHub desktop verkar inte klara snedstreck så använd _ istället. Förslagsvis bugfix_aaa eller feature_bbb
+1. Döp brancherna till valfritt namn med understreck, **GitHub desktop verkar inte klara snedstreck så använd _ istället**. Förslagsvis bugfix_aaa eller feature_bbb
 2. Gör en branch per uppgift. Ska du lägga till en feature, gör det. Ska du göra en bugfix, gör det. Upprepa stegen för varje branch, det blir lite jobbigt men det är värt det i längden. Om det strular med en merge eller liknande så är det bra att ha lite kod att jobba med.
 
 ## Här kommer en liten lathund till git.
