@@ -1,0 +1,17 @@
+Individual reflection week 1, 23/1
+
+- What do I want to learn or understand better?
+
+To be able to work more smoothly during the project later on, I would like to get a better understanding of Git, GitHub and how they are used together. We have decided to use an application called GitHub Desktop for Git, so I will need to get more used to that as well. I also want to learn more about scrum (which I assume I will during today's lecture) before we start our first real sprint. We have also talked about using a text editor (proposedly Sublime) instead of an IDE for writing code, to make the file management in GitHub easier. I have never programmed in a text editor so I will need to get used to that as well. 
+
+- How can I help someone else, or the entire team, to learn something new?
+
+I can be accessible for helping others when needed and be active in our team discussions to help spread knowledge. As this is the first week, it is difficult to give any examples at this point. 
+
+- What is my contribution towards the team's application of scrum?
+
+My contribution so far has been to participate in the Lego exercise to be able to learn more about how scrum is practiced. I will also attend today's lecture. After that I will be able to have an active role when we discuss and decide upon how we as a group will apply scrum in our project.
+
+What is my contribution towards the team's deliveries?
+
+Right now I am not completely confident with my knowledge of Git and GitHub. My learning objective for next week is therefore to develop a deeper understanding of these. This will be done by reading/studying and learning by doing (as we have already set up a repository in GitHub and tried to figure out how it works with Git)
