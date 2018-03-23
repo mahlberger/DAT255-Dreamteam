@@ -5,7 +5,7 @@
 
 My first goal is to learn Scrum and Git (using Github Desktop GUI) since  these will be used during the whole course.
 
--**how can I help someone else, or the entire team, to learn something new?**
+- **how can I help someone else, or the entire team, to learn something new?**
 
 At this moment I feel that it will be hard to help the team to learn something new as I am but an apprentice in Scrum and Git but when the project starts together with the programming I hope I can contribute and teach something new by doing pair-programming. I also hope that by reading the course literature I can help in the discussion of Scrum since I guess most of us are on a similar level and may have different point of views on the technique
 
