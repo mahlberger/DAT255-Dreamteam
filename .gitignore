@@ -1,6 +1,6 @@
 # Custom ignores
 # bupa_docs/*
-
+.DS_Store
 
 
 # Standard java ignores:
