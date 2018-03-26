@@ -21,6 +21,10 @@ public class CompositeTile extends GameTile {
 	public GameTile getTop() {
 		return this.topTile;
 	}
+	
+	public void test () {
+		System.out.println("hej");
+	}
 
 	public GameTile getBottom() {
 		return this.bottomTile;
