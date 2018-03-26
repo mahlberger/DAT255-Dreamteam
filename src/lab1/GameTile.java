@@ -11,6 +11,10 @@ import java.awt.Graphics;
  */
 public class GameTile {
 
+	
+	public void FilipTestar () {
+		System.out.println("HEJ");
+	}
 	/**
 	 * Draws itself in a given graphics context, position and size.
 	 * 
