@@ -25,5 +25,7 @@ public class Main {
 		// Open the window
 		frame.setVisible(true);
 		frame.requestFocus();
+
+		System.out.println("Test /ME")
 	}
 }
