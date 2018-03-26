@@ -29,5 +29,6 @@ public class Main {
 		frame.requestFocus();
 
 		System.out.println("Test /ME");
+		System.out.println("Test Staffan");
 	}
 }
