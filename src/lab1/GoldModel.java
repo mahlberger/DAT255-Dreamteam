@@ -53,12 +53,12 @@ public class GoldModel extends GameModel {
 	 */
 
 	/** Graphical representation of a coin. */
-	private static final GameTile COIN_TILE = new RoundTile(new Color(0, 0,
+	private static final GameTile COIN_TILE = new SquareTile(new Color(0, 0,
 			255),
 			new Color(255, 255, 0), 2.0);
 
 	/** Graphical representation of the collector */
-	private static final GameTile COLLECTOR_TILE = new RoundTile(Color.BLACK,
+	private static final GameTile COLLECTOR_TILE = new SquareTile(Color.BLACK,
 			Color.RED, 2.0);
 
 	/** Graphical representation of a blank tile. */
