@@ -42,6 +42,8 @@ Ansvarig för grupputvärdering och påminnare för egen reflektion, Jenny Sorsa
 
 Sekreterare, Staffan Hellsvik
 
+Trello, Anton Albinsson
+
 ## Tidslogg och dagbok
 Tidslogg ska fyllas i och kunna visas upp i valfri programmvara
 
