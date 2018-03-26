@@ -1,5 +1,5 @@
 package lab1;
-
+//Andreas was here and did some testing
 import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Dimension;
