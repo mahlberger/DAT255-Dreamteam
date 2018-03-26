@@ -28,6 +28,6 @@ public class Main {
 		frame.setVisible(true);
 		frame.requestFocus();
 
-		System.out.println("Test /ME")
+		System.out.println("Test /ME");
 	}
 }
