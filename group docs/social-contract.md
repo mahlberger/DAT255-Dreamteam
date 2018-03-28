@@ -23,7 +23,9 @@ Jenny Sorsa, jennyblsorsa@gmail.com
 # Regler
 
 ## Mötesteknik/Sprintar
-Scrum etc. på ett fast veckomöte, förslagsvis onsdagar 10:00, återkommer nästa möte (29/3)
+Scrum etc. på ett fast veckomöte. Måndagar 09:30 hålls reflektionsmöte, med både review och retrospective. En sprint avslutas och påbörjas alltså under detta möte. Gruppreflektionen görs och laddas upp i samband med mötet. De indiviudella reflektionerna ska vara uppladdade senast 23:59 under måndagen. 
+
+Undantag från ovanstående görs de två första sprintarna. 
 
 ### Scrumregler
 ...
@@ -45,6 +47,8 @@ Ansvarig för Håkankontakt, Jenny Sorsa
 Sekreterare, Staffan Hellsvik
 
 Trello, Anton Albinsson
+
+Git-ansvarig, Martin Ahlberger
 
 ## Tidslogg och dagbok
 Tidslogg ska fyllas i och kunna visas upp i valfri programmvara
