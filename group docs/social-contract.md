@@ -22,25 +22,25 @@ Jenny Sorsa, jennyblsorsa@gmail.com
 
 # Regler
 
-##Scrum
-Skaparn av Scrum, Ken Schwaber and Jeff Sutherland, säger i The Scrum Guide: 
-"Scrum exists only in its entirety". Vi ska utgå från att applicera det mesta vi kan från frameworket, men eftersom samtliga i gruppen har kandidatarbetet parallellt uppkommer svårigheter att ha ett gemensamt arbetsschema. The Scrum Guide kommer vara en utgångspunkt för arbetsmetodiken.
+## Scrum
+Skaparna av Scrum, Ken Schwaber and Jeff Sutherland, säger i The Scrum Guide: 
+"Scrum exists only in its entirety". Vi ska utgå från att applicera det mesta vi kan från frameworket med utgångspunkt i The Scrum Guide. Men eftersom samtliga i gruppen har kandidatarbetet parallellt uppkommer svårigheter att ha ett gemensamt arbetsschema. 
 
-###Sprint
+### Sprint
 Sprintrarna kommer hålla på en vecka under en 10-veckors period mellan måndag till måndag. Sprintrarna består av följande: 
 
-####Sprint planning
+#### Sprint planning
 * Sprint planning tar plats ca 11.00 varje måndag.
 * Sprint planning får ta maximalt 2h. Scrum master är ansvarig för att det hålls. 
 
-####Daily Scrums (Skall uppdateras)
+#### Daily Scrums (Skall uppdateras)
 Ett kritiskt moment för gruppen då det råder samordningssvårigheter. Olika metodiker för att lösa detta ska prövas.
 
-####Sprint Review 
+#### Sprint Review 
 * Sprint Review tar plats 09.00 varje måndag.
 * Sprint Review får maximalt ta 2h. Scrum master är ansvarig för att det hålls. 
 
-####Sprint Retrospective 
+#### Sprint Retrospective 
 * Sprint Retrospective tar plats efter sprint review:n varje måndag. 
 * Sprint Retrospective får maximalt ta 2h. Scrum master är ansvarig för att det hålls. 
 * Gruppreflektionen görs och laddas upp i samband med utvärderingsmötena. De indiviudella reflektionerna ska vara uppladdade senast 23:59 under måndagen. Undantag från ovanstående görs de två första sprintarna. 
@@ -48,8 +48,8 @@ Ett kritiskt moment för gruppen då det råder samordningssvårigheter. Olika m
 ### Definition av Done
 - Kommer inkrementellt att uppdateras och utvärderas för att få en bättre arbetsprocess. 
  
-### Scrum Team
-Samtliga i gruppen tillhör utveckling + Max som även är scrum master. Product owner är Håkan Burden med inslag av tillhörande RISE-personer och kontakt kommer ske på onsdagar. 
+### Scrum team
+Samtliga i gruppen tillhör utvecklingsdelen där Max även fungerar som scrum master. Product owner är Håkan Burden med inslag av tillhörande RISE-personer och kontakt med dessa kommer att ske på onsdagar. 
 
 ## Närvaro
 Den som blir skyldig till ogiltlig frånvaro borde bjuda på fika
