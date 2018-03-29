@@ -1,4 +1,4 @@
-# Indiviual reflection, Filip Wendelin 
+# Indivdual reflection, Filip Wendelin 
 
 ## Week 1 
 
