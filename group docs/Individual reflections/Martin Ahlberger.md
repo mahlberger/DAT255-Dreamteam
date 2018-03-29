@@ -1,4 +1,4 @@
-# Individual Reflection week 1
+### Individual Reflection week 1
 
 #### 1. What do I want to learn or understand better?
 I have been using Git a few times before but there is still a lot to learn about it. I also want to know more about Scrum since it's a whole new concept to me but I've heard about it and know it's used at many companies. Of course it would be interesting to know more about the project.
