@@ -1,4 +1,4 @@
-Individual reflection week 1, 23/1
+Individual reflection week 1, 23/3
 
 - What do I want to learn or understand better?
 
@@ -12,6 +12,30 @@ I can be accessible for helping others when needed and be active in our team dis
 
 My contribution so far has been to participate in the Lego exercise to be able to learn more about how scrum is practiced. I will also attend today's lecture. After that I will be able to have an active role when we discuss and decide upon how we as a group will apply scrum in our project.
 
-What is my contribution towards the team's deliveries?
+- What is my contribution towards the team's deliveries?
 
 Right now I am not completely confident with my knowledge of Git and GitHub. My learning objective for next week is therefore to develop a deeper understanding of these. This will be done by reading/studying and learning by doing (as we have already set up a repository in GitHub and tried to figure out how it works with Git)
+
+
+
+Individual reflection week 2, 29/3
+
+- What do I want to learn or understand better?
+
+Right now I want to get a deep understanding of how the PortableCDM app is built and how it works, before we can create content for it on our own. I also want to learn more about the API's used, and get some knowledge about JavaScript as well (if needed) as it seems to have been used for developing the front-end parts of the app. I will do this by digging deep in the source code.
+
+Another aspect I want to understand better is the shipping industry itself, particularly how the process of a vessel arriving to and leaving a port looks like. I will do this by further discussing the "Scenario" with the group and do some research on my own. 
+
+- How can I help someone else, or the entire team, to learn something new?
+
+As I wrote the last week, I can be accesible for helping others and partake actively in the group discussions. Later when we try to understand the given source code I think I will be able to contribute to the whole group's understanding of the code.
+
+- What is my contribution towards the team's application of scrum?
+
+This week I have had an active role in trying to figure out how we should structure our sprints, with the complication of having Easter holiday disrupting the schedule. We decided to start and end the sprints on Mondays, which means that our next sprint will start on Monday 9/4 and end on Monday 16/4. So the next team and individual reflections will be uploaded on Monday 16/4. 
+
+- What is my contribution towards the team's deliveries?
+
+Last week my learning objective was to increase my knowledge of Git and GitHub. I think I have achieved this as I am now confident in how the process of downloadning files locally, doing changes in another branch, commiting those changes, pushing the branch to GitHub and then merging the master with the branch works. This objective was achieved by doing testes and figuring it out together with the group.
+
+Next sprint my learning objective is to gain a deep enough knowledge about the app so that I feel confident in adding content and doing changes in the code. This will be done by studying the source code of the application and its API's. 
