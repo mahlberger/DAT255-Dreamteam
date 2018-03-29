@@ -47,7 +47,8 @@ Ett kritiskt moment för gruppen då det råder samordningssvårigheter. Olika m
 * Gruppreflektionen görs och laddas upp i samband med utvärderingsmötena. De indiviudella reflektionerna ska vara uppladdade senast 23:59 under måndagen. Undantag från ovanstående görs de två första sprintarna. 
  
 ### Definition av Done
-- Kommer inkrementellt att uppdateras och utvärderas för att få en bättre arbetsprocess. 
+ Till en början används sunt förnuft för att veta när någonting är klart. 
+-Kommer inkrementellt att uppdateras och utvärderas för att få en bättre definition. 
  
 ### Scrum team
 Samtliga i gruppen tillhör utvecklingsdelen där Max även fungerar som scrum master. Product owner är Håkan Burden med inslag av tillhörande RISE-personer och kontakt med dessa kommer att ske på onsdagar. 
