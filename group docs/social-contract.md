@@ -47,7 +47,7 @@ Ett kritiskt moment för gruppen då det råder samordningssvårigheter. Olika m
 * Gruppreflektionen görs och laddas upp i samband med utvärderingsmötena. De indiviudella reflektionerna ska vara uppladdade senast 23:59 under måndagen. Undantag från ovanstående görs de två första sprintarna. 
  
 ### Definition av Done
- Till en början används sunt förnuft för att veta när någonting är klart. 
+ * En oberoende gruppmedlem ska godkänna koden
 -Kommer inkrementellt att uppdateras och utvärderas för att få en bättre definition. 
  
 ### Scrum team
