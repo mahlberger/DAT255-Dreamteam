@@ -31,7 +31,7 @@ Sprintrarna kommer hålla på en vecka under en 10-veckors period mellan måndag
 
 #### Sprint Planning
 * Sprint planning tar plats varje måndag efter avslutad utvärdering av tidigare sprint.
-* Sprint planning får ta maximalt 1h. Scrum master är ansvarig för att det hålls. 
+* Sprint planning får ta maximalt 2h. Scrum master är ansvarig för att det hålls. 
 * Gruppen kommer själva ta ansvar för att skapa en produkt backlog samt sprint backlog. 
 
 #### Daily Scrums (Skall uppdateras)
