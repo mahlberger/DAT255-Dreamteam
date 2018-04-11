@@ -51,7 +51,7 @@ Ett kritiskt moment för gruppen då det råder samordningssvårigheter. Olika m
 -Kommer inkrementellt att uppdateras och utvärderas för att få en bättre definition. 
  
 ### Scrum team
-Samtliga i gruppen tillhör utvecklingsdelen där Max även fungerar som scrum master. Product owner är Håkan Burden med inslag av tillhörande RISE-personer och kontakt med dessa kommer att ske på onsdagar. 
+Samtliga i gruppen tillhör utvecklingsdelen där Max även fungerar som scrum master. Product owner är personer på RISE-personer med där sjöfartsverket agerar customers. Teamet ansvarar mycket själva för att göra en produkt backlog.  
 
 ## Närvaro
 Den som blir skyldig till ogiltlig frånvaro borde bjuda på fika
