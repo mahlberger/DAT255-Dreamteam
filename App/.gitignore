@@ -93,8 +93,6 @@ android/logcat.txt
 # Shell apps
 android-shell-app
 # Template files
-android/app/src/main/AndroidManifest.xml
-android/app/google-services.json
 android/app/src/main/java/host/exp/exponent/generated/ExponentKeys.java
 android/app/fabric.properties
 ios/Exponent/Supporting/Generated/EXKeys.h
@@ -103,3 +101,12 @@ ios/RCTTest.podspec
 ios/Podfile.lock
 ios/Pods
 .expo
+
+#Changes by @martinahlberger
+#Following rows deleted:
+
+#android/app/src/main/AndroidManifest.xml
+#android/app/google-services.json
+
+#added:
+react-native-pinch/android/build/
