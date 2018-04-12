@@ -2,6 +2,7 @@
 # bupa_docs/*
 .DS_Store
 
+#more in /App/.gitignore
 
 # Standard java ignores:
 
@@ -18,7 +19,6 @@
 .mtj.tmp/
 
 # Package Files #
-*.jar
 *.war
 *.ear
 *.zip
