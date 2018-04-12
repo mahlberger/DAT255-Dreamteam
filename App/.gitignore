@@ -1,0 +1,8 @@
+node_modules/
+.expo/
+npm-debug.*
+*.apk
+android/.gradle
+android/.idea
+ios/.DS_Store
+*.DS_Store
