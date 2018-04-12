@@ -52,7 +52,8 @@ DerivedData
 ReactAndroid-temp.aar
 *.apk
 /android/android/
-/android/maven/
+/android/maven/*
+!/android/maven/*.jar
 # Tools
 jarjar-rules.txt
 # Node
