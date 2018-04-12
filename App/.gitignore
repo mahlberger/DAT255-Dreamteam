@@ -110,3 +110,4 @@ ios/Pods
 
 #added:
 react-native-pinch/android/build/
+android/app/src/main/java/host/exp/exponent/generated/DetachBuildConstants.java
