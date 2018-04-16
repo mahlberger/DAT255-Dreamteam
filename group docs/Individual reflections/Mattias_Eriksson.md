@@ -1,5 +1,23 @@
 #Individual Reflection
 
+## Week 3
+- **what do I want to learn or understand better?**
+
+I feel like I start getting a good understanding of Scrum now, and I think the lecture on friday (2018.04.13) did help to bring some new perspectives. I have also, with the help of my group, got Android Studio working and have been looking at some basic javascript code, the next step is to understand the structure of the given code, some things are quite clear, like changing some strings or color, but I still need to understand the code a lot more to actually contribute in the end.
+
+- **how can I help someone else, or the entire team, to learn something new?**
+
+We haven't started programming yet so there has been no pair-programming which I mentioned last week. The plan is to start next week and I hope that by looking over the code I can help the rest of the team to understand the code as well. I will also probably get help to understand some of the code from other team members. We have to help each other so that we all can do as much as possible in the time given.
+
+- **what is my contribution towards the team’s application of scrum?**
+
+I do not think I do a lot to contribute except taking part in the meetings and discussions, though I believe this is what I am supposed to do.
+
+- **what is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week's ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation).**
+
+I have been present at all meetings giving my point of view, asking questions at the supervision, taking notes and trying to understand the work of the pilots in the harbor. I have started to look over the code and hope that I will be able to contribute more this way when we start programming.
+
+
 ## Week 2
 - **what do I want to learn or understand better?**
 
