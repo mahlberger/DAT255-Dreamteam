@@ -1,3 +1,19 @@
+### Individual Reflection week 3
+
+#### 1. What do I want to learn or understand better?
+I have learned a lot about the domain but there could still be added more knowledge but I whink that will do when working with the project. I want to learn more how the app work and how it today solves problems for the users. I also want to know more about the developing environment so I can help my group more with their problems running the application and also to understand better when developing.
+
+#### 2. How can I help someone else, or the entire team, to learn something new?
+I think I still can contribute with my experience of software projects and also my coding skills could be useful.
+
+#### 3. What is my contribution towards the team’s application of scrum?
+I have been practicing at daily scrums and the team's weekly reflection.
+
+#### 4. What is my contribution towards the team’s deliveries?
+I have been active in the research of the domain even though others have contributing more at this part. Instead I have continued to try to fix the developing environment so it primarily works and secondary is easy to work with. Nothing of this has succeeded but I will continue and I'm still learning a lot so I hope it will soon work.
+
+---
+
 ### Individual Reflection week 2
 
 #### 1. What do I want to learn or understand better?
