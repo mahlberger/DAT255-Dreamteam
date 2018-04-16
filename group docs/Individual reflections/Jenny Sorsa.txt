@@ -31,3 +31,17 @@ Furthermore I will keep attenting our meetings where we reflect upon what has be
 
 4. What is my contribution towards the team’s deliveries? 
 Last sprint's learning objectives was to reach a better understanding of the project scope. I think this has been partially achieved, but I've also understood that a part of the project process is to continiously keep learning new things about the project. Until next reflection I would like to reach an understanding of the source code, get a better picture of how a Pilot station works and keep the team's communication at a good level. By doing research online and read the specification once more I can hopefully achieve this goal and contribute towards the team's deliveries.
+
+-- Individual Reflection week 3, 16/4 --
+1. What do I want to learn or understand better?
+I would like to learn the development environment and understand how to work and build an application in Android Studios. I would also like to learn more about the pilot most important needs in order to create relevant user stories.
+
+2. How can I help someone else, or the entire team, to learn something new?
+Hopefully, by analyzing and breaking down the information we received from meeting the pilot station I can contribute with a good overview of the pilot's needs and help my team develop decent user stories.
+
+3. What is my contribution towards the team’s application of scrum?
+Since I've been on vacation and therefore missed all of this sprints team meetings except from the last meeting at the pilot station, my contribution of scrum hasn't been optimal. My team was aware of this from the beginning of the project and I've been trying to keep up with how the project has been going by reading about what the team has worked with during the week. 
+
+4. What is my contribution towards the team’s deliveries? 
+Due to a week of vacation my contribution has been very small. I've tried to read in on how to work with javascript and Android Studios and also attended the meeting with the pilot where I tried to identify their needs. During the next sprint I will try to catch up by putting a lot of effort in the process of scrum and the development of the application. My goal until next week is to put more time and effort in the creation of user stories and also get a better understanding of how to work in Android Studios.
+
