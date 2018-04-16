@@ -46,3 +46,28 @@ As we have met the product owners and had group meetings I believe we have a bet
 
 This sprint goal will be to further break down this deliveries by setting up user stories. I want to contribute by reading more about the scenario and be active in group meetings to find the workflow of the pilot organization. 
 
+##Week 3##
+
+**what do I want to learn or understand better?**
+In retrospective I realized that setting up the developer enviroment was much harder than anticipated. As I still have not made the developer enviroment work (Android Studio), I still feel that I lack understanding of how the code architecture works. 
+
+This sprints goal will therefore be revised to first setting up the developer enviroment correctly, e.g. can run the app without problems in android studio. Depending if I am achiving this, another goal will be to edit some of the exisiting code, as I believe this is a good way to learn more about how the code architecture works.
+
+To achieve my goal I will discuss my problems with our group, I will search the web for forums were similar issues have been posted and I will also post my problems in the DAT255 slack channel. 
+
+**How can I help someone else, or the entire team, to learn something new?**
+In our group meetings we was able from the sketch of the workflow create a bulletin list over the pilot organizations workflow, which gave us a better overview of the pilot organizations role. 
+
+This sprint I believe that we all will have to learn more about react-native in order to be able to code in the future sprints. As such, I want to educate myself about this framework by watching tutorials on youtube, and then hopefully be able to help someone by sharing this information I have learned. 
+
+
+**What is my contribution towards the team’s application of scrum?**
+Besides taking part of our group meeting and attending the lectures, as my role as Trello responsible I had helped my team by adjusting our Trello Board to help our agile practices. For example, one of our KPI's is focused around comparing our velocity vs actual time of user stories completed. As such I have recommended the extension Scrum for Trello which helps easier input time spent on each user stories. In our group meeting we also came to the conclusion that we should try the approach of 1 board for each sprint. 
+
+This sprint goal will be to establish some rules for how we are allowed to move user stories in our board. For example, when and whom can move a user story from the testing to done coloumn. Having a set of rules will make it easier for us to make fair comparissons on our actual achivments, which is important if we want to create a better process in our group. 
+
+**What is my contribution towards the team’s deliveries?**
+This sprint we as a group has had group meetings where we discussed the scenario and drafted user stories. Our group also met with the pilot organization which helped us with some prioritizations of our user stories. 
+
+The goal of this sprint is to alter our user stories to better fit the product owners needs and take input to be able to put priority levels on our user stories. I also want to be part of splitting up a user story into tasks so we are enabling us to start coding which will help our deliveries by showing something concrete to our proudct owner next sprint. 
+
