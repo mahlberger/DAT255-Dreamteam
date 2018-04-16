@@ -27,15 +27,15 @@ Skaparna av Scrum, Ken Schwaber and Jeff Sutherland, säger i The Scrum Guide:
 "Scrum exists only in its entirety". Vi ska utgå från att applicera det mesta vi kan från frameworket med utgångspunkt i The Scrum Guide. Men eftersom samtliga i gruppen har kandidatarbetet parallellt uppkommer svårigheter att ha ett gemensamt arbetsschema. 
 
 ### Sprint
-Sprintrarna kommer hålla på en vecka under en 10-veckors period mellan måndag till måndag. Sprintrarna består av följande: 
+Sprintrarna kommer hålla på en vecka under en 10-veckors period mellan måndag till måndag. Måndagens printmöten består av följande: 
 
 #### Sprint Planning
 * Sprint planning tar plats varje måndag efter avslutad utvärdering av tidigare sprint.
 * Sprint planning får ta maximalt 2h. Scrum master är ansvarig för att det hålls. 
 * Gruppen kommer själva ta ansvar för att skapa en produkt backlog samt sprint backlog. 
 
-#### Daily Scrums (Skall uppdateras)
-Ett kritiskt moment för gruppen då det råder samordningssvårigheter. Olika metodiker för att lösa detta ska prövas.
+#### Daily Scrums 
+En daily scrum görs varje gång gruppen träffas, vilket sker 2-3 gånger i veckan. 
 
 #### Sprint Review 
 * Sprint review tar plats 09.30 varje måndag.
@@ -74,12 +74,10 @@ Trello, Anton Albinsson
 Git-ansvarig, Martin Ahlberger
 
 ## Tidslogg och dagbok
-Tidslogg ska fyllas i och kunna visas upp i valfri programmvara
-
-Individuell reflektion i slutet av varje sprint
+Tidslogg fylls i enskilt av varej gruppmedlem. Finns ett gemensamt dokument i Drive. 
 
 ## Dokument och filhantering
-All dokumentation på github alternativt google docs
+All dokumentation på github i kombination med google docs
 
 Kodbas och versionshantering på github
 
