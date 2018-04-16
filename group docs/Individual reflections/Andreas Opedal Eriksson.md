@@ -1,4 +1,4 @@
-Individual reflection week 1, 23/3
+## Individual reflection week 1, 23/3 ## 
 
 - What do I want to learn or understand better?
 
@@ -18,7 +18,7 @@ Right now I am not completely confident with my knowledge of Git and GitHub. My 
 
 
 
-Individual reflection week 2, 29/3
+## Individual reflection week 2, 29/3 ##
 
 - What do I want to learn or understand better?
 
@@ -42,7 +42,7 @@ Next sprint my learning objective is to gain a deep enough knowledge about the a
 
 
 
-Individual reflection week 3, 16/4
+## Individual reflection week 3, 16/4 ##
 
 - What do I want to learn or understand better?
 
