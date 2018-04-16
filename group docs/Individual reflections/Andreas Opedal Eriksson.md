@@ -39,3 +39,27 @@ This week I have had an active role in trying to figure out how we should struct
 Last week my learning objective was to increase my knowledge of Git and GitHub. I think I have achieved this as I am now confident in how the process of downloadning files locally, doing changes in another branch, commiting those changes, pushing the branch to GitHub and then merging the master with the branch works. This objective was achieved by doing testes and figuring it out together with the group.
 
 Next sprint my learning objective is to gain a deep enough knowledge about the app so that I feel confident in adding content and doing changes in the code. This will be done by studying the source code of the application and its API's. 
+
+
+
+Individual reflection week 3, 16/4
+
+- What do I want to learn or understand better?
+
+My focus for this next sprint in developing knowledge will be to learn more about Javascript and the React Native framework that the app is built in. I will gain a basic theoretical knowledge base before I start doing some programming tasks and developing my skills further.
+
+- How can I help someone else, or the entire team, to learn something new?
+
+Last sprint I spent some time getting oriented with the app to understand all of its functionality and how it is designed. This will be useful when we try to break down the user stories into tasks, and I can share this knowledge with the group at that point. Further, as I am one of the group members who have gotten the development environment properly up and running I can spend more time on reading up on Javascript and React Native in the meantime, which is also knowledge that I can share with the rest of the group.
+
+- What is my contribution towards the team's application of scrum?
+
+I have partaked in and had an actrive role in all of the scrum meetings so far, which include weekly sprint retrospectives, sprint reviews and sprint plannings as well as the more frequently occurring daily scrums. I have also helped develop the KPI's. For instance, we decided to change the objective for our overhead KPI from 40%-60% to 30%-50%. 
+
+- What is my contribution towards the team's deliveries?
+
+My contribution towards the team's deliveries has been to complete the sprint's tasks (which this sprint have been common for everyone), help developing the user stories/tasks, attend lectures to gain important insights, attend group meetings and partake in figuring out how to get the development environment working.
+
+- Learning objective
+
+For this sprint my first learning objective is to learn more about Javascript and React Native. My second learning objective is to get a clearer understanding of the pilots' situation to be fully confident in writing user stories and tasks. 
