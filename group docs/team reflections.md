@@ -116,7 +116,8 @@ Strategi: Genom att stämma av efter varje sprint justerar vi för att se vad so
 *Goal* Läsa in sig på Findbugs och liknande program
 
 *Gap* Gain knowledge of code testing.
-the roles you have used within the team
+
+**The roles you have used within the team**
 
 *Now* We have assigned roles, among others, Scrummaster, a responsible of booking group rooms, a secretary and meeting protocol responsible.
 
