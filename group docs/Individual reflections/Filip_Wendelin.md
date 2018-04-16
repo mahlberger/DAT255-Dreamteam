@@ -45,7 +45,6 @@ By reading The Scrum Guide and different scrum litterature I have contributet to
 * A better scrum practice 
 
 
-
 ### Objectives 
 Last week objectives: 
 * Learn git and scrum - that is something I've achieved since last week. 
@@ -63,3 +62,45 @@ Plan to get to next week's objectives:
 2. Read and discuss with the group and make sure every team member understand. 
 3. Read and discuss with the group. Make a scheme about daily life of a pilot.
 4. Read more about scrum and discuss
+
+
+## Week 3
+
+### WHAT DO I WANT TO LEARN OR UNDERSTAND BETTER?
+
+* How the app works
+* To understand the termology of userstories (vertical, that elefant name etc.)
+* 
+
+### HOW CAN I HELP SOMEONE ELSE, OR THE ENTIRE TEAM, TO LEARN SOMETHING NEW?
+* Share how I solved problems that occours for me at the  development environment.
+* Share my way of thinking creating user stories 
+* Do something and review it in the sprint- 
+
+### WHAT IS MY CONTRIBUTION TOWARDS THE TEAM’S APPLICATION OF SCRUM?
+* Shared my summary of scrum 
+* Had a presentation explaining key points from my summary 
+* Knowledge and a positive attitude
+
+### WHAT IS MY CONTRIBUTION TOWARDS THE TEAM’S DELIVERIES?
+* This week we have'd the same user stories for everybody, so I've helped with that including coming up with user stories. 
+* Attended the wednesdays turtorial. 
+
+### Objectives 
+Last week objectives: 
+1. understand terminology about testing and software quality (inspired by the lecture). - 50% CHECK - put testing on hold until we start with it. 
+2. understand the code for the portableCDM app, the API and Javascript. I want to be able to make changes confidently. - CHECK, I can make changes but I want to understand it better. 
+3. understand the port system and especially pilots. - CHECK
+And share the above to the team.
+4. Come up with a solution for daily scrum - CHECK We do it foremost on mondays and wednesdays.
+
+Next week objectives: 
+1. Start working properly with user-stories 
+2. Understand the app and what we want to change
+3. Learn more javascript 
+
+
+Plan to get to next week's objectives:
+1. communication within the group
+2. Read and discuss with the group and make sure every team member understand. 
+4. See stackoverflow and read the source code for the app 
