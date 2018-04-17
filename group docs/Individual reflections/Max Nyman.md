@@ -1,3 +1,18 @@
+### Individual Reflection week 3
+
+#### 1. What do I want to learn or understand better?
+I'd like to better understand the internal structure of the application. Furthermore I want to get a basic understanding of React native. Unfortunalely I'm forced to put my valuable time into trying to get the app to start correctly my development environment since it's currently not working.
+
+#### 2. How can I help someone else, or the entire team, to learn something new?
+By sharing my thoughts and findings with others on Slack, i.e. the initial idea of having a chat/comment function in tha app, wich would affect not only our team but also other teams.
+
+#### 3. What is my contribution towards the team’s application of scrum?
+I've led and actively participated in all Scrum specific activities, such as retrospective and review.
+
+#### 4. What is my contribution towards the team’s deliveries?
+I've booked meetings with Sjöfartsverket and the Pilot organization in order for the team to get a better understanding of the domain in wich we are operating. Moreover I've participated in the process of developing new user stories and also completing user stories (wich were common for every group member).
+
+---
 ### Individual Reflection week 2
 
 #### 1. What do I want to learn or understand better?
