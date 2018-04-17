@@ -1,3 +1,168 @@
+
+# Team Reflection week 3, Monday 16/4
+**the chosen scope of the application under development including priority of features and for whom you are creating value**
+
+*Now* We have had our first meeting with the pilot station
+
+*Goal* To have a list of user stories in prioritized order that can easily be broken down into tasks
+
+*Gap* Process information from first meeting with pilot, develop user stories and ideas and prioritize features in the application before the second meeting with the pilot. Present user stories to end user representative as well as product owner. 
+
+**your social contract, which means you should create one in the first week**
+
+*Now*  Have updated the social contract with how the daily scrums work and how the time log is structured. 
+
+*Goal* To have a social contract that all group members are satsified with and follow. 
+
+*Gap*  Test how well the current iteration of the social contract is at creating an evenly distributed workload among the team members.
+
+**success criteria for the team in terms of what you want to achieve with your application**
+
+*Now* We have met our pilot and have an overall overview of what will be important in the application. We have not yet met with the product owner to determine success criterias. 
+
+*Goal* Determine the success criteria from the Product Owner
+
+*Gap* Meet with the product owner and present a draft of prioritizations wich we as a group has identified.
+
+**your acceptance tests, such as how they were performed and with whom**
+
+*Now* We have not yet generated any code on which to conduct acceptance tests.
+
+*Goal* Create our first acceptance tests once code is in place. 
+
+*Gap* Generate code that we can test.
+
+**the design of your application (choice of APIs, architecture patterns etc)**
+
+*Now*  We have started looking into the design of the given PortCDM application and gained a basic understanding of how it works
+
+*Goal* Have a good enough understanding so that we start developing the application
+
+*Gap* Learn about React Native
+
+**the behavioural overview of your application (for instance through use cases, interaction diagrams or similar)**
+
+*Now* We have a basic understanding of how the PortableCDM app works and how users interact with it. 
+
+*Goal* Make incremental adjustments to the app as it is used today.
+
+*Gap* Understand the needs of the user in order to create a hypothesis on behavior and evaluate our own experience to make changes in the design of the app. 
+
+**the structural overview of your application (such as class diagrams, domain models or component diagrams)**
+
+*Now* We do not yet have an understanding of the general (main) application presented.
+
+*Goal* We choose to not gain a deep understanding of the structural overview of the whole app. The goal is therefore to get a good enough understanding of the classes we are interacting with to make the changes we want to do. 
+
+*Gap* Find those specific classes that we need to use in order to create value for our product owners. 
+
+**your user stories in terms of using a standard pattern, acceptance criteria, task breakdown and effort estimation**
+
+*Now* We only have a foundation towards user stories, and not yet any “real” user stories that we can start breaking down into tasks.
+
+*Goal* Have a preliminary and prioritized set of user stories.
+
+*Gap* Create user stories, prioritize them, meet with Pilot, present user stories to product owner,  get familiar with main application.
+
+
+**the three KPIs you use for monitoring your progress**
+
+*Träffsäkerhet i Velocity - hur väl uppskattar vi vår velocity?*
+
+Hur: Genom att uppskatta tid (mantimmar) som gruppen kan avsätta, och använda detta som initial velocity.
+Nuläge: Vi har inte kunnat arbeta ännu i projekt och kan därför inte uppskatta vår träffsäkerhet. 
+Mål: Vårt mål är att ligga inom 30% av vår uppskattade Velocity.
+Strategi: Efter varje sprint anpassar vi detta mått och stämmer av hur väl detta sätt att mäta velocity stämmer överens med vår faktiska Velocity.
+
+Värde: -
+We do not yet have any user stories that we can work with and use to assess our current velocity.
+
+
+*Kommunikation - hur väl fungerar vår kommunikation i gruppen?*
+
+Hur: Transparens: Hur ärliga har vi varit mot varandra gällande vårt behov av hjälp, tillgänglig tid.
+Tydlighet: Hur väl har vi lyckats förmedla information till gruppen, hur “rak” har kommunikationen varit.
+Frekvens: Har vi kommunicerat tillräckligt frekvent och i tid?
+KPI:n sätts genom att medlemmarna betygsätter kommunikationen i gruppen med ett sammanvägt betyg på en skala 1-5 med en kort motivation till betyget.
+Nuläge: Vi har inledningsvis haft brister i skriftlig kommunikation, vad som gåtts igenom, framförallt under möten. Detta påverkade inte de som deltog på plats på mötet men blev tydligt för de som fick delta över Skype.
+Mål: Vårt mål är att hålla en hög genomsnittlig nivå på kommunikationen över veckorna med ett snitt över 4.5 av 5.
+Strategi: Genom att stämma av i slutet av varje sprint och betygsätta kommunikationen enligt ovan.
+
+
+Kommentarer: Vi behöver bli bättre på team reflections.
+
+
+*Overhead - hur stor andel av vår tid är värdeadderande för produktägaren?*
+
+Hur: KPI:n mäts som tid vi lägger ned per vecka minus mötestid och tid lagd på reflektioner genom total tid som lagts ned i projektet.
+Nuläge: I nuläget har ingen kod presterats och ingen produktägare presenterats.
+Mål: Vårt mål med nuvarande definition är att hålla oss 30% - 50%
+Strategi: Genom att stämma av efter varje sprint justerar vi för att se vad som varit icke värdeadderande tid och vad som varit värdeadderande för att iterativt närma oss vad som faktiskt är värdeadderande och på så sätt kunna arbeta för att minska det som inte tillför värde till projektet.
+
+
+*Now* We have established three KPI’s and have used them for two sprints.
+
+*Goal* Have three KPI’s that contribute to facilitating good communication, maximizing time spent on value-contributing activities and accurate assessment of our own velocity.
+
+*Gap* For the Velocity KPI:Divide user stories into smaller tasks that are easier to estimate. Generally: continue to evaluate the KPI’s during the sprint retrospectives. 
+
+**code quality using a tool such as Findbugs (1 point if your code includes issues concerning correctness or bad style, 2 points if you have dodgy or performance issues and 3 points if the code is fine), only asses the code you have written yourself**
+
+*Now* We do not have code to test yet.
+
+*Goal* To learn more on working with one person testing another persons code.
+
+*Gap* Be at a stage where we write code and then test the generated code.
+
+**The roles you have used within the team**
+
+*Now* We have assigned the following role: Scrummaster, a responsible of booking group rooms, a secretary and meeting protocol responsible, responsible for Trello, reminding-of-indiviudal-reflection responsible, responsible for contact with course examiner and Git-responsible.
+
+*Goal* Equal share of work to each person in the project.
+
+*Gap* Early stage of the project with limited amount of work to assign. Better role descriptions need to be formulated for future efforts.
+
+**the agile practices you have used for the current sprint**
+
+*Now* We have all the theory needed to implement agile practices (through Scrum) for the project. 
+
+*Goal* In general we want to apply Scrum in an efficient way that works well for our project group. A goal right now however is to consistently use Trello (as a Scrumboard) throughout the sprint. 
+
+*Gap* For Trello: Set up user stories and tasks for the sprint in Trello and then move all the tasks that are completed to the next “step”.
+
+**the time you have spent on the course (so keep track of your hours so you can describe the current situation)**
+
+*Now* Most of the group members have spent more than 20 hours the last sprint, as we had problems with setting up the development environment. 
+
+*Goal* Get on track toward a 20 hrs average for the end of the course.
+
+*Gap* We need to input more hours in the coming weeks to reach the 20hour average. This is a conscious strategy though, as we want to be able to spend more time when there is more programming to do. 
+
+**the sprint review (either in terms of outcome of the current week's exercise or meeting the product owner)**
+
+*Now* We have established a standard procedure for conducting the sprint reviews. 
+
+*Goal* That the product owner is satisfied with the user stories we have produced. 
+
+*Gap* Make user stories, prioritize them and present them to the product owners
+
+**Best practices for using new tools and technologies (IDEs, version control, scrum boards etc.)**
+
+*Now* We have found a suitable IDE to work with: Sublime. We have developed a best practice for using Git and GitHub that all group members will follow when coding. Android Studio is still in setup stage for half of the group. There are no best practices yet for Javascript and React Native. 
+
+*Goal* To get a clearer view of how Android Studio works and how we as a group should use it when developing. We should also have a greater understanding of Javascript and the React Native framework.
+
+*Gap* Solve the setup issues with Android Studio for the PC users in the group. Also gain a knowledge base for Javascript, both through theory and learning by doing in the development project. 
+
+**Relation to literature and guest lectures (how do your reflections relate to what others have to say?)**
+
+*Now* We have implemented daily Scrum in our practices. In relation to guest lectures, Mikael spoke a lot about how agile practices advocates doing incremental changes and consistenly moving forward in the project. From most courses at Chalmers we have learned that the opposite oftentimes works best - preparing and studying before implementing that is. We are confused by this paradox. 
+
+*Goal* To mentally adapt the agile way of working, i.e. learning how to tackle assignments without having complete knowledge in advance. 
+
+*Gap* Just do it!™ 
+
+
 # Team Reflection week 2, Thursday 29/3
 **the chosen scope of the application under development including priority of features and for whom you are creating value**
 
