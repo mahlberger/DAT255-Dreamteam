@@ -111,3 +111,11 @@ ios/Pods
 #added:
 react-native-pinch/android/build/
 android/app/src/main/java/host/exp/exponent/generated/DetachBuildConstants.java
+
+#totaly new changes by @mahlberger
+android/build.gradle
+android/build.gradle
+android/gradle/wrapper/gradle-wrapper.jar
+android/gradle/wrapper/gradle-wrapper.properties
+android/.gradlew
+android/gradlew.bat
