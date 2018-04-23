@@ -111,6 +111,7 @@ ios/Pods
 !node_modules/react-native-pinch
 node_modules/react-native-pinch/android/build
 android/app/src/main/java/host/exp/exponent/generated/DetachBuildConstants.java
+android/app/src/main/java/DetachBuildConstants.java
 
 
 #totaly new changes by @mahlberger
