@@ -46,7 +46,7 @@ As we have met the product owners and had group meetings I believe we have a bet
 
 This sprint goal will be to further break down this deliveries by setting up user stories. I want to contribute by reading more about the scenario and be active in group meetings to find the workflow of the pilot organization. 
 
-##Week 3##
+## Week 3 ##
 
 **what do I want to learn or understand better?**
 In retrospective I realized that setting up the developer enviroment was much harder than anticipated. As I still have not made the developer enviroment work (Android Studio), I still feel that I lack understanding of how the code architecture works. 
@@ -70,4 +70,28 @@ This sprint goal will be to establish some rules for how we are allowed to move 
 This sprint we as a group has had group meetings where we discussed the scenario and drafted user stories. Our group also met with the pilot organization which helped us with some prioritizations of our user stories. 
 
 The goal of this sprint is to alter our user stories to better fit the product owners needs and take input to be able to put priority levels on our user stories. I also want to be part of splitting up a user story into tasks so we are enabling us to start coding which will help our deliveries by showing something concrete to our proudct owner next sprint. 
+
+## Week 4 ##
+
+**what do I want to learn or understand better?**
+In retrospective I have achived my goal of setting up the developer enivroment but have very little experience with the coding part. 
+
+This sprints goal will be to learn more about coding in Javascript with React Native framework as well as how to work effectivly in a pair when programming. 
+
+To achieve my goal I will, together with my colleague in pair programming, try to code one of our user stories. I believe I will learn alot about js/react for just doing some practical work involving code but also be active with my colleague and ask this person for any tips regarding js/react. 
+
+**How can I help someone else, or the entire team, to learn something new?**
+After watching several tutorials on youtube last sprint I gained somewhat knowledge about js/react even though I feel the need for coding in order to get a better understanding so I did not reach last sprints goal exactly.
+
+This sprint I believe my goal will still be to help someone learn more about react-native/javascript but this week it will be focused around my colleague whom I will be doing the pair programming with. I want to reach this goal by summarizing my findings from the youtube tutorial as well as reading on the web about similar components that we can take inspiration from. 
+
+**What is my contribution towards the team’s application of scrum?**
+How to make an effective flow of our user stories in our board is still a hard question. Some of the suggestions for solving this flow is to 1) break down a card holding a user story involving several tasks to multiple card containg one card each and 2) setting up a clear definition of done & acceptance critiera. Since we can't plan for everything in advanced, one way of application scrum is here to test one week and then in our retrospective see how our process was affected. 
+
+This sprints goal will be to make a clear and meaningful seperation in our Trello Board between Epics, User Stories and Tasks. Achiving this will require to take use of different elements in trello such as multiple lists and labels, but also to listen closely to the group members for what they find most practical to use as nothing is value-adding of its own. 
+
+**What is my contribution towards the team’s deliveries?**
+I have attended group meetings in this sprint where we have created user stories and made some intitial prioritizations. 
+
+Goals of this sprint will be to take one of the user stories in our sprint backlog, and together with my colleague, implement this in code to help our deliveries. To do this we will have to break down our user stories into tasks and then start working on coding. 
 
