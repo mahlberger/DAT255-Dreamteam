@@ -259,7 +259,7 @@ Strategi: Genom att stämma av efter varje sprint justerar vi för att se vad so
 
 **the agile practices you have used for the current sprint**
 
-*Now* We have all the theory needed to implement agile practices (through Scrum) for the project. 
+*Now* We have all the theory needed to implement agile practices (through Scrum) for the project. We discussed moving the sprints from monday-monday to wednesday-wednesday since this was some feedback we got from our meeting with Jean-Philippe. We have decided to keep the monday-monday since we want to have the sprint planning the same day as the sprint retrospective and team reflection. If we were to move it to wednesday-wednesday we wouldn't have time to adjust our next sprint planning the same day after meeting the product owners, since we only have group meetings on mondays and wednesdays.
 
 *Goal* In general we want to apply Scrum in an efficient way that works well for our project group. A goal right now however is to consistently use Trello (as a Scrumboard) throughout the sprint. 
 
