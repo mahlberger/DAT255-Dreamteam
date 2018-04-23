@@ -1,5 +1,25 @@
 #Individual Reflection
 
+## Week 4
+- **what do I want to learn or understand better?**
+
+As we will now start the actual coding, I want to improve and learn more about javascript to be able to complete the User Stories at hand. More precisely I want to learn/understand that which is needed to create a visual GANTT-chart in the application.
+
+- **how can I help someone else, or the entire team, to learn something new?**
+
+I still haven't got a good understanding of the given code, but as we are starting to code this next sprint I will hopefully be able to improve that knowledge and share it with the team.
+
+While creating the structure for the GANTT-chart I will also need to tell each and every member of my group what I have done to make the structure for the GANTT-chart.
+
+- **what is my contribution towards the team’s application of scrum?**
+
+I have been present and given my thoughts during the scrum meetings and team reflections. I have also been present and helped the group develop new User Stories and give my thoughts on the structure of our Trello boards.
+
+- **what is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week's ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation).**
+
+I have been present at all meetings and given my thoughts in discussions. Until this point we have mostly done the same thing, but now when the coding starts I hope to be able to contribute this way this coming sprint. As the group has chosen to try to implement a GANTT-chart into a new view I hope to be able to learn more about this, both adding new graphical elements (views, GANTT-timeline) and also more about how the application works. 
+
+
 ## Week 3
 - **what do I want to learn or understand better?**
 
