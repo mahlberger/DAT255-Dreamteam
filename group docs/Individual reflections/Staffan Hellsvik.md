@@ -1,5 +1,26 @@
 ## Individuell reflection
 
+Now
+Goal
+Gap
+**v4**
+what do I want to learn or understand better?
+In the previous sprint we underestimated the challenges of getting our development environment running. For the upcoming sprint there are lots of user stories that we have broken down that will need estimations, something that I want to be able to accurately asssess in the future. This sprint will be an opportunity to better understand what kind off efforts are needed and how long things actually take to get done. The previous sprint was both a success and a setback with regards to the development environment. I got it running on the old branch of our github but not on the master. At the moment I can access the login screen of the app but no more. I want to understand what is not working at the moment and move forward so that I can tackle other kinds of problems regarding the coding of the app.
+
+
+
+how can I help someone else, or the entire team, to learn something new?
+In the previous sprint I have participated in two meetings with the end user, the pilot. Translating their needs into a vision we can work towards requires communicating on the one hand the end users own description of for what they hope what the app will be, and reading between the lines what actual functionality is required. I hope that by focusing on visuals to orient us in terms of what is needed I can contribute to the teams learning and co-creation of the app for the coming sprint.
+
+
+what is my contribution towards the team’s application of scrum?
+By providing a breakdown of the end users description into several categories or Epics, we have arrived at a GANTT representation of vessels arriving in port, a need for a way to easily communicate and negotiate the different times for activities in the port, and a notification system to help the pilot organizer sort through the incoming information from the system. By helping out with the additional breakdown we had hopes of presenting something to the product owner but they were busy during the wednesday so we have not had a priority from them yet. This is a gap we need to get covered for the next sprint.
+
+what is my contribution towards the team’s deliveries?
+By being  able to take a more active role in our second meeting with the pilot organizations manager, we could confirm the needs that the end users described to us in the first meeting. They are pressing for a "chat"-like function, which we have then discussed in anticipation of the product owners demands as to how it could be implemented. At the moment this has been my contribution, the facilitation of the needs of the end user into our list of wishes/requirements of the end user. My goal for the next sprint is to contribute some actual code for one of our user stories, pending the success in getting my development environment to work, which remains another goal.
+
+
+
 **v3**
 what do I want to learn or understand better?
 The previous long sprint has been full of learnings. We are almost up and running with our development environment. At the moment I need to successfully be
