@@ -33,6 +33,11 @@ export default class PilotTimeLineView extends Component {
     return(
       <View>
         <Modal
+            animationType={'slide'}
+            transparent={false}
+            style={{backgroundColor: colorScheme.backgroundColor}}
+            visible={this.state.showChangeLog}
+            onRequestClose={() => this.setState({showChangeLog: false})}
         >
             <TopHeader modal title="Change log" backArrowFunction={() => this.setState({showChangeLog: false})}/>
             
