@@ -116,7 +116,7 @@ class SideMenu extends Component {
 
                     <ListItem
                       containerStyle={activeItemKey === 'PilotTimeLine' ? [styles.menuContainer, styles.selectedContainer] : styles.menuContainer}
-                      leftIcon={{
+                      leftIcon={{ 
                             name: 'timeline',
                             color: 'white'
                       }}
@@ -128,8 +128,8 @@ class SideMenu extends Component {
                           </View>
                       }
                       onPress={() => {
-                            if(activeItemKey !== 'Login') navigate('PilotTimeline');
-                      }}
+                            navigate('PilotTimeLine');
+                      }} 
                     />
 
                     {true &&<ListItem
