@@ -1,3 +1,19 @@
+### Individual Reflection week 4
+
+#### 1. What do I want to learn or understand better?
+I'd like to gain better knowledge about applying a grid system to a view in an Android app. Also further understand the internal structure of the application.
+
+#### 2. How can I help someone else, or the entire team, to learn something new?
+By continuing to share thoughts and ideas on Slack, scrum of scrum and in the group.
+
+#### 3. What is my contribution towards the team’s application of scrum?
+I've made sure the group has applied scrum and not diverted to much from the framework even if it has occasionally seemed tempting to do things differently.
+
+#### 4. What is my contribution towards the team’s deliveries?
+I've participated in all group activities and led several of them, such as retrospective, review and daily scrum. I've also managed to get my development environment up and running, enabling me to  make progress on more value-adding activities for the product owner. 
+
+---
+
 ### Individual Reflection week 3
 
 #### 1. What do I want to learn or understand better?

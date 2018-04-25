@@ -104,3 +104,43 @@ Plan to get to next week's objectives:
 1. communication within the group
 2. Read and discuss with the group and make sure every team member understand. 
 4. See stackoverflow and read the source code for the app 
+
+
+## Week 4
+
+### WHAT DO I WANT TO LEARN OR UNDERSTAND BETTER?
+* My development environment works fine and now it's time to change stuff in the app - exciting to atlast be able to write some code. Good for my motivation with more clear objectives. Earlier sprints have been more of learning and less of doing - which suits me worse. 
+* The back end of the application so I can fetch the information I want. 
+* A deeper understand of the user perspective of the app - which functions is the best and what is should be changed. I think the product owners (RISE-ppl) know that the best. 
+
+### HOW CAN I HELP SOMEONE ELSE, OR THE ENTIRE TEAM, TO LEARN SOMETHING NEW?
+* Share stuff I've learnt about react native
+* I've participated by attending one of the pilot meeting where I helped interpret what the pilots wanted from the app to perform, and afterward helping to prioritize user stories according to what she said. In that way I hopefully help the scrum team to get a better understanding what could and should be done 
+
+### WHAT IS MY CONTRIBUTION TOWARDS THE TEAM’S APPLICATION OF SCRUM?
+* Helping to make sure we actually are doing some kind of scrum accoring to the rules. For instance how we do the review, retrospective and sprint-stuff. 
+* Helping by coming up with epics and then breaking them into user stories and tasks 
+* Helping how we organize Trello
+
+### WHAT IS MY CONTRIBUTION TOWARDS THE TEAM’S DELIVERIES?
+* I attented the second meeting with the pilot and took and an active part in understanding their point of view toward the app. My gained knowledge from that meeting helped me to see the end users perspective better when we come up with epics, user stories and priorized them. 
+* Indirect I started to gain more knowledge about react native so I faster can start to code thi week. 
+* Unfortunately I missed the meeting on the monday due to a education for my summer job. And since last week we didn't have any delegated work, I had a hard time to work up my 20h. I need a clear goal to get motivation and I was bad of setting one last week. Much for easy this week when we start with coding and actually come up with something visiable. 
+
+### Objectives 
+Last week objectives: 
+1. Start working properly with user-stories - DONE 
+2. Understand the app and what we want to change - ALMOST DONE - will continue with this goal the coming week as well. We didn't get to meet with the product owners from RISE, hopefolly they have time to talk with us this week. 
+3. Learn more javascript - NOPE - but I've learnt a lot more about react native. 
+
+Next week objectives: 
+1. Understand the app and what we want to change
+2. Create a product (I'll be working on how we can handle subscribed portcalls) 
+3. Be able to create working code piece with react native. 
+
+
+Plan to get to next week's objectives:
+1. communication within the group
+2. Pair programming
+3. See stackoverflow and read the source code for the app 
+4. Trial and error 

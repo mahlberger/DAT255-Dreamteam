@@ -45,3 +45,16 @@ Since I've been on vacation and therefore missed all of this sprints team meetin
 4. What is my contribution towards the team’s deliveries? 
 Due to a week of vacation my contribution has been very small. I've tried to read in on how to work with javascript and Android Studios and also attended the meeting with the pilot where I tried to identify their needs. During the next sprint I will try to catch up by putting a lot of effort in the process of scrum and the development of the application. My goal until next week is to put more time and effort in the creation of user stories and also get a better understanding of how to work in Android Studios.
 
+
+-- Individual Reflection week 4, 23/4 --
+1. What do I want to learn or understand better?
+I would like to learn how to build a GANTT-chart in React Native and also get a better understanding of the acceptance criteria from the product owners. 
+
+2. How can I help someone else, or the entire team, to learn something new?
+I can hopefully help someone learn what tasks that are needed in order to complete a user story. 
+
+3. What is my contribution towards the team’s application of scrum?
+I've been contributing by informing the group about the dialogue with Jean-Pierre and steering that into a discussion about the agile process and reviewing the sprint sessions.  I've also taken on the responsibility to make sure that the team reflection is uploaded in time every week, since that has been a problem during the latest sprints. Regarding the use of Trello I've been active in the decision making of how to organize and use cards for Epics, User stories and tasks in the most effective way.
+
+4. What is my contribution towards the team’s deliveries? 
+I've gotten a better understanding of the application by studying its' various functions, this can hopefully help the team deliver functions deriving from our user stories and tasks. I've also contributed in breaking down Epic's into user stories and deciding which ones to prioritize during the next sprint. My goal last week was to spend more time on the project, which I have done. Next week's goal is to get familiar with javascript in React Native by producing and texting code together with a small group. 

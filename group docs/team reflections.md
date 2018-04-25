@@ -1,3 +1,138 @@
+# Team Reflection week 4, Monday 23/4
+**the chosen scope of the application under development including priority of features and for whom you are creating value**
+
+*Now:* We’ve started creating User Stories, now we have User stories that are more or less useful, but they have not been evaluated with the INVEST criteria yet and are therefore not broken down into tasks. We did present the user stories to the end user representatives, but we did not manage to present them to the product owner as there was no time on the supervision meeting. 
+
+*Goa:l* To present our user stories to the product owners on wednesday. Also to create a prioritized list containing user stories and start breaking down and work on each user story.
+
+*Gap:* Making sure we get a meeting with the Product owners, since we didn’t manage to last week. We also need to make sure that we all sit down together to take care of the user story situaton and evaluating it with the INVEST criteria.  
+
+**your social contract, which means you should create one in the first week**
+
+*Now:*  Have updated the social contract so that one person is responsible for uploading the group reflection.
+
+*Goal:* To have a social contract that all group members are satsified with and follow. 
+
+*Gap:*  Test how well the current iteration of the social contract is at creating an evenly distributed workload among the team members.
+
+**success criteria for the team in terms of what you want to achieve with your application**
+
+*Now:* Since we weren’t able to meet with the Product owner due to lack of time (and too much people) we have yet to present our current situation and User Stories to the Product Owners. 
+
+*Goal:* Determine the success criteria in consultation with the product owner.
+
+*Gap:* Meet with the product owner and present a draft of prioritizations which we as a group have identified.
+
+**your acceptance tests, such as how they were performed and with whom**
+
+*Now:* We have not yet generated any code on which to conduct acceptance tests.
+
+*Goal:* Create our first acceptance tests once code is in place. 
+
+*Gap:* Generate code that we can test.
+
+**the design of your application (choice of APIs, architecture patterns etc)**
+
+*Now:*  We have now acquired a basic knowledge about Javascript and React Native. 
+
+*Goal:* Have a enough understanding about the structure behind the current application.
+
+*Gap:* Implement our knowledge about React Native into code (we are like Jon Snow, we know nothing, sorry).
+
+**the behavioural overview of your application (for instance through use cases, interaction diagrams or similar)**
+
+*Now:* We have a basic understanding of how the PortableCDM app works and how users interact with it. We understand the needs of the user and have created a hypothesis on behavior and evaluated our own experience in order to make changes in the design of the app.
+
+*Goal:* Understand how to create and implement a notification function into the application
+
+*Gap:* Two or three people are responsible for searching information about creating notifications in React Native, and should be able to inform the rest of the group about this during next week’s meeting. 
+
+**the structural overview of your application (such as class diagrams, domain models or component diagrams)**
+
+*Now:* We do not yet have an understanding of the general (main) application presented.
+
+*Goal:* The goal is to acquire a good enough understanding of the structure so that we can 
+present a roadmap of how the different classes interact with each other. 
+
+*Gap:* Delegate the task of acquiring this understanding to one or two project members which they will present to the rest of the group during the week. 
+
+**your user stories in terms of using a standard pattern, acceptance criteria, task breakdown and effort estimation**
+
+*Now:* We have started the process of creating user stories but have not yet prioritized them We have had two meetings with the pilot and gotten a better understanding of the main application. We haven’t presented our user stories to the product owner. 
+
+*Goal:* Have a preliminary and prioritized set of user stories, some of which are broken down into tasks. Come up with an acceptance criteria together with the product owners.
+
+*Gap:* A smaller group of people are responsible for prioritizing the set of user stories and create acceptance criterias which are to be presented to the product owners on wednesday.
+
+
+**the three KPIs you use for monitoring your progress**
+
+*Now:* We have established three KPI’s and have used them for three sprints, we have also discussed if they are still relevant for tracking our process and concluded that they are good enough. There are other alternatives to the time-tracking (Overhead) KPI, but the group have decided that we will stick with the original one during at least one sprint containing coding in order to assess it fairly. For the velocity KPI, we fell short this sprint as well... 
+
+*Goal:* Have three KPI’s that contribute to facilitating good communication, maximizing time spent on value-contributing activities and accurate assessment of our own velocity. Further assess the Overhead KPI during the following sprint. 
+
+*Gap:* For the Velocity KPI: Important to divide user stories into smaller tasks that are easier to estimate. Generally: continue to evaluate the KPI’s during the sprint retrospectives. Keep tracking the Overhead KPI during next week’s review meeting.
+
+**code quality using a tool such as Findbugs (1 point if your code includes issues concerning correctness or bad style, 2 points if you have dodgy or performance issues and 3 points if the code is fine), only asses the code you have written yourself**
+
+*Now:* We do not have code to test yet.
+
+*Goal:* To learn more on working with one person testing another persons code.
+
+*Gap:* Be at a stage where we write code and then test the generated code.
+
+**The roles you have used within the team**
+
+*Now:* We have assigned the following role: Scrummaster, a responsible of booking group rooms, a secretary and meeting protocol responsible, responsible for Trello, reminding-of-indiviudal-reflection and uploading team reflection responsible, responsible for contact with course examiner and Git-responsible.
+
+*Goal:* Equal share of work to each person in the project.
+
+*Gap:* Early stage of the project with limited amount of work to assign. Better role descriptions need to be formulated for future efforts.
+
+**the agile practices you have used for the current sprint**
+
+*Now:* We are in the state that we are comfortable enough to use and set up User Stories in Trello. We have also created another group chat in able to separate “informative” information and formal information regarding the application/development. We have also implemented daily scrums for every time all of us in the project group meet (2-3 days a week)
+
+
+*Goal:* Break down the group into more individual task in order to become more effective.
+
+*Gap:* Assign specific tasks to smaller groups and set deadlines for when that group should be done with their task and inform the rest of the group.
+
+**the time you have spent on the course (so keep track of your hours so you can describe the current situation)**
+
+*Now:* Last sprint we spent on average 15 hours. This was because of a lack of having value-adding assignments. 
+
+*Goal:* Get on track towards a 20 hrs average for the end of the course.
+
+*Gap:* We need to input more hours in the coming weeks to reach the 20 hour average. This is a conscious strategy though, as we want to be able to spend more time when there is more programming to do. 
+
+**the sprint review (either in terms of outcome of the current week's exercise or meeting the product owner)**
+
+*Now:* We have established a standard procedure for conducting the sprint reviews. 
+
+*Goal:* That the product owner is satisfied with the user stories we have produced. 
+
+*Gap:* Prioritize user stories, create acceptance criterias and present them to the product owners
+
+**Best practices for using new tools and technologies (IDEs, version control, scrum boards etc.)**
+
+*Now:* We have found a suitable IDE to work with: Sublime. We have developed a best practice for using Git and GitHub that all group members will follow when coding. Android Studio has been set up for all but one of the group members. We have started looking at Javascript and React Native. All but one group members have set up the development environment. 
+
+*Goal:* As one of the user stories is to implement a notification function, the goal is now to understand the technologies (classes etc) associated with implementing this. 
+
+*Gap:* Solve the setup issues with Android Studio for the last PC user in our group by providing the person with the information the others have learned when setting up the developer environment. We want to search the web for more information regarding notification functions in javascript, this will be done in smaller groups.
+
+
+
+
+**Relation to literature and guest lectures (how do your reflections relate to what others have to say?)**
+
+*Now:* Since we haven’t had any lectures there is no new information to collect from guest lectures. We have had a meeting with the examiners in the course where we discussed the process, which was helpful in creating this reflection.We still find it very hard to adapt the agile way of working, because we find ourselves wanting to plan for everything ahead. 
+
+
+*Goal:* To mentally adapt the agile way of working, i.e. learning how to tackle assignments without having complete knowledge in advance. 
+
+*Gap:* Just continue doing it! Help each other during the group meetings to mention that we don’t need a complete understanding of something in order to start to do it. 
 
 # Team Reflection week 3, Monday 16/4
 **the chosen scope of the application under development including priority of features and for whom you are creating value**
@@ -124,7 +259,7 @@ Strategi: Genom att stämma av efter varje sprint justerar vi för att se vad so
 
 **the agile practices you have used for the current sprint**
 
-*Now* We have all the theory needed to implement agile practices (through Scrum) for the project. 
+*Now* We have all the theory needed to implement agile practices (through Scrum) for the project. We discussed moving the sprints from monday-monday to wednesday-wednesday since this was some feedback we got from our meeting with Jean-Philippe. We have decided to keep the monday-monday since we want to have the sprint planning the same day as the sprint retrospective and team reflection. If we were to move it to wednesday-wednesday we wouldn't have time to adjust our next sprint planning the same day after meeting the product owners, since we only have group meetings on mondays and wednesdays.
 
 *Goal* In general we want to apply Scrum in an efficient way that works well for our project group. A goal right now however is to consistently use Trello (as a Scrumboard) throughout the sprint. 
 

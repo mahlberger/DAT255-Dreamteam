@@ -1,3 +1,21 @@
+### Individual Reflection week 4
+
+#### 1. What do I want to learn or understand better?
+Also this week there have been to much of my time being spent on debuging code which, of course have been useful for my team mates but also, have caused that I lack some knowledge about the domain. I need to catch up about the user stories and the knowledge of the App as I only know the App in vauge technical terms.
+
+I would also need to dig deeper in the App to know how it works on a functional plane, not just building and running it. 
+
+#### 2. How can I help someone else, or the entire team, to learn something new?
+Until this point a lot of effort from my side has been put on making the app work and run on the team members local environment. From now on it's important to do some development. At this part I think, and hope, that my knowledge as a web developer will come to hand.
+
+#### 3. What is my contribution towards the team’s application of scrum?
+I have been practicing at daily scrums and the team's weekly reflection. I have been paticipating in the discussion about how and when we are going to have our sprints.
+
+#### 4. What is my contribution towards the team’s deliveries?
+There have still been none, or very little, value adding work made by the group. My time have been focused on helping others with their development environment which isn't part of the delivery but will make sure everyone can contribute to theese in the future.
+
+---
+
 ### Individual Reflection week 3
 
 #### 1. What do I want to learn or understand better?

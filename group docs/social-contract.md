@@ -65,7 +65,7 @@ Boka grupprum, Andreas Opedal Eriksson
 
 Ansvarig för grupputvärdering och påminnare för egen reflektion, Jenny Sorsa
 
-Ansvarig för Håkankontakt, Jenny Sorsa
+Ansvarig för Håkankontakt samt inskick av team reflection, Jenny Sorsa
 
 Sekreterare, Staffan Hellsvik
 

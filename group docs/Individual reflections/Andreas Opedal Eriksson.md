@@ -63,3 +63,29 @@ My contribution towards the team's deliveries has been to complete the sprint's 
 - Learning objective
 
 For this sprint my first learning objective is to learn more about Javascript and React Native. My second learning objective is to get a clearer understanding of the pilots' situation to be fully confident in writing user stories and tasks. 
+
+
+
+## Individual reflection week 4, 23/4 ##
+
+
+
+- What do I want to learn or understand better?
+
+For this week's sprint I want to learn exactly what is needed to complete the task(s) I will complete. This includes learning how to add a new view in the app (for the "GANTT chart" we are going to implement) and how to add a link to this view in the app menu. No further theory on Javascript, React Native, Git, Scrum or anything else is worth the time right now.
+
+- How can I help someone else, or the entire team, to learn something new?
+
+After completing the week's programming tasks, my programming peer and I will explain briefly to the rest of the team how we did, in order to share the knowledge. I can also share some of the knowledge about Javascript and React Native I have acquired through tutorials with the rest of the team if problems that I have the skills to solve show up. 
+
+- What is my contribution towards the team's application of Scrum?
+
+As the previous sprints, I have had an active role in all the Scrum related meetings and team reflections. I have also pushed the team to develop more concrete user stories so that we can break them down into tasks and start doing some value-adding work, which we then did. Further, I have partaked in deciding the structure in Trello related to epics, user stories and tasks, where we now have a color code for each of the three categories and have numbered the different elements according to a MECE structure. 
+
+- What is my contribution towards the team's deliveries?
+
+As the previous sprint, it has been to do my part in completing the tasks (which have up to this point been mainly common for every team member). For this sprint we have however been able to delegate the tasks. My contribution will still be to complete my assigned tasks though. 
+
+- Learning objective
+
+As stated above, learn how to implement a new "view" in the app and access this view from the menu in the app. 
