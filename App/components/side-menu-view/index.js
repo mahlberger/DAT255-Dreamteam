@@ -114,6 +114,24 @@ class SideMenu extends Component {
                         }}
                     />
 
+                    <ListItem
+                      containerStyle={activeItemKey === 'PilotTimeLine' ? [styles.menuContainer, styles.selectedContainer] : styles.menuContainer}
+                      leftIcon={{
+                            name: 'timeline',
+                            color: 'white'
+                      }}
+                      hideChevron
+                      underLayColor={colorScheme.secondaryColor}
+                      title={
+                          <View style={styles.textContainer}>
+                                <Text style={canBeAccessedEverywhereExceptOnLogin}>Pilot Timeline</Text>
+                          </View>
+                      }
+                      onPress={() => {
+                            if(activeItemKey !== 'Login') navigate('PilotTimeline');
+                      }}
+                    />
+
                     {true &&<ListItem
                         containerStyle={activeItemKey === 'FavoriteStatesSideMenu' /* TODO: Change color when selected */ ? [containerStyle, styles.selectedContainer] : containerStyle}
                           leftIcon={{
@@ -248,6 +266,8 @@ class SideMenu extends Component {
                             }
                         }
                     />
+
+
                 </List>
             </View>
 
