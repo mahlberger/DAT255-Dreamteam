@@ -56,7 +56,7 @@ Samtliga i gruppen tillhör utvecklingsdelen där Max även fungerar som scrum m
 ## Närvaro
 Den som blir skyldig till ogiltlig frånvaro borde bjuda på fika
 
-Som ogiltlig frånvaro räknas att man uteblir, utan meddelad orsak eller utom rimlig tid eller sen ankomst med mer än 5 minuter till veckans fasta möte.
+Som ogiltlig frånvaro räknas att man uteblir, utan meddelad RIMLIG orsak eller utom rimlig tid eller sen ankomst med mer än 5 minuter till veckans fasta möte.
 
 ## Ansvarsområden
 Scrum master, Max Nyman - har sista ordet
