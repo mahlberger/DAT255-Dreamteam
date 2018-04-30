@@ -93,5 +93,27 @@ This sprints goal will be to make a clear and meaningful seperation in our Trell
 **What is my contribution towards the team’s deliveries?**
 I have attended group meetings in this sprint where we have created user stories and made some intitial prioritizations. 
 
-Goals of this sprint will be to take one of the user stories in our sprint backlog, and together with my colleague, implement this in code to help our deliveries. To do this we will have to break down our user stories into tasks and then start working on coding. 
+Goals of this sprint will be to take one of the user stories in our sprint backlog, and together with my colleague, implement this in code to help our deliveries. To do this we will have to break down our user stories into tasks and then start working on coding.
+
+## Week 5 ##
+
+**what do I want to learn or understand better?**
+In retrospective I have learned more about coding in Javascript with React Native framework and realized the importance of start coding without planning to much in advanced. Pair programming went fine. 
+
+This weeks goal will be, besides more coding, to get a better grasp about how the different components in the app communicate with each other. I believe this is important because a lot of the code can be reused if you only know where to look. Achiving this goal will be made through 1) trial-and error in the code to see where changes appear and 2) making a simple sketch of some of the components that will be intresting for our user story. 
+
+**How can I help someone else, or the entire team, to learn something new?**
+In retrospective I realized that "summarize my findings in the javascript tutorial" and show to my pair programmer was a bad goal because most of it would never be used. I did however believe that we could share some ideas with each other. 
+
+As we are currently exploring the code if I come across some useful functions/components I want to tips other groups about these so they can learn about them and apply it when coding their user stories.  
+
+**What is my contribution towards the team’s application of scrum?**
+Last sprints goal about using our Trello Board to seperate between Epics, User Stories and Tasks went really well. We now use a board for storing our epics + product backlog and then a seperate board for each sprint. We use the task-list function to integrate our tasks into each user story. 
+
+This weeks goal will be to try to find improvments to our Trello setup, as an important part of the scrum retrospective part to evaluate the process. To do this I will combine asking the team combined with trying to find out which area that eventually might need another setup than current "best-practice", to suit our needs. 
+
+**What is my contribution towards the team’s deliveries?**
+While we broke down our user stories into tasks we were not able to fully code our complete user story during last sprint. Reflecting on this I believe that it's important to realize the vast uncertanity that exist when approaching a new progamming language and to take this into account during the next time estimation. 
+
+My goal this week will to finish our assigned user story that we were not able to complete last sprint about fetching favorite portcalls. To achieve this goal I will alter my apporach and focus more on reusing exisitng code but also ask for help from our other team members as they might have done something similiar during coding of their user stories. 
 
