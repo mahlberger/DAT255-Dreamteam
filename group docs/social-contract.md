@@ -58,6 +58,9 @@ Den som blir skyldig till ogiltlig frånvaro borde bjuda på fika
 
 Som ogiltlig frånvaro räknas att man uteblir, utan meddelad RIMLIG orsak eller utom rimlig tid eller sen ankomst med mer än 5 minuter till veckans fasta möte.
 
+## Skyldigheter 
+* All members are responsible for making sure that they have work assigned to them during the sprint. Once the work you have assigned yourself is complete you shall assign yourself new tasks from Trello.
+
 ## Ansvarsområden
 Scrum master, Max Nyman - har sista ordet
 
@@ -74,6 +77,7 @@ Trello, Anton Albinsson
 Git-ansvarig, Martin Ahlberger
 
 Chief time allocating officer (CTAO)  - Filip Wendelin 
+
 
 ## Tidslogg och dagbok
 Tidslogg fylls i enskilt av varej gruppmedlem. Finns ett gemensamt dokument i Drive. 
