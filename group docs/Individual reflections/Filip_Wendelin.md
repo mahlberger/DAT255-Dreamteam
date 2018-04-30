@@ -126,22 +126,23 @@ Plan to get to next week's objectives:
 * I attented the second meeting with the pilot and took and an active part in understanding their point of view toward the app. My gained knowledge from that meeting helped me to see the end users perspective better when we come up with epics, user stories and priorized them. 
 * Indirect I started to gain more knowledge about react native so I faster can start to code thi week. 
 * Unfortunately I missed the meeting on the monday due to a education for my summer job. And since last week we didn't have any delegated work, I had a hard time to work up my 20h. I need a clear goal to get motivation and I was bad of setting one last week. Much for easy this week when we start with coding and actually come up with something visiable. 
-* Spent resonable time to do my user story. 
 
 ### Objectives 
 Last week objectives: 
-1. Understand the app and what we want to change - HALF DONE. Understand what we want to change, but not the app totaly. 
-2. Create a product (I'll be working on how we can handle subscribed portcalls) - NOT DONE, started, but everything take longer time than you thing. 
-3. Be able to create working code piece with react native. - DONE. Can create new text views, write stuff to the console etc. 
+1. Start working properly with user-stories - DONE 
+2. Understand the app and what we want to change - ALMOST DONE - will continue with this goal the coming week as well. We didn't get to meet with the product owners from RISE, hopefolly they have time to talk with us this week. 
+3. Learn more javascript - NOPE - but I've learnt a lot more about react native. 
 
 Next week objectives: 
-1. Get last week user story done. 
-
+1. Understand the app and what we want to change
+2. Create a product (I'll be working on how we can handle subscribed portcalls) 
+3. Be able to create working code piece with react native. 
 
 Plan to get to next week's objectives:
-1. Read code
+1. communication within the group
 2. Pair programming
-3. Google 
+3. See stackoverflow and read the source code for the app 
 4. Trial and error 
+
 
 
