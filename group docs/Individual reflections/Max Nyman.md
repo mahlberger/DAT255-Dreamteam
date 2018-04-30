@@ -1,3 +1,19 @@
+### Individual Reflection week 5
+
+#### 1. What do I want to learn or understand better?
+How to do programming in the react-native framework - at a deeper level than copy pasta in existing code.
+
+#### 2. How can I help someone else, or the entire team, to learn something new?
+By contributing in the team efforts, i.e. our user stries, towards the final product. Also by actively participating in our planner pair programming.
+
+#### 3. What is my contribution towards the team’s application of scrum?
+I've made sure the group has applied scrum and not diverted to much from the framework even if it has occasionally seemed tempting to do things differently.
+
+#### 4. What is my contribution towards the team’s deliveries?
+I've successfully implemented a grid-view into the application, and also gained a better knowledge about the internal structure of the application wich can be valuable further down the road.
+
+---
+
 ### Individual Reflection week 4
 
 #### 1. What do I want to learn or understand better?
