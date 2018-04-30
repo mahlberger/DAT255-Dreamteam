@@ -89,3 +89,29 @@ As the previous sprint, it has been to do my part in completing the tasks (which
 - Learning objective
 
 As stated above, learn how to implement a new "view" in the app and access this view from the menu in the app. 
+
+
+
+## Individual reflection week 5, 30/4 ##
+
+
+
+- What do I want to learn or understand better?
+
+For this sprint, my assigned tasks include displaying information from all timestamps for a given portcall (so that we later can display this information in the GANTT-chart). I therefore want to understand how to do exactly this right now.
+
+- How can I help someone else, or the entire team, to learn something new?
+
+We have divided tasks into groups of two. However, we will all sit together when we write code (mostly). We do this so that we can be easily available to each other if help is needed, which means that I will be open to help out with anything I can during the whole sprint. I will mainly help my peer programming mate understand and move forward, and he will do the same with me.
+
+- What is my contribution towards the team's application of Scrum?
+
+As earlier - been active in all the Scrum meetings. This past sprint my contribution has mainly been to complete my assigned tasks. I was also one of the team members who presented our progress to the PO's and discussed our prioritization of user stories with them. It is also worth mentioning that I have taken responsibility in my role as room booking responsible. 
+
+- What is my contribution towards the team's deliveries?
+
+As above - complete my tasks and help move the whole group forward by prioritizing user stories.
+
+- Learning objective
+
+My learning objective for this sprint is to learn what is needed to complete the sprint's task. 
