@@ -73,6 +73,8 @@ Trello, Anton Albinsson
 
 Git-ansvarig, Martin Ahlberger
 
+Chief time allocating officer (CTAO)  - Filip Wendelin 
+
 ## Tidslogg och dagbok
 Tidslogg fylls i enskilt av varej gruppmedlem. Finns ett gemensamt dokument i Drive. 
 
