@@ -145,4 +145,42 @@ Plan to get to next week's objectives:
 4. Trial and error 
 
 
+## Week 5
+
+### WHAT DO I WANT TO LEARN OR UNDERSTAND BETTER?
+Understand how the app works - how do different views correlate with each other, how do they communicate. 
+In order to do that, I need a better understanding of javascript. 
+
+### HOW CAN I HELP SOMEONE ELSE, OR THE ENTIRE TEAM, TO LEARN SOMETHING NEW?
+We are pair programming, and I’m programming with Anton. I will try to make sure we both understand how the stuff we change work and the understanding behind it. Me and Anton can also help other pair programmers with our mistakes to make the process for everybody more smooth. 
+If I learn javascribt better, I can help my fellows more. 
+
+
+### WHAT IS MY CONTRIBUTION TOWARDS THE TEAM’S APPLICATION OF SCRUM?
+Attending the meeting and helping to make sure we actually are doing some kind of scrum accoring to the rules. For instance how we do the review, retrospective and sprint-stuff. 
+Using Trello in a suitable way 
+Working on my user story and trying to finish it (my role a developer in the team)  
+As our scrum master had to leave on wednesday, I took his part in the scrum of scrum. There i took up the question about a chat-function between the actors. No one had the plan to develop even though some end users might appropriate it (we are probably not either implement it, since we focus on a specific view to the pilots instead). 
+
+### WHAT IS MY CONTRIBUTION TOWARDS THE TEAM’S DELIVERIES?
+*Worked on my user story that is about to fetch data about all berths that are among the favourites. Later that will be implemented in the Gantt scheme so we can show the PO our achievments. 
+Spend resonable time (20h isch) doing my user story 
+
+
+
+### Objectives 
+Last week objectives: 
+1. Understand the app and what we want to change - HALF DONE. Understand what we want to change, but not the app totaly. 
+2. Create a product (I'll be working on how we can handle subscribed portcalls) - NOT DONE, started, but everything take longer time than you thing. 
+3. Be able to create working code piece with react native. - DONE. Can create new text views, write stuff to the console etc. 
+
+Next week objectives: 
+1. Get last week user story done. 
+
+
+Plan to get to next week's objectives:
+1. Read code
+2. Pair programming
+3. Google 
+4. Trial and error 
 
