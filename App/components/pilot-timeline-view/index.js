@@ -27,15 +27,23 @@ export default class PilotTimeLineView extends Component {
   constructor(props) {
       super(props);
       this.state = {showChangeLog: false};
+
+    this.colWidth = 60;
+    this.HoursLookingBack = 48;
 	  this.rows = [];
 	  for(var i = 0; i < 1; i++){
 		  this.rows.push('');
 	  }
-	  
+
 	  this.cols = [];
 	  for(var j = 0; j < 10; j++){
 		  this.cols.push('');
 	  }
+
+    this.now = new Date();
+    var firstTime = new Date();
+    firstTime.setHours(this.now.getHours()-this.HoursLookingBack);
+    this.lineCurrentTimeOffSet = (this.now-firstTime)/(1000*60*60)/(this.colWidth*this.HoursLookingBack);
   }
 
   render() {
@@ -50,7 +58,7 @@ export default class PilotTimeLineView extends Component {
             onRequestClose={() => this.setState({showChangeLog: false})}
         >
             <TopHeader modal title="Change log" backArrowFunction={() => this.setState({showChangeLog: false})}/>
-            
+
         </Modal>
         <TopHeader
           title="Pilot Scheduling"
@@ -74,12 +82,12 @@ export default class PilotTimeLineView extends Component {
 								))
 							}
 						</Row>
-					  ))					
+					  ))
 					}
 				</Grid>
 			</ScrollView>
 		</ScrollView>
-        
+
       </View>
     );
   }
@@ -90,7 +98,7 @@ const styles = StyleSheet.create({
                 height: 200
         },
         col: {
-				width: 40,
+				width: 60,
                 borderRightColor: 'black',
                 borderRightWidth: 1
         },
@@ -99,10 +107,8 @@ const styles = StyleSheet.create({
 		   borderRightWidth: 2,
 		   position: 'absolute',
 		   top: 0,
-		   left: 40,
+		   left: this.lineCurrentTimeOffSet,
 		   width: 0,
 		   height: '100%'
 		}
 });
-
-
