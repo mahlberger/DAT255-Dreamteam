@@ -2,6 +2,7 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Col, Row, Grid } from "react-native-easy-grid";
 
 import {
   View,
@@ -47,6 +48,58 @@ export default class PilotTimeLineView extends Component {
           firstPage
           navigation={this.props.navigation}
         />
+        <ScrollView horizontal>
+			<Grid>
+				<Row>
+					<Col>
+						<Text>Row 1, Col 1</Text>
+					</Col>
+					<Col>
+						<Text>Row 1, Col 2</Text>
+					</Col>
+				</Row>
+				<Row>
+					<Col>
+						<Text>Row 2, Col 1</Text>
+					</Col>
+					<Col>
+						<Text>Row 2, Col 2</Text>
+					</Col>
+				</Row>
+				<Row>
+					<Col>
+						<Text>Row 1, Col 1</Text>
+					</Col>
+					<Col>
+						<Text>Row 1, Col 2</Text>
+					</Col>
+				</Row>
+				<Row>
+					<Col>
+						<Text>Row 2, Col 1</Text>
+					</Col>
+					<Col>
+						<Text>Row 2, Col 2</Text>
+					</Col>
+				</Row>
+				<Row>
+					<Col>
+						<Text>Row 1, Col 1</Text>
+					</Col>
+					<Col>
+						<Text>Row 1, Col 2</Text>
+					</Col>
+				</Row>
+				<Row>
+					<Col>
+						<Text>Row 2, Col 1</Text>
+					</Col>
+					<Col>
+						<Text>Row 2, Col 2</Text>
+					</Col>
+				</Row>
+			</Grid>
+		</ScrollView>
         
       </View>
     );
