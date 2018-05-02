@@ -33,7 +33,7 @@ export default class PilotTimeLineView extends Component {
 	  }
 	  
 	  this.cols = [];
-	  for(var j = 0; j < 30; j++){
+	  for(var j = 0; j < 10; j++){
 		  this.cols.push('');
 	  }
   }
@@ -59,7 +59,9 @@ export default class PilotTimeLineView extends Component {
         />
         <ScrollView>
 			<ScrollView horizontal={true}>
-				<Grid>
+				<Grid style={styles.container}>
+					<View style={styles.lineCurrentTime}>
+					</View>
 					{
 					  this.rows.map(( itemRow, keyRow ) =>
 					  (
@@ -85,13 +87,22 @@ export default class PilotTimeLineView extends Component {
 
 const styles = StyleSheet.create({
         row: {
-                height: 400
+                height: 200
         },
         col: {
 				width: 40,
                 borderRightColor: 'black',
                 borderRightWidth: 1
-        }
+        },
+		lineCurrentTime: {
+		   borderRightColor: 'red',
+		   borderRightWidth: 2,
+		   position: 'absolute',
+		   top: 0,
+		   left: 40,
+		   width: 0,
+		   height: '100%'
+		}
 });
 
 
