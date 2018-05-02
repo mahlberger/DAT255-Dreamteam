@@ -28,22 +28,22 @@ export default class PilotTimeLineView extends Component {
       super(props);
       this.state = {showChangeLog: false};
 
-    this.colWidth = 60;
-    this.HoursLookingBack = 48;
+      this.colWidth = 10;
+      this.HoursLookingBack = 48;
 	  this.rows = [];
 	  for(var i = 0; i < 1; i++){
 		  this.rows.push('');
 	  }
 
 	  this.cols = [];
-	  for(var j = 0; j < 10; j++){
+	  for(var j = 0; j < 24*4; j++){
 		  this.cols.push('');
 	  }
 
     this.now = new Date();
     var firstTime = new Date();
     firstTime.setHours(this.now.getHours()-this.HoursLookingBack);
-    this.lineCurrentTimeOffSet = (this.now-firstTime)/(1000*60*60)/(this.colWidth*this.HoursLookingBack);
+    this.lineCurrentTimeOffSet = (this.now-firstTime)/(1000*60*60)*(this.colWidth);
   }
 
   render() {
@@ -68,7 +68,17 @@ export default class PilotTimeLineView extends Component {
         <ScrollView>
 			<ScrollView horizontal={true}>
 				<Grid style={styles.container}>
-					<View style={styles.lineCurrentTime}>
+					<View style={
+						{
+						   borderRightColor: 'red',
+						   borderRightWidth: 2,
+						   position: 'absolute',
+						   top: 0,
+						   left: this.lineCurrentTimeOffSet,
+						   width: 0,
+						   height: '100%'
+						}
+					}>
 					</View>
 					{
 					  this.rows.map(( itemRow, keyRow ) =>
@@ -77,7 +87,7 @@ export default class PilotTimeLineView extends Component {
 							{
 								this.cols.map((itemCol, keyCol) =>
 								(
-									<Col key = { keyCol } style = { styles.col }>
+									<Col key = { keyCol } style = { styles.col}>
 									</Col>
 								))
 							}
@@ -98,7 +108,7 @@ const styles = StyleSheet.create({
                 height: 200
         },
         col: {
-				width: 60,
+				width: 10,
                 borderRightColor: 'black',
                 borderRightWidth: 1
         },
@@ -107,7 +117,7 @@ const styles = StyleSheet.create({
 		   borderRightWidth: 2,
 		   position: 'absolute',
 		   top: 0,
-		   left: this.lineCurrentTimeOffSet,
+		   left: global.lineCurrentTimeOffSet,
 		   width: 0,
 		   height: '100%'
 		}
