@@ -26,7 +26,16 @@ import colorScheme from '../../config/colors';
 export default class PilotTimeLineView extends Component {
   constructor(props) {
       super(props);
-      this.state = {showChangeLog: false}
+      this.state = {showChangeLog: false};
+	  this.rows = [];
+	  for(var i = 0; i < 1; i++){
+		  this.rows.push('');
+	  }
+	  
+	  this.cols = [];
+	  for(var j = 0; j < 30; j++){
+		  this.cols.push('');
+	  }
   }
 
   render() {
@@ -50,28 +59,21 @@ export default class PilotTimeLineView extends Component {
         />
         <ScrollView>
 			<ScrollView horizontal={true}>
-				<Grid style={styles.container}>
-					<Row style={styles.row}><Col style={styles.col}><Text>Lorem ipsum dolor sit...</Text></Col><Col><Text>Row 1, Col 2</Text></Col></Row>
-					<Row><Col><Text>Row 1, Col 1</Text></Col><Col><Text>Row 1, Col 2</Text></Col></Row>
-					<Row><Col><Text>Row 1, Col 1</Text></Col><Col><Text>Row 1, Col 2</Text></Col></Row>
-					<Row><Col><Text>Row 1, Col 1</Text></Col><Col><Text>Row 1, Col 2</Text></Col></Row>
-					<Row><Col><Text>Row 1, Col 1</Text></Col><Col><Text>Row 1, Col 2</Text></Col></Row>
-					<Row><Col><Text>Row 1, Col 1</Text></Col><Col><Text>Row 1, Col 2</Text></Col></Row>
-					<Row><Col><Text>Row 1, Col 1</Text></Col><Col><Text>Row 1, Col 2</Text></Col></Row>
-					<Row><Col><Text>Row 1, Col 1</Text></Col><Col><Text>Row 1, Col 2</Text></Col></Row>
-					<Row><Col><Text>Row 1, Col 1</Text></Col><Col><Text>Row 1, Col 2</Text></Col></Row>
-					<Row><Col><Text>Row 1, Col 1</Text></Col><Col><Text>Row 1, Col 2</Text></Col></Row>
-					<Row><Col><Text>Row 1, Col 1</Text></Col><Col><Text>Row 1, Col 2</Text></Col></Row>
-					<Row><Col><Text>Row 1, Col 1</Text></Col><Col><Text>Row 1, Col 2</Text></Col></Row>
-					<Row><Col><Text>Row 1, Col 1</Text></Col><Col><Text>Row 1, Col 2</Text></Col></Row>
-					<Row><Col><Text>Row 1, Col 1</Text></Col><Col><Text>Row 1, Col 2</Text></Col></Row>
-					<Row><Col><Text>Row 1, Col 1</Text></Col><Col><Text>Row 1, Col 2</Text></Col></Row>
-					<Row><Col><Text>Row 1, Col 1</Text></Col><Col><Text>Row 1, Col 2</Text></Col></Row>
-					<Row><Col><Text>Row 1, Col 1</Text></Col><Col><Text>Row 1, Col 2</Text></Col></Row>
-					<Row><Col><Text>Row 1, Col 1</Text></Col><Col><Text>Row 1, Col 2</Text></Col></Row>
-					<Row><Col><Text>Row 1, Col 1</Text></Col><Col><Text>Row 1, Col 2</Text></Col></Row>
-					<Row><Col><Text>Row 1, Col 1</Text></Col><Col><Text>Row 1, Col 2</Text></Col></Row>
-					<Row><Col><Text>Row 1, Col 1</Text></Col><Col><Text>Row 1, Col 2</Text></Col></Row>
+				<Grid>
+					{
+					  this.rows.map(( itemRow, keyRow ) =>
+					  (
+						<Row key = { keyRow } style = { styles.row }>
+							{
+								this.cols.map((itemCol, keyCol) =>
+								(
+									<Col key = { keyCol } style = { styles.col }>
+									</Col>
+								))
+							}
+						</Row>
+					  ))					
+					}
 				</Grid>
 			</ScrollView>
 		</ScrollView>
@@ -82,17 +84,13 @@ export default class PilotTimeLineView extends Component {
 }
 
 const styles = StyleSheet.create({
-        container: {
-                borderColor: 'black',
-                borderWidth: 1
-        },
         row: {
-                height: 40
+                height: 400
         },
         col: {
 				width: 40,
-                borderColor: 'black',
-                borderWidth: 1
+                borderRightColor: 'black',
+                borderRightWidth: 1
         }
 });
 
