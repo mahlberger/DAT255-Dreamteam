@@ -1,3 +1,4 @@
 # Custom ignores
 # bupa_docs/*
 .DS_Store
+App/android/app/src/dev19/java/host/exp/exponent/DetachBuildConstants.java
