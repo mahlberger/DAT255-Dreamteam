@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "expo": "^25.0.0",
+    "moment": "^2.22.1",
     "npm": "^4.6.1",
     "query-string": "^5.0.0",
     "react": "16.2.0",

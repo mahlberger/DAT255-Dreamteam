@@ -46,14 +46,14 @@ export default class PilotTimeLineView extends Component {
   intToTimeString(int) {
     time = moment().parse(int);
     if (int % 12 == 0) {
-      return time.format("HH:mm");
+      return time.format("llll");
     }
   }
 
   intToDateString(int) {
     time = moment().parse(int);
     if (int % 12 == 0) {
-      return time.format("D/M E");
+      return time.format("llll");
     }
     return "";
   }
