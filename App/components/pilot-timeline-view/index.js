@@ -33,30 +33,22 @@ export default class PilotTimeLineView extends Component {
 		  this.rows.push('');
 	  }
 	  
-    time = moment();
-    time.subtract(2, "days");
+    var currentTime = new Date();
+    currentTime.setDate(currentTime.getDate() -2);
 
-	  this.cols = [];
-	  for(var j = 0; j < 120;   j++){
-      time.add(1, "hour");
-		  this.cols.push({key: j, timeInt: time.unix()});
-	  }
-  }
+    this.cols = [];
+    for( var j = 0; j < 48; j++){
+    currentTime.setDate(currentTime.getDate() +1/24);
+      this.cols.push({key: j, timeInt: Math.floor(currentTime.getTime()/1000)});
+    }
 
   intToTimeString(int) {
-    time = moment().parse(int);
-    if (int % 12 == 0) {
-      return time.format("llll");
+    return int;
     }
-  }
 
   intToDateString(int) {
-    time = moment().parse(int);
-    if (int % 12 == 0) {
-      return time.format("llll");
+    return int;
     }
-    return "";
-  }
 
   render() {
     const BULLET = '\u2022';
