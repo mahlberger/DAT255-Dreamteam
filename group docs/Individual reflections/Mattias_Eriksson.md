@@ -1,5 +1,21 @@
 # Individual Reflection
 
+## Week 5
+- **what do I want to learn or understand better?**
+
+Last week I wrote that I wanted to improve more at javascript, and by looking a bit on tutorials and the given code I feel that I'm starting to get better with the syntax, but I still feel that react-native is a bit of a mystery with the rendering function. My goal still stands to learn more about javascript, though I will now focus more on react native.
+- **how can I help someone else, or the entire team, to learn something new?**
+
+I did not do a lot this sprint since I was sick and also had some deadlines that our bachelor thesis group had set which is were my focus has been this week. Therefore I wasn't able to see if I could help someone out with the coding, nor be present and explain written code. Next week I will be present and I will be able to explain the parts of the code we've been working to the rest of the team in, hopefully at least.
+
+- **what is my contribution towards the team’s application of scrum?**
+
+As said I was sick and therefore not present at our wednesday meeting, but I was present at monday and tried to, as always give my point of view of what we should be doing and how we should structure the sprint.
+
+- **what is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week's ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation).**
+
+I wasn't able to contribute much to the team's deliveries this week, but will try to catch up next week. As I did not start any coding, just looking at some of the given code and discussing a bit how we should do the GANTT-chart my goal here also stands, I want to learn more about rendering graphical objects in react native and also get a better basic understanding of how the code works. 
+
 ## Week 4
 - **what do I want to learn or understand better?**
 
