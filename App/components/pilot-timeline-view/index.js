@@ -23,12 +23,13 @@ import TopHeader from '../top-header-view';
 import { APP_VERSION } from '../../config/version';
 import colorScheme from '../../config/colors';
 
+const colWidth = 60;
+
 export default class PilotTimeLineView extends Component {
   constructor(props) {
       super(props);
       this.state = {showChangeLog: false};
 
-      this.colWidth = 10;
       this.HoursLookingBack = 48;
 	  this.rows = [];
 	  for(var i = 0; i < 1; i++){
@@ -43,7 +44,8 @@ export default class PilotTimeLineView extends Component {
     this.now = new Date();
     var firstTime = new Date();
     firstTime.setHours(this.now.getHours()-this.HoursLookingBack);
-    this.lineCurrentTimeOffSet = (this.now-firstTime)/(1000*60*60)*(this.colWidth);
+    this.lineCurrentTimeOffSet = ((this.now-firstTime)/(1000*60*60))*(colWidth);
+    console.log(colWidth);
   }
 
   render() {
@@ -108,9 +110,9 @@ const styles = StyleSheet.create({
                 height: 200
         },
         col: {
-				width: 10,
-                borderRightColor: 'black',
-                borderRightWidth: 1
+				width: colWidth,
+        borderRightColor: 'black',
+        borderRightWidth: 1
         },
 		lineCurrentTime: {
 		   borderRightColor: 'red',
