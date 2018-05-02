@@ -24,22 +24,31 @@ import TopHeader from '../top-header-view';
 import { APP_VERSION } from '../../config/version';
 import colorScheme from '../../config/colors';
 
+const colWidth = 60;
+const HoursLookingBack = 48;
+
 export default class PilotTimeLineView extends Component {
   constructor(props) {
-    super(props);
-    this.state = {showChangeLog: false};
+      super(props);
+      this.state = {showChangeLog: false};
+
 	  this.rows = [];
 	  for(var i = 1; i < 4;  i++){
 		  this.rows.push('');
 	  }
-	  
-    var firstTime = new Date();
-    firstTime.setTime(firstTime.getTime() - 1000*60*60*24*3); //remove 2 days 
-    firstTime.setTime(Math.floor(firstTime.getTime()/1000/60/60)*1000*60*60); //round to hours 
+
+    this.now = new Date();
+    
+    var firstTime = new Date(Math.floor(this.now.getTime()/1000/60/60)*1000*60*60);
+    firstTime.setHours(firstTime.getHours()-HoursLookingBack); 
+    
+    this.lineCurrentTimeOffSet = ((this.now-firstTime)/(1000*60*60))*(colWidth); 
+    console.log(colWidth);
+    
     console.log("Firstime: " + firstTime.getTime());
 
     this.cols = [];
-    for( var j = 0; j < 48; j++){
+    for( var j = 0; j < 96; j++){
       
       currentTime = new Date();
       currentTime.setTime(firstTime.getTime() + 1000*60*60*j); //add one hour
@@ -60,6 +69,15 @@ export default class PilotTimeLineView extends Component {
     return "";
   }
 
+  componentDidMount() {
+    console.log(78);
+    const fx = () => this.refs._scrollViewHorizontal.scrollTo({
+      x: this.lineCurrentTimeOffSet - Dimensions.get('window').width/2,
+      animated: false
+    });
+    timerid = setTimeout( fx, 30 );
+  }
+
   render() {
     const BULLET = '\u2022';
     return(
@@ -72,7 +90,7 @@ export default class PilotTimeLineView extends Component {
             onRequestClose={() => this.setState({showChangeLog: false})}
         >
             <TopHeader modal title="Change log" backArrowFunction={() => this.setState({showChangeLog: false})}/>
-            
+
         </Modal>
         <TopHeader
           title="Pilot Scheduling"
@@ -80,67 +98,83 @@ export default class PilotTimeLineView extends Component {
           navigation={this.props.navigation}
         />
         <ScrollView>
-			<ScrollView horizontal={true}>
-				<Grid>
+			<ScrollView ref='_scrollViewHorizontal' horizontal={true}> 
+				<Grid style={styles.container}>
+					<View style={
+						{
+						   borderRightColor: 'red',
+						   borderRightWidth: 2,
+						   position: 'absolute',
+						   top: 0,
+						   left: this.lineCurrentTimeOffSet,
+						   width: 0,
+						   height: '100%'
+						}
+					}>
+					</View>
             <Row key = { 0 } style = { styles.row }>
               {
                 this.cols.map((itemCol, keyCol) =>
                 (
 
                   <Col key = { keyCol } style = { styles.col2}>
-                    <Text style = {styles.colText}>{this.intToDateString(itemCol.timeObj)}{'\n'}{this.intToTimeString(itemCol.timeObj)}</Text>
+                    <Text style = {styles.colText}>{this.intToDateString(itemCol.timeObj)}{'\n'}{this.intToTimeString(itemCol.timeObj)}</Text>  
 
 
                   </Col>
                 ))
               }
             </Row>
-        
-          {
-            this.rows.map(( itemRow, keyRow ) =>
-            (
-            <Row key = { keyRow } style = { styles.row }>
-              {
-                this.cols.map((itemCol, keyCol) =>
-                (
-                  <Col key = { keyCol } style = { styles.col }>
-                  </Col>
-                ))
-              }
-            </Row>
-            ))          
-          }
-        </Grid>
+					{
+					  this.rows.map(( itemRow, keyRow ) =>
+					  (
+						<Row key = { keyRow } style = { styles.row }>
+							{
+								this.cols.map((itemCol, keyCol) =>
+								(
+									<Col key = { keyCol } style = { styles.col}>
+									</Col>
+								))
+							}
+						</Row>
+					  ))
+					}
+				</Grid>
 			</ScrollView>
 		</ScrollView>
-        
+
       </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-        row: {
-                height: 40
-        },
-        col: {
-				  width: 60,
-          borderRightColor: 'black',
-          borderRightWidth: 1
-        },
-        col2: {
-          width: 60,
-          borderRightColor: 'transparent',
-          borderRightWidth: 1,
-          position: 'relative',
-          left: -30,
-          alignContent: 'center'
-        },
-        colText: {
-          textAlign: 'center'
-        }
-
-     
+    row: {
+      height: 200
+    },
+    col: {
+		  width: colWidth,
+      borderRightColor: 'black',
+      borderRightWidth: 1
+    },
+    col2: {
+      width: 60,
+      borderRightColor: 'transparent',
+      borderRightWidth: 1,
+      position: 'relative',
+      left: -30,
+      alignContent: 'center'
+    },
+    colText: {
+      textAlign: 'center'
+    },
+		lineCurrentTime: {
+		   borderRightColor: 'red',
+		   borderRightWidth: 2,
+		   position: 'absolute',
+		   top: 0,
+		   left: global.lineCurrentTimeOffSet,
+		   width: 0,
+		   height: '100%'
+		}
 });
-
-
