@@ -38,6 +38,10 @@ export default class PilotTimeLineView extends Component {
 	  }
   }
 
+  intToTimeString(int) {
+    return int + ":00";
+  }
+
   render() {
     const BULLET = '\u2022';
     return(
@@ -65,7 +69,7 @@ export default class PilotTimeLineView extends Component {
                 this.cols.map((itemCol, keyCol) =>
                 (
                   <Col key = { keyCol } style = { styles.col }>
-                    <Text>{"japp"}</Text>
+                    <Text style = {styles.colText}>{this.intToTimeString(keyCol)}</Text>
                   </Col>
                 ))
               }
@@ -99,9 +103,15 @@ const styles = StyleSheet.create({
                 height: 40
         },
         col: {
-				width: 40,
-                borderRightColor: 'black',
-                borderRightWidth: 1
+	        width: 60,
+          borderRightColor: 'black',
+          borderRightWidth: 1,
+          overflow: 'visible'
+        },
+        colText: {
+          position: 'relative',
+          left: -3,
+
         }
 });
 
