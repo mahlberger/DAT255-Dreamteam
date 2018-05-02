@@ -26,6 +26,7 @@ import colorScheme from '../../config/colors';
 
 const colWidth = 60;
 const HoursLookingBack = 48;
+const portcallIndex = 0;
 
 export default class PilotTimeLineView extends Component {
   constructor(props) {
@@ -37,26 +38,41 @@ export default class PilotTimeLineView extends Component {
 		  this.rows.push('');
 	  }
 
+    this.cols = [];
+    for(var j = 0; j < 24*4; j++){
+      this.cols.push('');
+    }
+
+    this.portCalls = [];
+    for(var j = 0; j < 2; j++){
+      this.portCalls.push(new Date());
+    }
+
+    // Test för datum
+    var testDate = new Date();
+    testDate.setHours(testDate.getHours()+2);
+    this.portCalls.push(testDate);
+
     this.now = new Date();
     
-    var firstTime = new Date(Math.floor(this.now.getTime()/1000/60/60)*1000*60*60);
-    firstTime.setHours(firstTime.getHours()-HoursLookingBack); 
+    this.firstTime = new Date(Math.floor(this.now.getTime()/1000/60/60)*1000*60*60);
+    this.firstTime.setHours(this.firstTime.getHours()-HoursLookingBack); 
     
-    this.lineCurrentTimeOffSet = ((this.now-firstTime)/(1000*60*60))*(colWidth); 
+    this.lineCurrentTimeOffSet = ((this.now-this.firstTime)/(1000*60*60))*(colWidth); 
     console.log(colWidth);
     
-    console.log("Firstime: " + firstTime.getTime());
+    console.log("Firstime: " + this.firstTime.getTime());
 
     this.cols = [];
     for( var j = 0; j < 96; j++){
       
       currentTime = new Date();
-      currentTime.setTime(firstTime.getTime() + 1000*60*60*j); //add one hour
+      currentTime.setTime(this.firstTime.getTime() + 1000*60*60*j); //add one hour
       console.log("Firstime: " + currentTime.getTime());
       this.cols.push({key: j, timeObj: currentTime});
     }
   }
- 
+
   intToTimeString(timeObj) {
     return timeObj.getHours() + ':' + timeObj.getMinutes();
   }
@@ -76,6 +92,13 @@ export default class PilotTimeLineView extends Component {
       animated: false
     });
     timerid = setTimeout( fx, 30 );
+  }
+
+  getLeftOffSet(date){
+      var offset;
+      offset = ((date-this.firstTime)/(1000*60*60))*(colWidth);
+      console.log(offset);
+      return offset;
   }
 
   render() {
@@ -139,6 +162,22 @@ export default class PilotTimeLineView extends Component {
 						</Row>
 					  ))
 					}
+          {
+            this.portCalls.map((item, key) =>
+            (
+              <View key = { key } style = { {
+                width: 20,
+                height: 20,
+                borderColor: 'blue',
+                borderWidth: 2,
+                position: 'absolute',
+                left: this.getLeftOffSet(item.getTime()),
+                top: portcallIndex++*40 
+
+              }}>
+              </View>
+            ))
+          }
 				</Grid>
 			</ScrollView>
 		</ScrollView>
@@ -163,10 +202,18 @@ const styles = StyleSheet.create({
       borderRightWidth: 1,
       position: 'relative',
       left: -30,
-      alignContent: 'center'
+      alignContent: 'center' 
     },
     colText: {
       textAlign: 'center'
+    },
+    square: {
+      width: 20,
+      height: 20,
+      borderColor: 'blue',
+      borderWidth: 2,
+      position: 'absolute'
+
     },
 		lineCurrentTime: {
 		   borderRightColor: 'red',
