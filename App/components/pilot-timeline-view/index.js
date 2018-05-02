@@ -3,6 +3,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Col, Row, Grid } from "react-native-easy-grid";
+import moment from 'moment';
 
 import {
   View,
@@ -25,21 +26,36 @@ import colorScheme from '../../config/colors';
 
 export default class PilotTimeLineView extends Component {
   constructor(props) {
-      super(props);
-      this.state = {showChangeLog: false};
+    super(props);
+    this.state = {showChangeLog: false};
 	  this.rows = [];
 	  for(var i = 1; i < 4;  i++){
 		  this.rows.push('');
 	  }
 	  
+    time = moment();
+    time.subtract(2, "days");
+
 	  this.cols = [];
-	  for(var j = 0; j < 24;  j++){
-		  this.cols.push('');
+	  for(var j = 0; j < 120;   j++){
+      time.add(1, "hour");
+		  this.cols.push({key: j, timeInt: time.unix()});
 	  }
   }
 
   intToTimeString(int) {
-    return int + ":00";
+    time = moment().parse(int);
+    if (int % 12 == 0) {
+      return time.format("HH:mm");
+    }
+  }
+
+  intToDateString(int) {
+    time = moment().parse(int);
+    if (int % 12 == 0) {
+      return time.format("D/M E");
+    }
+    return "";
   }
 
   render() {
@@ -70,7 +86,8 @@ export default class PilotTimeLineView extends Component {
                 (
 
                   <Col key = { keyCol } style = { styles.col2}>
-                    <Text style = {styles.colText}>{this.intToTimeString(keyCol)}</Text>
+                    <Text style = {styles.colText}>{this.intToDateString(itemCol.timeInt)}{'\n'}{this.intToTimeString(itemCol.timeInt)}</Text>
+
 
                   </Col>
                 ))
@@ -105,18 +122,20 @@ const styles = StyleSheet.create({
                 height: 40
         },
         col: {
-				width: 40,
-                borderRightColor: 'black',
-                borderRightWidth: 1
+				  width: 60,
+          borderRightColor: 'black',
+          borderRightWidth: 1
         },
-       col2: {
-        width: 60,
-                borderRightColor: '#e3e3e3',
-                borderRightWidth: 1
-        },
-        colText: {
+        col2: {
+          width: 60,
+          borderRightColor: 'transparent',
+          borderRightWidth: 1,
           position: 'relative',
-          left: -3,
+          left: -30,
+          alignContent: 'center'
+        },
+        colText: {
+          textAlign: 'center'
         }
 
      
