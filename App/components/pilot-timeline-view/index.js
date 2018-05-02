@@ -33,22 +33,32 @@ export default class PilotTimeLineView extends Component {
 		  this.rows.push('');
 	  }
 	  
-    var currentTime = new Date();
-    currentTime.setDate(currentTime.getDate() -2);
+    var firstTime = new Date();
+    firstTime.setTime(firstTime.getTime() - 1000*60*60*24*3); //remove 2 days 
+    firstTime.setTime(Math.floor(firstTime.getTime()/1000/60/60)*1000*60*60); //round to hours 
+    console.log("Firstime: " + firstTime.getTime());
 
     this.cols = [];
     for( var j = 0; j < 48; j++){
-    currentTime.setDate(currentTime.getDate() +1/24);
-      this.cols.push({key: j, timeInt: Math.floor(currentTime.getTime()/1000)});
+      
+      currentTime = new Date();
+      currentTime.setTime(firstTime.getTime() + 1000*60*60*j); //add one hour
+      console.log("Firstime: " + currentTime.getTime());
+      this.cols.push({key: j, timeObj: currentTime});
     }
+  }
+ 
+  intToTimeString(timeObj) {
+    return timeObj.getHours() + ':' + timeObj.getMinutes();
+  }
 
-  intToTimeString(int) {
-    return int;
+  intToDateString(timeObj) {
+    if (timeObj.getHours() % 12 == 0) { 
+      console.log(timeObj.getTime());
+      return (timeObj.getDate()) + '/' + (timeObj.getMonth()+1);   
     }
-
-  intToDateString(int) {
-    return int;
-    }
+    return "";
+  }
 
   render() {
     const BULLET = '\u2022';
@@ -78,7 +88,7 @@ export default class PilotTimeLineView extends Component {
                 (
 
                   <Col key = { keyCol } style = { styles.col2}>
-                    <Text style = {styles.colText}>{this.intToDateString(itemCol.timeInt)}{'\n'}{this.intToTimeString(itemCol.timeInt)}</Text>
+                    <Text style = {styles.colText}>{this.intToDateString(itemCol.timeObj)}{'\n'}{this.intToTimeString(itemCol.timeObj)}</Text>
 
 
                   </Col>
