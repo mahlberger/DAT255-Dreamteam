@@ -105,7 +105,6 @@ const styles = StyleSheet.create({
                 height: 40
         },
         col: {
-<<<<<<< HEAD
 				width: 40,
                 borderRightColor: 'black',
                 borderRightWidth: 1
