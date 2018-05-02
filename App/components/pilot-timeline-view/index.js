@@ -24,14 +24,16 @@ import { APP_VERSION } from '../../config/version';
 import colorScheme from '../../config/colors';
 
 const colWidth = 60;
+const portcallIndex = 0;
 
 export default class PilotTimeLineView extends Component {
   constructor(props) {
       super(props);
       this.state = {showChangeLog: false};
 
-      this.HoursLookingBack = 48;
+    this.HoursLookingBack = 48;
 	  this.rows = [];
+    this.portCalls = [];
 	  for(var i = 0; i < 1; i++){
 		  this.rows.push('');
 	  }
@@ -41,11 +43,24 @@ export default class PilotTimeLineView extends Component {
 		  this.cols.push('');
 	  }
 
+    for(var j = 0; j < 2; j++){
+      this.portCalls.push(new Date());
+    }
+
+    // Test för datum
+    var testDate = new Date();
+    testDate.setHours(testDate.getHours()+2);
+    this.portCalls.push(testDate);
+
     this.now = new Date();
-    var firstTime = new Date();
-    firstTime.setHours(this.now.getHours()-this.HoursLookingBack);
-    this.lineCurrentTimeOffSet = ((this.now-firstTime)/(1000*60*60))*(colWidth);
-    console.log(colWidth);
+    this.firstTime = new Date();
+    this.firstTime.setHours(this.now.getHours()-this.HoursLookingBack);
+    this.lineCurrentTimeOffSet = this.getLeftOffSet(this.now);
+  }
+
+  getLeftOffSet(date){
+      var offSet;
+      return offSet = ((date-this.firstTime)/(1000*60*60))*(colWidth);
   }
 
   render() {
@@ -96,6 +111,22 @@ export default class PilotTimeLineView extends Component {
 						</Row>
 					  ))
 					}
+          {
+            this.portCalls.map((item, key) =>
+            (
+              <View key = { key } style = { {
+                width: 20,
+                height: 20,
+                borderColor: 'blue',
+                borderWidth: 2,
+                position: 'absolute',
+                left: this.getLeftOffSet(item.getTime()),
+                top: portcallIndex++*20
+
+              }}>
+              </View>
+            ))
+          }
 				</Grid>
 			</ScrollView>
 		</ScrollView>
@@ -113,6 +144,14 @@ const styles = StyleSheet.create({
 				width: colWidth,
         borderRightColor: 'black',
         borderRightWidth: 1
+        },
+        square: {
+          width: 20,
+          height: 20,
+          borderColor: 'blue',
+          borderWidth: 2,
+          position: 'absolute'
+
         },
 		lineCurrentTime: {
 		   borderRightColor: 'red',
