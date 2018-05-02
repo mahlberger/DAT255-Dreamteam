@@ -28,12 +28,12 @@ export default class PilotTimeLineView extends Component {
       super(props);
       this.state = {showChangeLog: false};
 	  this.rows = [];
-	  for(var i = 0; i < 1; i++){
+	  for(var i = 1; i < 4;  i++){
 		  this.rows.push('');
 	  }
 	  
 	  this.cols = [];
-	  for(var j = 0; j < 30; j++){
+	  for(var j = 0; j < 24;  j++){
 		  this.cols.push('');
 	  }
   }
@@ -60,21 +60,32 @@ export default class PilotTimeLineView extends Component {
         <ScrollView>
 			<ScrollView horizontal={true}>
 				<Grid>
-					{
-					  this.rows.map(( itemRow, keyRow ) =>
-					  (
-						<Row key = { keyRow } style = { styles.row }>
-							{
-								this.cols.map((itemCol, keyCol) =>
-								(
-									<Col key = { keyCol } style = { styles.col }>
-									</Col>
-								))
-							}
-						</Row>
-					  ))					
-					}
-				</Grid>
+            <Row key = { 0 } style = { styles.row }>
+              {
+                this.cols.map((itemCol, keyCol) =>
+                (
+                  <Col key = { keyCol } style = { styles.col }>
+                    <Text>{"japp"}</Text>
+                  </Col>
+                ))
+              }
+            </Row>
+        
+          {
+            this.rows.map(( itemRow, keyRow ) =>
+            (
+            <Row key = { keyRow } style = { styles.row }>
+              {
+                this.cols.map((itemCol, keyCol) =>
+                (
+                  <Col key = { keyCol } style = { styles.col }>
+                  </Col>
+                ))
+              }
+            </Row>
+            ))          
+          }
+        </Grid>
 			</ScrollView>
 		</ScrollView>
         
@@ -85,7 +96,7 @@ export default class PilotTimeLineView extends Component {
 
 const styles = StyleSheet.create({
         row: {
-                height: 400
+                height: 40
         },
         col: {
 				width: 40,
