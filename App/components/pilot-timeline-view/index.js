@@ -48,57 +48,32 @@ export default class PilotTimeLineView extends Component {
           firstPage
           navigation={this.props.navigation}
         />
-        <ScrollView horizontal>
-			<Grid>
-				<Row>
-					<Col>
-						<Text>Row 1, Col 1</Text>
-					</Col>
-					<Col>
-						<Text>Row 1, Col 2</Text>
-					</Col>
-				</Row>
-				<Row>
-					<Col>
-						<Text>Row 2, Col 1</Text>
-					</Col>
-					<Col>
-						<Text>Row 2, Col 2</Text>
-					</Col>
-				</Row>
-				<Row>
-					<Col>
-						<Text>Row 1, Col 1</Text>
-					</Col>
-					<Col>
-						<Text>Row 1, Col 2</Text>
-					</Col>
-				</Row>
-				<Row>
-					<Col>
-						<Text>Row 2, Col 1</Text>
-					</Col>
-					<Col>
-						<Text>Row 2, Col 2</Text>
-					</Col>
-				</Row>
-				<Row>
-					<Col>
-						<Text>Row 1, Col 1</Text>
-					</Col>
-					<Col>
-						<Text>Row 1, Col 2</Text>
-					</Col>
-				</Row>
-				<Row>
-					<Col>
-						<Text>Row 2, Col 1</Text>
-					</Col>
-					<Col>
-						<Text>Row 2, Col 2</Text>
-					</Col>
-				</Row>
-			</Grid>
+        <ScrollView>
+			<ScrollView horizontal={true}>
+				<Grid>
+					<Row><Col><Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dignissim posuere fringilla. Duis vitae viverra leo. Donec fermentum ante at elit egestas, quis venenatis risus luctus. Curabitur feugiat sit amet ligula a rutrum. Nulla fermentum id nisi quis sodales. Mauris efficitur pulvinar enim, nec elementum libero gravida vitae. Ut maximus finibus diam. Sed faucibus nulla et volutpat cursus. Integer vitae justo sed turpis suscipit accumsan. Curabitur metus ante, maximus sed pulvinar at, laoreet sit amet urna. Morbi ullamcorper dui mi, sed finibus sem accumsan eu. Donec accumsan ultrices nunc sed convallis.</Text></Col><Col><Text>Row 1, Col 2</Text></Col></Row>
+					<Row><Col><Text>Row 1, Col 1</Text></Col><Col><Text>Row 1, Col 2</Text></Col></Row>
+					<Row><Col><Text>Row 1, Col 1</Text></Col><Col><Text>Row 1, Col 2</Text></Col></Row>
+					<Row><Col><Text>Row 1, Col 1</Text></Col><Col><Text>Row 1, Col 2</Text></Col></Row>
+					<Row><Col><Text>Row 1, Col 1</Text></Col><Col><Text>Row 1, Col 2</Text></Col></Row>
+					<Row><Col><Text>Row 1, Col 1</Text></Col><Col><Text>Row 1, Col 2</Text></Col></Row>
+					<Row><Col><Text>Row 1, Col 1</Text></Col><Col><Text>Row 1, Col 2</Text></Col></Row>
+					<Row><Col><Text>Row 1, Col 1</Text></Col><Col><Text>Row 1, Col 2</Text></Col></Row>
+					<Row><Col><Text>Row 1, Col 1</Text></Col><Col><Text>Row 1, Col 2</Text></Col></Row>
+					<Row><Col><Text>Row 1, Col 1</Text></Col><Col><Text>Row 1, Col 2</Text></Col></Row>
+					<Row><Col><Text>Row 1, Col 1</Text></Col><Col><Text>Row 1, Col 2</Text></Col></Row>
+					<Row><Col><Text>Row 1, Col 1</Text></Col><Col><Text>Row 1, Col 2</Text></Col></Row>
+					<Row><Col><Text>Row 1, Col 1</Text></Col><Col><Text>Row 1, Col 2</Text></Col></Row>
+					<Row><Col><Text>Row 1, Col 1</Text></Col><Col><Text>Row 1, Col 2</Text></Col></Row>
+					<Row><Col><Text>Row 1, Col 1</Text></Col><Col><Text>Row 1, Col 2</Text></Col></Row>
+					<Row><Col><Text>Row 1, Col 1</Text></Col><Col><Text>Row 1, Col 2</Text></Col></Row>
+					<Row><Col><Text>Row 1, Col 1</Text></Col><Col><Text>Row 1, Col 2</Text></Col></Row>
+					<Row><Col><Text>Row 1, Col 1</Text></Col><Col><Text>Row 1, Col 2</Text></Col></Row>
+					<Row><Col><Text>Row 1, Col 1</Text></Col><Col><Text>Row 1, Col 2</Text></Col></Row>
+					<Row><Col><Text>Row 1, Col 1</Text></Col><Col><Text>Row 1, Col 2</Text></Col></Row>
+					<Row><Col><Text>Row 1, Col 1</Text></Col><Col><Text>Row 1, Col 2</Text></Col></Row>
+				</Grid>
+			</ScrollView>
 		</ScrollView>
         
       </View>
