@@ -64,7 +64,7 @@ export default class PilotTimeLineView extends Component {
               {
                 this.cols.map((itemCol, keyCol) =>
                 (
-                  <Col key = { keyCol } style = { styles.col }>
+                  <Col key = { keyCol } style = { styles.col2}>
                     <Text>{"japp"}</Text>
                   </Col>
                 ))
@@ -102,7 +102,14 @@ const styles = StyleSheet.create({
 				width: 40,
                 borderRightColor: 'black',
                 borderRightWidth: 1
+        },
+       col2: {
+        width: 40,
+                borderRightColor: '#e3e3e3',
+                borderRightWidth: 1
         }
+
+     
 });
 
 
