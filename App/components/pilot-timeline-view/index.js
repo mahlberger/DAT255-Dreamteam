@@ -41,12 +41,13 @@ class PilotTimeLineView extends Component {
   constructor(props) {
       super(props);
       const {portCalls} = this.props;
+      var listOfFavoritePortcalls = this.props.favoritePortCalls;
       var text = "Hello World2!";
       var text2;
       this.state = { numLoadedPortCalls: 20,};
-      this.search(portCalls, "Marinus").map( (portCall) => ( text2 = portCall.
+      this.search(portCalls, "Marinus").map( (portCall) => ( text2 = portCall.vessel.imo
                             ))
-      var timestamp = this.props.fetchPortCallEvents();
+      //var timestamp = this.props.fetchPortCallEvents();
       this.state = {showChangeLog: false, titleText: "Hejsan", hw: text2};
       //search(portCalls, "Hanna")
   }
@@ -73,13 +74,15 @@ class PilotTimeLineView extends Component {
 
         <View>
           <View>
-            <Text>{this.state.hw}</Text>
+            <Text>
+              {this.state.hw}
+            </Text>
           </View>
         </View>
       </View>
     );
   }
-
+//{listOfFavoritePortcalls.toString()}
   search(portCalls, searchTerm) {
         let { filters } = this.props;
         
