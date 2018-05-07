@@ -2,7 +2,6 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Col, Row, Grid } from "react-native-easy-grid";
 import moment from 'moment';
 
 import {
