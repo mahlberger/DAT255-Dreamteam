@@ -115,3 +115,29 @@ As above - complete my tasks and help move the whole group forward by prioritizi
 - Learning objective
 
 My learning objective for this sprint is to learn what is needed to complete the sprint's task. 
+
+
+
+## Individual reflection week 6, 7/5 ##
+
+
+
+- What do I want to learn or understand better?
+
+I currently want to deepen my knowledge about how to fetch data about timestamps from the backend and to translate this into a graphical format in the grid system we are implementing. I also want to get better at estimating User Stories and tasks, as this is connected to a new KPI we are evaluating this coming sprint. 
+
+- How can I help someone else, or the entire team, to learn something new?
+
+Since my peer and I were not able to fully complete our assigned tasks for last sprint (as they proved to take more time than estimated), we decided to share the rest of the tasks with another pair within the team. We will therefore need to share our made progress and knowledge with them, so that everyone is on the same level when we finish the rest of the tasks. 
+
+- What is my contribution towards the team's application of Scrum?
+
+During today's Sprint Retrospective, I helped develop the new KPI about estimation accuracy. We are for this sprint going to put this new KPI on trial and will replace one of the current ones if it works out well. I took an active role in the rest of the meeting as well, for example I partaked in planning which User Stories that would be taken on for this sprint and how they should prioritized. A lot of the things I wrote about last week are relevant this week as well. 
+
+- What is my contribution towards the team's deliveries?
+
+To complete my assigned task - which is a requirement for my team mates to implement timestamp information in the grid. 
+
+- Learning objective
+
+To learn how to fetch information from timestamps in the app. 
