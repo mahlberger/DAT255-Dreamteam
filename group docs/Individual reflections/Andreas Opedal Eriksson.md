@@ -132,7 +132,7 @@ Since my peer and I were not able to fully complete our assigned tasks for last 
 
 - What is my contribution towards the team's application of Scrum?
 
-During today's Sprint Retrospective, I helped develop the new KPI about estimation accuracy. We are for this sprint going to put this new KPI on trial and will replace one of the current ones if it works out well. I took an active role in the rest of the meeting as well, for example I partaked in planning which User Stories that would be taken on for this sprint and how they should prioritized. A lot of the things I wrote about last week are relevant this week as well. 
+During today's Sprint Retrospective, I helped develop the new KPI about estimation accuracy. We are for this sprint going to put this new KPI on trial and will replace one of the current ones if it works out well. I was also a driving force behind us getting a structured way of using DoD's. I took an active role in the rest of the meeting as well, for example I partaked in planning which User Stories that would be taken on for this sprint and how they should prioritized. A lot of the things I wrote about last week are relevant this week as well. 
 
 - What is my contribution towards the team's deliveries?
 
