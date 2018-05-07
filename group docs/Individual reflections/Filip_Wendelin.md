@@ -184,3 +184,41 @@ Plan to get to next week's objectives:
 3. Google 
 4. Trial and error 
 
+## Week 6
+
+### WHAT DO I WANT TO LEARN OR UNDERSTAND BETTER?
+I want to understand the backend of the app better, more precisely I want to fully understand how the where and how the portcalls are stored, and also if there are two different storing areas for favorited portcalls and the one that are ordinary. By doing that, I will be easier to fetch the data we need, like ETA:s and statuses on vessels. I also want to improve my estimation of tasks and user stories since we’ll start with a new KPI about that this week. Though I believe that is very much about gut feeling. 
+
+I also started looking on different code testing methods. That’s an area I want more knowledge about if we have time to do it the last sprint. 
+
+### HOW CAN I HELP SOMEONE ELSE, OR THE ENTIRE TEAM, TO LEARN SOMETHING NEW?
+
+Me and Anton finished with our user story last sprint where we created an array with all the  favouritezed PortCalls to our view. Since we got a little hang of it how it could be done, this week we will help another pair that caught problem with fetching data from a portcall/portcallID. In that way, we can contribute by what we did and what we tried. 
+I also took initiative to ask Pontus (tech support) questions that provided help for the entire team. 
+
+
+### WHAT IS MY CONTRIBUTION TOWARDS THE TEAM’S APPLICATION OF SCRUM?
+Keeping attending all meetings, talking to the productowner etc. I take part of discussions, like this week when we created a new KPI about precision of estimation of tasks. I also made sure that our definition of done would be the best way possible - I want a concrete results that can be shared among the team, and not just “Now I understand how it works” since it’s hard to spread the knowledge. Also contributing by writing and discussion about the retrospective. 
+
+
+
+### WHAT IS MY CONTRIBUTION TOWARDS THE TEAM’S DELIVERIES?
+I worked my hours and I did my assign user story. Since my user story ended when I had some working time left, I started to look on how we can test the code with a third part library like snapshot with JEST. I started a discussion about how we should look on the testing, and that we probably should prioritise coding for the app instead, since the PO:s are not going to use our code immodesty, but want our ideas. There it creates more value by coding what we think.  
+
+
+
+### Objectives 
+Last week objectives: 
+1. Get last week user story done. - DONE. Creates a nice feeling in the gut. Thanks to Pontus it took a lot less time than we thought - we had no idea we were working with react redux as well. 
+
+Next week objectives: 
+Get my assigned user stories done
+Understand Javascript better (which I’m doing every week)
+Think about how long it takes to do the user stories (and tasks) in order to improve it and for the new KPI. 
+
+
+Plan to get to next week's objectives:
+1. Read code and trial and error. 
+2. Pair programming
+3. Be conscious about the time for each task and if it can get more efficient. 
+
