@@ -1,5 +1,22 @@
 # Individual Reflection
 
+## Week 6
+- **what do I want to learn or understand better?**
+
+I feel that I do understand react-native a bit more, and my javascript is getting better and better. These are still things that I want to improve on, but I do also feel that I need to improve more on the process. I believe that I know quite a bit about the scrum-process now but I feel that the user story and task thing are things I can improve more on. Especially the estimates. It helps that we do this in group and can discuss, and by just doing more I hope that I will improve.
+
+- **how can I help someone else, or the entire team, to learn something new?**
+
+We've made quite some progress this week and sprint and I feel that doing pair programming is great. While one is doing some code it is much easier for the other one to spot mistakes which could maybe take some time to find if not found instantaneously. I feel that we help each other a lot this way and will probably be the way I can help someone else except for technical struggles.  
+
+- **what is my contribution towards the team’s application of scrum?**
+
+I've been present at the meatings and I've pointed out some errors in our user story progress, mostly about having a priority, but also just by giving my point of view. 
+
+- **what is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week's ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation).**
+
+This week and sprint we've started to render vertical lines for each our as in a calendar/GANTT-chart and also render a vertical line for the current time which is working. We've also added graphical representation that will be used to present timestamps/port calls so I feel that I now have some understanding about rendering things in react native. Our goal now is to actually not just render a random blue box but actually connect it with a port call and for this I will need to understand states a lot more so that is my goal this week, understanding and hopefully be able to implement something related.
+
 ## Week 5
 - **what do I want to learn or understand better?**
 
