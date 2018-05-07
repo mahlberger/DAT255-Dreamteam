@@ -29,6 +29,7 @@ import {
     appendPortCalls,
     bufferPortCalls,
     setError,
+    fetchPortCallEvents,
  } from '../../actions';
 
 
@@ -43,8 +44,9 @@ class PilotTimeLineView extends Component {
       var text = "Hello World2!";
       var text2;
       this.state = { numLoadedPortCalls: 20,};
-      this.search(portCalls, "Marinus").map( (portCall) => ( text2 = portCall.vessel.imo
+      this.search(portCalls, "Marinus").map( (portCall) => ( text2 = portCall.
                             ))
+      var timestamp = this.props.fetchPortCallEvents();
       this.state = {showChangeLog: false, titleText: "Hejsan", hw: text2};
       //search(portCalls, "Hanna")
   }
@@ -92,6 +94,55 @@ class PilotTimeLineView extends Component {
 
 }
 
+// class PilotTimeLineView extends Component {
+//   constructor(props) {
+//       super(props);
+//       const {portCalls} = this.props;
+//       var text = "Hello World2!";
+//       var text2;
+//       this.state = { numLoadedPortCalls: 20,};
+      
+//       this.state = {showChangeLog: false, titleText: "Hejsan", hw: text2};
+
+//   }
+
+//   render() {
+
+//   const {portCalls} = this.props;
+//   var listOfFavoritePortcalls = this.props.favoritePortCalls; //An array of all favoritedPortcalls. 
+//     return(
+//       <View>
+//         <Modal
+//             animationType={'slide'}
+//             transparent={false}
+//             style={{backgroundColor: colorScheme.backgroundColor}}
+//             visible={this.state.showChangeLog}
+//             onRequestClose={() => this.setState({showChangeLog: false})}
+//         >
+//             <TopHeader modal title="Change log" backArrowFunction={() => this.setState({showChangeLog: false})}/>
+            
+//         </Modal>
+
+//         <TopHeader
+//           title="Pilot Scheduling"
+//           firstPage
+//           navigation={this.props.navigation}
+//         />
+
+//         <View>
+//           <View>
+//           <Text> {listOfFavoritePortcalls.toString()} 
+      
+//           </Text>
+
+//           </View>
+        
+//         </View>
+//       </View>
+//     );
+//   }
+// }
+
 function mapStateToProps(state) {
     return {
         portCalls: state.cache.portCalls,
@@ -113,5 +164,6 @@ export default connect(mapStateToProps, {
     toggleFavoriteVessel,
     bufferPortCalls,
     setError,
+    fetchPortCallEvents,
 })(PilotTimeLineView);
 
