@@ -2,7 +2,6 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Col, Row, Grid } from "react-native-easy-grid";
 import moment from 'moment';
 
 import {
@@ -29,7 +28,7 @@ const portcallIndex = 0;
 export default class PilotTimeLineView extends Component {
   constructor(props) {
       super(props);
-      this.state = {showChangeLog: false, colWidth: 60, hoursLookingBack: 10, hoursLookingForward: 10 };  
+      this.state = {showChangeLog: false, colWidth: 60, hoursLookingBack: 10, hoursLookingForward: 10 };
 
     this.updateZoomState = this.updateZoomState.bind(this);
 
@@ -42,9 +41,9 @@ export default class PilotTimeLineView extends Component {
   }
 
   intToDateString(timeObj) {
-    if (timeObj.getHours() % 12 == 0) { 
+    if (timeObj.getHours() % 12 == 0) {
       console.log(timeObj.getTime());
-      return (timeObj.getDate()) + '/' + (timeObj.getMonth()+1);   
+      return (timeObj.getDate()) + '/' + (timeObj.getMonth()+1);
     }
     return "";
   }
@@ -70,7 +69,7 @@ export default class PilotTimeLineView extends Component {
        return {colWidth: prevState.colWidth + value}
     });
     if (value>0) {
-      console.log("Forward"); 
+      console.log("Forward");
       this.setState(prevState => {
        return {hoursLookingForward: prevState.hoursLookingForward + 5}
       });
@@ -79,13 +78,13 @@ export default class PilotTimeLineView extends Component {
       this.setState(prevState => {
        return {hoursLookingBack: prevState.hoursLookingBack + 5}
       });
-    }    
+    }
   }
 
   render() {
     const BULLET = '\u2022';
     this.firstTime = new Date(Math.floor(this.now.getTime()/1000/60/60)*1000*60*60);
-    this.firstTime.setHours(this.firstTime.getHours()-this.state.hoursLookingBack); 
+    this.firstTime.setHours(this.firstTime.getHours()-this.state.hoursLookingBack);
 
     this.cols = [];
     for( var j = 0; j < this.state.hoursLookingBack + this.state.hoursLookingForward; j++){
@@ -122,14 +121,14 @@ export default class PilotTimeLineView extends Component {
           navigation={this.props.navigation}
         />
 
-			<ScrollView ref='_scrollViewHorizontal' horizontal={true} style= {{height: 300}}> 
+			<ScrollView ref='_scrollViewHorizontal' horizontal={true} style= {{height: 300}}>
 				<View style={
 					{
 					   borderRightColor: 'red',
 					   borderRightWidth: 2,
 					   position: 'absolute',
 					   top: 0,
-					   left: this.getLeftOffSet(this.now), 
+					   left: this.getLeftOffSet(this.now),
 					   width: 0,
 					   height: '100%'
 					}
@@ -138,8 +137,8 @@ export default class PilotTimeLineView extends Component {
         {
           this.cols.map((itemCol, keyCol) =>
           (
-            <View key = { keyCol } style = {[ styles.timelineHeader, {left: -this.state.colWidth/2, width: this.state.colWidth }]}>  
-              <Text style = {styles.colText}>{this.intToDateString(itemCol.timeObj)}{'\n'}{this.intToTimeString(itemCol.timeObj)}</Text>  
+            <View key = { keyCol } style = {[ styles.timelineHeader, {left: -this.state.colWidth/2, width: this.state.colWidth }]}>
+              <Text style = {styles.colText}>{this.intToDateString(itemCol.timeObj)}{'\n'}{this.intToTimeString(itemCol.timeObj)}</Text>
             </View>
           ))
         }
@@ -147,8 +146,8 @@ export default class PilotTimeLineView extends Component {
 
 					this.cols.map((itemCol, keyCol) =>
 					(
-						<View key = { keyCol } style = {[ styles.timelineRuler, {left: this.getLeftOffSet(itemCol.timeObj)}]}> 
-              
+						<View key = { keyCol } style = {[ styles.timelineRuler, {left: this.getLeftOffSet(itemCol.timeObj)}]}>
+
             </View>
 					))
 				}
@@ -184,7 +183,7 @@ const styles = StyleSheet.create({
       height: 200
     },
     timelineHeader: {
-      height: 50, 
+      height: 50,
     },
     timelineRuler: {
       width: 1,
@@ -211,7 +210,7 @@ const styles = StyleSheet.create({
       borderRightWidth: 1,
       position: 'relative',
       left: -30,
-      alignContent: 'center' 
+      alignContent: 'center'
     },
     colText: {
       textAlign: 'center'
