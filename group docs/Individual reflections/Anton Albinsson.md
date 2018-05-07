@@ -117,3 +117,25 @@ While we broke down our user stories into tasks we were not able to fully code o
 
 My goal this week will to finish our assigned user story that we were not able to complete last sprint about fetching favorite portcalls. To achieve this goal I will alter my apporach and focus more on reusing exisitng code but also ask for help from our other team members as they might have done something similiar during coding of their user stories. 
 
+## Week 6 ##
+
+**what do I want to learn or understand better?**
+In retrospective I learned the importance of reusing our the exisitng code base which helps save a lot of time. The sprint involved some trial and error as well as useful tips from Pontus during the wednesday. By this I gained a better understanding of how components communicate, for example learned more about the role of react redux, which I hardly believe I would know if I just watched youtube tutorials. 
+
+We have started coding on different user stories and sooner or later we will need to integerate these so they communicate with each other. This weeks goal will therefore be to learn more about how this process actually works in practice and what challenges that arises when different people have written codes that need to be consolidated. This knowledge will be attained by being active during our group meetings and possibly when testing/reviewing someone else code. 
+
+**How can I help someone else, or the entire team, to learn something new?**
+Last sprint we were for example introduced to React Redux and in our team we helped each other trying to get a grasp about it and its purpose, which I found very useful. 
+
+This sprint we will team up with another programming pair to help solve a user story. Here I hope to be able to provide the insights me and my pair programming buddy learned from our user story last sprint so we can complement each other sprint. 
+
+**What is my contribution towards the team’s application of scrum?**
+We learned last sprint that in order to better be able to integerate user stories we need clearer defintion of dones, which was identified as one area where Trellos description box was a good way make it  (DoD) easier accesible. 
+
+This weeks goal wil be to help our team get a better sense of our capabilties of time estimation, which is a important aspect when applying scrum. This will be done by our new KPI (Estimation accuracy) as well as setting up clear rules about our Trello setup where the actual time can be inputed for each task. 
+
+**What is my contribution towards the team’s deliveries?**
+The user story was succesfully completed and went through testing. Leason learned was that the focus reusing code was a smart move as well as asking Pontus for more technical advice. 
+
+This sprint goal will be to finish our user stories on receiving relevant time stamps from our given portcalls. From the leasons learned last week the focus should be on reusing exisiting code as well as taking advice from our different group members as we know have achived more knowledge on different fields. 
+
