@@ -22,6 +22,7 @@ import {
 } from 'react-native-elements';
 
 import {
+  fetchEventsForLocation,
     updatePortCalls,
     selectPortCall,
     toggleFavoritePortCall,
@@ -30,6 +31,11 @@ import {
     bufferPortCalls,
     setError,
     fetchPortCallEvents,
+    fetchPortCall,
+    selectNewDate,
+    changeLookAheadDays,
+    changeLookBehindDays,
+    setFilterOnSources,
  } from '../../actions';
 
 
@@ -41,19 +47,49 @@ class PilotTimeLineView extends Component {
   constructor(props) {
       super(props);
       const {portCalls} = this.props;
-      var listOfFavoritePortcalls = this.props.favoritePortCalls;
+     //var listOfFavoritePortcalls = this.props.favoritePortCalls;
       var text = "Hello World2!";
       var text2;
       this.state = { numLoadedPortCalls: 20,};
       this.search(portCalls, "Marinus").map( (portCall) => ( text2 = portCall.vessel.imo
                             ))
       //var timestamp = this.props.fetchPortCallEvents();
+
+      //var test = this.props.fetchPortCallEvents("urn:mrn:stm:portcdm:port_call:SEGOT:861f2e56-8289-4f48-80c0-4451900473c2");
+
       this.state = {showChangeLog: false, titleText: "Hejsan", hw: text2};
       //search(portCalls, "Hanna")
   }
 
+  _onViewPortCall = (portCallId) => {
+    this.props.fetchPortCall(portCallId)
+        .then(this.props.selectPortCall)
+        .then(() => this.props.navigation.navigate('TimeLine'))
+}
+
   render() {
+    //const {portCalls} = this.props;
+
+
+    var listOfFavoritePortcalls = this.props.favoritePortCalls;
+
+    var EttportCall = this.props.portCalls[6];
+
+    var ListOfAllPortCalls = this.props.portCalls;
+
+    var ettFavoritPortCall = listOfFavoritePortcalls[0];
+
+    
+
+//Metod för att kolla om det är en favorit eller ej 
+    if (this.props.favoritePortCalls.includes(EttportCall.portCallId)) {
+      console.log("DET HÄR ÄR EN FAVORIT")}
+      else {
+      console.log("DEt här är inte en favorit")
+      }
+    
     return(
+      
       <View>
         <Modal
             animationType={'slide'}
@@ -75,13 +111,30 @@ class PilotTimeLineView extends Component {
         <View>
           <View>
             <Text>
-              {this.state.hw}
+    
+              
+{JSON.stringify(EttportCall)}
+          
+          
+STARTTID:
+          {EttportCall.startTime}
+SLUTTID:
+        {EttportCall.endTime}
+
             </Text>
           </View>
         </View>
       </View>
     );
   }
+
+  // {JSON.stringify(EttportCall)}  ger all data som finns lagrat i ett portcall. 
+
+  isFavorite(portCall) {
+    return this.props.favoritePortCalls.includes(portCall.portCallId) ||
+    this.props.favoriteVessels.includes(portCall.vessel.imo);
+}
+
 //{listOfFavoritePortcalls.toString()}
   search(portCalls, searchTerm) {
         let { filters } = this.props;
@@ -155,7 +208,19 @@ function mapStateToProps(state) {
         showLoadingIcon: state.portCalls.portCallsAreLoading,
         filters: state.filters,
         error: state.error,
-        isAppendingPortCalls: state.cache.appendingPortCalls
+        isAppendingPortCalls: state.cache.appendingPortCalls,
+
+
+        berth: state.berths.selectedLocation,
+        events: state.berths.events,
+        fetchingEvents: state.berths.fetchingEvents,
+        date: state.berths.fetchForDate,
+        error: state.error,
+        displayRatio: state.berths.displayRatio,
+        lookBehindDays: state.berths.lookBehindDays,
+        lookAheadDays: state.berths.lookAheadDays,
+        filterOnSources: state.berths.filterOnSources,
+        previousFilters: state.berths.previousFilters,
     }
 }
 
@@ -168,5 +233,12 @@ export default connect(mapStateToProps, {
     bufferPortCalls,
     setError,
     fetchPortCallEvents,
+    fetchEventsForLocation, 
+    selectNewDate,
+    fetchPortCall,
+    selectPortCall,
+    changeLookAheadDays,
+    changeLookBehindDays,
+    setFilterOnSources, 
 })(PilotTimeLineView);
 
