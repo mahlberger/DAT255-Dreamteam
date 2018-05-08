@@ -1,3 +1,19 @@
+### Individual Reflection week 6
+
+#### 1. What do I want to learn or understand better?
+How to create and use classes. How to import port calls into a view and minipulate them as I want to do.
+
+#### 2. How can I help someone else, or the entire team, to learn something new?
+By share my knowledge of css, which seem to be viable to use in the current context. Fortuermore I'd like to continue contributing in creating good userstories and contributing in out pair programming.
+
+#### 3. What is my contribution towards the team’s application of scrum?
+In my role as scrum master I have made sure the weekly team reflections and team retrospective is carrried through in correct manner. I've also had to exhort some team members to actually do what the user story says and not divert from their intended path.
+
+#### 4. What is my contribution towards the team’s deliveries?
+I've implemented visual "boxes", representing a port call, into the pilot-view. Moreover I've implemented a line, representing the current time, in the pilot-view.
+
+---
+
 ### Individual Reflection week 5
 
 #### 1. What do I want to learn or understand better?
