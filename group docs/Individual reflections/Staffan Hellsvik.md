@@ -1,5 +1,29 @@
 ## Individuell reflection
 
+**v6**
+
+what do I want to learn or understand better?
+
+Now that we are up and running and actually trying to contribute to the completion of the different user stories, learning more about Javascript, states and props is a priority. Coming from a basic understanding of Java, the way Javascripts deals with no types, and how assignments are done is confusing. The goal is to move from confusion to a basic understanding during the next sprint.
+
+
+
+how can I help someone else, or the entire team, to learn something new?
+In the previous sprint there was some benefits in sharing the progress between the programming pairs with regards to how we managed to accesss different types of information. By continueing to sit together when we program this process of knowledge sharing can easily be maintained, and I will promote that we keep on working in this fashion. We noted that there was a real benefit of having a definition of done that is clear and agreed on by everyone. It helps us divide our tasks efficiently and we can continue with new tasks during the sprint more easily if we can for certain say that something is done.
+
+
+
+
+
+
+what is my contribution towards the team’s application of scrum?
+
+In the previous sprint we increased the amount of tasks of each user story. This made it easier to progress in our work. It did however not end up giving us a better accuracy when trying to estimate the tasks. I am thinking of how changing the standard pattern that we use for estimating user stories will help us. We need to make sure that we abide by the principles that Scrum sets out to a further extent. I believe that my contribution for the coming sprint can consist of assisting other team members in iterating that we need to follow the rules and abide by the processes that we have set out for ourselves, specifically how the order the work is done in when it comes to defining our user stories and splitting them into tasks, and estimating them.
+
+what is my contribution towards the team’s deliveries?
+We have had a successful Sprint when it comes to completing work that supports the other functions we are trying to develop. We tracked down and extracted information from a port call and tried to make that information available to the people working on the timeline. What remains is to extract specific information, which we will have to do in the next sprint. This is something that we did not have time to do as we underestimated the time it would take to locate and make use of a Portcall. The consultation time in the middle of the week was very helpful to move us forward here. To start getting better at estimates we have introduced a KPI that measures our estimation accuracy.
+
+
 **v5**
 what do I want to learn or understand better?
 Right at the start of the sprint the development was up and running. We had an assessment of our user story set to 24 hrs, but completed it in approx 12 hrs, so there is room for improvement. On the other hand, all the other estimations were wildly optimistic, even when adjusting for the delta between the hours we put in and the expected total work hours of the sprint. For the next sprint I want to increase the granularity of the task breakdown - hopefully this will translate into a more accurate assessment.
