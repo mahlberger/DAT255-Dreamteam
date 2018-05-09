@@ -1,8 +1,5 @@
-
-
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import moment from 'moment';
 
 import {
   View,
@@ -22,6 +19,7 @@ import {
 import TopHeader from '../top-header-view';
 import { APP_VERSION } from '../../config/version';
 import colorScheme from '../../config/colors';
+import PortCall from '../../PortCall.js';
 
 const portcallIndex = 0;
 
@@ -29,7 +27,7 @@ export default class PilotTimeLineView extends Component {
   constructor(props) {
       super(props);
       this.state = {showChangeLog: false, colWidth: 60, hoursLookingBack: 10, hoursLookingForward: 10 };
-
+	
     this.updateZoomState = this.updateZoomState.bind(this);
 
     this.now = new Date();
@@ -42,14 +40,12 @@ export default class PilotTimeLineView extends Component {
 
   intToDateString(timeObj) {
     if (timeObj.getHours() % 12 == 0) {
-      console.log(timeObj.getTime());
       return (timeObj.getDate()) + '/' + (timeObj.getMonth()+1);
     }
     return "";
   }
 
   componentDidMount() {
-    console.log(78);
     const fx = () => this.refs._scrollViewHorizontal.scrollTo({
       x: this.getLeftOffSet(this.now) - Dimensions.get('window').width/2,
       animated: false
@@ -93,16 +89,26 @@ export default class PilotTimeLineView extends Component {
       this.cols.push({key: j, timeObj: currentTime});
     }
 
+	/*
+	//Test för att generera port calls
     this.portCalls = [];
     for(var j = 0; j < 2; j++){
       this.portCalls.push(new Date());
     }
-
+	
     // Test för ny tid
     var testDate = new Date();
     testDate.setHours(testDate.getHours()+2);
     this.portCalls.push(testDate);
-
+	*/
+	
+	this.portCalls = [];
+	this.portCalls.push(new PortCall('2018-05-07T16:30', 'tillstånd'));
+	
+//	this.newPortCalls.forEach(function(entry) {
+//		console.log(entry.getDate());
+//	});
+	
     return(
       <View>
         <Modal
@@ -154,7 +160,7 @@ export default class PilotTimeLineView extends Component {
         {
           this.portCalls.map((item, key) =>
           (
-            <View key = { key } style = { [ styles.timelinePortcall, {left: this.getLeftOffSet(item.getTime()), top: portcallIndex++*40 }]}>
+            <View key = { key } style = { [ styles.timelinePortcall, {left: this.getLeftOffSet(item.getDate().getTime()), top: 50 + portcallIndex++*40 }]}>
             </View>
           ))
         }
@@ -193,12 +199,12 @@ const styles = StyleSheet.create({
       top: 50
     },
     timelinePortcall: {
-      width: 30,
+      width: 60,
       height: 30,
       borderColor: 'blue',
       borderWidth: 2,
-      position: 'absolute',
-      top: 50
+	  backgroundColor: 'blue',
+      position: 'absolute'
     },
     col: {
       borderRightColor: 'black',
