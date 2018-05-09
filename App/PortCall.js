@@ -5,9 +5,13 @@ export default class PortCall {
       this.date = new Date(date);
 	  this.stateType = stateType;
   }
-  
+
+  getStateType(){
+    return this.stateType;
+  }
+
   getDate(){
 	  return this.date;
   }
-  
+
 }

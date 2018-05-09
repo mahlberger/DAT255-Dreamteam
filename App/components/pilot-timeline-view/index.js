@@ -7,15 +7,38 @@ import {
   Image,
   Dimensions,
   ScrollView,
+  RefreshControl,
+  Alert,
   Modal,
   Platform,
 } from 'react-native';
 
 import {
+  List,
+  ListItem,
   Text,
   Button,
   Icon,
 } from 'react-native-elements';
+
+// Anton-Filip-Kod
+import {
+  fetchEventsForLocation,
+    updatePortCalls,
+    selectPortCall,
+    toggleFavoritePortCall,
+    toggleFavoriteVessel,
+    appendPortCalls,
+    bufferPortCalls,
+    setError,
+    fetchPortCallEvents,
+    fetchPortCall,
+    selectNewDate,
+    changeLookAheadDays,
+    changeLookBehindDays,
+    setFilterOnSources,
+ } from '../../actions';
+
 import TopHeader from '../top-header-view';
 import { APP_VERSION } from '../../config/version';
 import colorScheme from '../../config/colors';
@@ -23,11 +46,19 @@ import PortCall from '../../PortCall.js';
 
 const portcallIndex = 0;
 
-export default class PilotTimeLineView extends Component {
+class PilotTimeLineView extends Component {
   constructor(props) {
       super(props);
-      this.state = {showChangeLog: false, colWidth: 60, hoursLookingBack: 10, hoursLookingForward: 10 };
-	
+
+      // Fetching portCalls
+      const {portCalls} = this.props;
+      this.portCalls = [];
+      // Pushing each portCall to array
+      for(var i = 0; i < this.props.portCalls.length;i++){
+        this.portCalls.push(new PortCall(this.props.portCalls[i].startTime, this.props.portCalls[i].vessel.name));
+      }
+      this.state = {showChangeLog: false, colWidth: 60, hoursLookingBack: 48, hoursLookingForward: 48 };
+
     this.updateZoomState = this.updateZoomState.bind(this);
 
     this.now = new Date();
@@ -60,12 +91,12 @@ export default class PilotTimeLineView extends Component {
   }
 
   updateZoomState(value) {
-    console.log(value);
+  //  console.log(value);
     this.setState(prevState => {
        return {colWidth: prevState.colWidth + value}
     });
     if (value>0) {
-      console.log("Forward");
+  //    console.log("Forward");
       this.setState(prevState => {
        return {hoursLookingForward: prevState.hoursLookingForward + 5}
       });
@@ -78,7 +109,7 @@ export default class PilotTimeLineView extends Component {
   }
 
   render() {
-    const BULLET = '\u2022';
+  const BULLET = '\u2022';
     this.firstTime = new Date(Math.floor(this.now.getTime()/1000/60/60)*1000*60*60);
     this.firstTime.setHours(this.firstTime.getHours()-this.state.hoursLookingBack);
 
@@ -88,27 +119,6 @@ export default class PilotTimeLineView extends Component {
       currentTime.setTime(this.firstTime.getTime() + 1000*60*60*j); //add one hour
       this.cols.push({key: j, timeObj: currentTime});
     }
-
-	/*
-	//Test för att generera port calls
-    this.portCalls = [];
-    for(var j = 0; j < 2; j++){
-      this.portCalls.push(new Date());
-    }
-	
-    // Test för ny tid
-    var testDate = new Date();
-    testDate.setHours(testDate.getHours()+2);
-    this.portCalls.push(testDate);
-	*/
-	
-	this.portCalls = [];
-	this.portCalls.push(new PortCall('2018-05-07T16:30', 'tillstånd'));
-	
-//	this.newPortCalls.forEach(function(entry) {
-//		console.log(entry.getDate());
-//	});
-	
     return(
       <View>
         <Modal
@@ -126,7 +136,6 @@ export default class PilotTimeLineView extends Component {
           firstPage
           navigation={this.props.navigation}
         />
-
 			<ScrollView ref='_scrollViewHorizontal' horizontal={true} style= {{height: 300}}>
 				<View style={
 					{
@@ -161,6 +170,9 @@ export default class PilotTimeLineView extends Component {
           this.portCalls.map((item, key) =>
           (
             <View key = { key } style = { [ styles.timelinePortcall, {left: this.getLeftOffSet(item.getDate().getTime()), top: 50 + portcallIndex++*40 }]}>
+                <Text>
+                  {item.getStateType()}
+                </Text>
             </View>
           ))
         }
@@ -239,3 +251,47 @@ const styles = StyleSheet.create({
 		   height: '100%'
 		}
 });
+
+// Anton-Filip-Kod
+function mapStateToProps(state) {
+    return {
+        portCalls: state.cache.portCalls,
+        cacheLimit: state.cache.limit,
+        favoritePortCalls: state.favorites.portCalls,
+        favoriteVessels: state.favorites.vessels,
+        showLoadingIcon: state.portCalls.portCallsAreLoading,
+        filters: state.filters,
+        error: state.error,
+        isAppendingPortCalls: state.cache.appendingPortCalls,
+
+
+        berth: state.berths.selectedLocation,
+        events: state.berths.events,
+        fetchingEvents: state.berths.fetchingEvents,
+        date: state.berths.fetchForDate,
+        error: state.error,
+        displayRatio: state.berths.displayRatio,
+        lookBehindDays: state.berths.lookBehindDays,
+        lookAheadDays: state.berths.lookAheadDays,
+        filterOnSources: state.berths.filterOnSources,
+        previousFilters: state.berths.previousFilters,
+    }
+}
+
+export default connect(mapStateToProps, {
+    updatePortCalls,
+    appendPortCalls,
+    selectPortCall,
+    toggleFavoritePortCall,
+    toggleFavoriteVessel,
+    bufferPortCalls,
+    setError,
+    fetchPortCallEvents,
+    fetchEventsForLocation,
+    selectNewDate,
+    fetchPortCall,
+    selectPortCall,
+    changeLookAheadDays,
+    changeLookBehindDays,
+    setFilterOnSources,
+})(PilotTimeLineView);
