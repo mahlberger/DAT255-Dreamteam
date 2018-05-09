@@ -55,8 +55,9 @@ class PilotTimeLineView extends Component {
       this.portCalls = [];
       // Pushing each portCall to array
       for(var i = 0; i < this.props.portCalls.length;i++){
-        this.portCalls.push(new PortCall(this.props.portCalls[i].startTime, this.props.portCalls[i].vessel.name));
+        this.portCalls.push(new PortCall(this.props.portCalls[i].startTime, this.props.portCalls[i].lastUpdatedState, this.props.portCalls[i].vessel.name));
       }
+      console.log(this.props.portCalls[0]);
       this.state = {showChangeLog: false, colWidth: 60, hoursLookingBack: 48, hoursLookingForward: 48 };
 
     this.updateZoomState = this.updateZoomState.bind(this);
@@ -106,6 +107,35 @@ class PilotTimeLineView extends Component {
        return {hoursLookingBack: prevState.hoursLookingBack + 5}
       });
     }
+  }
+
+  getColorByState(state){
+//    console.log(state);
+  switch (state) {
+  case 'Arrival_Vessel_Berth':
+      return 'green';
+      break;
+  case 'Arrival_Vessel_TrafficArea':
+      return 'red';
+      break;
+  case 'Departure_Vessel_Berth':
+      return 'yellow';
+      break;
+  case 'Departure_Vessel_TrafficArea':
+      return 'purple';
+      break;
+  case 'SludgeOp_Requested':
+      return 'orange';
+      break;
+  case 'Arrival_Vessel_AnchorageArea':
+      return 'black';
+      break;
+  case 'SludgeOp_Completed':
+      return 'green';
+  default:
+      return 'blue';
+}
+
   }
 
   render() {
@@ -169,9 +199,10 @@ class PilotTimeLineView extends Component {
         {
           this.portCalls.map((item, key) =>
           (
-            <View key = { key } style = { [ styles.timelinePortcall, {left: this.getLeftOffSet(item.getDate().getTime()), top: 50 + portcallIndex++*40 }]}>
+            <View key = { key } style = { [ styles.stylePortCall, {left: this.getLeftOffSet(item.getDate().getTime()),
+              top: 50 + portcallIndex++*40, backgroundColor: this.getColorByState(item.getLastState())}]}>
                 <Text>
-                  {item.getStateType()}
+                  {item.getVesselName()}
                 </Text>
             </View>
           ))
@@ -210,11 +241,10 @@ const styles = StyleSheet.create({
       position: 'absolute',
       top: 50
     },
-    timelinePortcall: {
+    stylePortCall: {
       width: 60,
       height: 30,
-      borderColor: 'blue',
-      borderWidth: 2,
+      borderWidth: 0,
 	  backgroundColor: 'blue',
       position: 'absolute'
     },
@@ -232,14 +262,6 @@ const styles = StyleSheet.create({
     },
     colText: {
       textAlign: 'center'
-    },
-    square: {
-      width: 20,
-      height: 20,
-      borderColor: 'blue',
-      borderWidth: 2,
-      position: 'absolute'
-
     },
 		lineCurrentTime: {
 		   borderRightColor: 'red',
