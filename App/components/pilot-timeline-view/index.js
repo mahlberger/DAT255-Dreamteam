@@ -59,7 +59,7 @@ class PilotTimeLineView extends Component {
 
       this.state = {showChangeLog: false, titleText: "Hejsan", hw: text2};
       //search(portCalls, "Hanna")
-      var EttportCall;
+      var onePortCall;
   }
 
   _onViewPortCall = (portCallId) => {
@@ -73,49 +73,35 @@ class PilotTimeLineView extends Component {
   }
   
   loadOperations() {
+    onePortCall = this.props.portCalls[6];
+    this.props.fetchPortCallEvents(onePortCall.portCallId).then(this.finishedFetchingEvents);
   }
 
   componentWillUnmount() {
         clearInterval(timer);
     }
 
+  finishedFetchingEvents() {
+    console.log("hej");
+    console.log(JSON.stringify(this.props.fetchedEvents));
+    //console.log(JSON.stringify(this.state.fetchedEvents));
+    console.log("hej igen");
+  }
+
   render() {
     const {portCalls} = this.props;
 
 
-    var listOfFavoritePortcalls = this.props.favoritePortCalls;
+    // var listOfFavoritePortcalls = this.props.favoritePortCalls;
 
-    var EttportCall = this.props.portCalls[6];
+    // var ListOfAllPortCalls = this.props.portCalls;
 
-    var ListOfAllPortCalls = this.props.portCalls;
+    // var ettFavoritPortCall = listOfFavoritePortcalls[0];
 
-    var ettFavoritPortCall = listOfFavoritePortcalls[0];
-
-    var EventsIEttPortCall = this.props.fetchPortCallEvents(EttportCall.portCallId).then(() => {
-            if(this.props.error.hasError) {
-                if(this.props.error.error.title == "RELIABILITY_FAIL") {
-                    Alert.alert(
-                        'Unable to fetch reliabilities!',
-                        'It can easily be turned on or off in the settings. Would you like to turn it off now?',
-                        [
-                            {text: 'No', onPress: () => this.props.navigation.navigate('PortCalls'), style: 'cancel'},
-                            {text: 'Yes', onPress: () => {
-                                this.props.changeFetchReliability(false);
-                                this.props.removeError();
-                                this.loadOperations(); //Maybe dangerous?
-                            }}
-                        ],
-                        {cancelable: false},
-                    );
-                } else {
-                    this.props.navigation.navigate('Error');                   
-                }
-            }
-        }); 
 
 
 //Metod för att kolla om det är en favorit eller ej 
-    if (this.props.favoritePortCalls.includes(EttportCall.portCallId)) {
+    if (this.props.favoritePortCalls.includes(onePortCall.portCallId)) {
       console.log("DET HÄR ÄR EN FAVORIT")}
       else {
       console.log("DEt här är inte en favorit")
@@ -146,15 +132,13 @@ class PilotTimeLineView extends Component {
             <Text>
     
               
-//{JSON.stringify(EttportCall)}
+{JSON.stringify(onePortCall)}
           
           
 STARTTID:
-          {EttportCall.startTime}
+          {onePortCall.startTime}
 SLUTTID:
-        {EttportCall.endTime}
-
-        {JSON.stringify(EventsIEttPortCall)}
+        {onePortCall.endTime}
 
             </Text>
           </View>
@@ -163,7 +147,7 @@ SLUTTID:
     );
   }
 
-  // {JSON.stringify(EttportCall)}  ger all data som finns lagrat i ett portcall. 
+  // {JSON.stringify(onePortCall)}  ger all data som finns lagrat i ett portcall. 
 
   isFavorite(portCall) {
     return this.props.favoritePortCalls.includes(portCall.portCallId) ||
@@ -245,6 +229,7 @@ function mapStateToProps(state) {
         error: state.error,
         isAppendingPortCalls: state.cache.appendingPortCalls,
 
+        fetchedEvents: state.portCalls.selectedPortCallOperations, //Denna har vi lagt till
 
         berth: state.berths.selectedLocation,
         events: state.berths.events,
