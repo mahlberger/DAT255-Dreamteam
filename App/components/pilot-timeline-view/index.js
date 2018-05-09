@@ -37,7 +37,7 @@ export default class PilotTimeLineView extends Component {
   }
 
   intToTimeString(timeObj) {
-    return timeObj.getHours() + ':' + timeObj.getMinutes();
+    return timeObj.getHours() + ':' + ('0'+timeObj.getMinutes()).slice(-2);
   }
 
   intToDateString(timeObj) {
