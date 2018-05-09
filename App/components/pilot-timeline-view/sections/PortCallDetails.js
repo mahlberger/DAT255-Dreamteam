@@ -8,6 +8,7 @@ import {
     TouchableWithoutFeedback,
     Modal,
     ScrollView,
+    Image,
 } from 'react-native';
 
 import {
@@ -20,9 +21,9 @@ import { getDateTimeString, getDateString, getTimeString } from '../../../util/t
 import colorScheme from '../../../config/colors';
 
 
-const PilotDetails = (props) => {
-    const { pilot } = props;
-
+const PortCallDetails = (props) => {
+    const { portCall } = props;
+    console.log(portCall)
     const actualIcon = (<View style={[styles.actualContainer]}>
                             <Text style={styles.actualText}>A</Text>
                         </View>);
@@ -44,12 +45,15 @@ const PilotDetails = (props) => {
                 <View style={styles.innerContainer}>
                     {/* Header */}
                     <View style={styles.headerContainer}>
-                        <Text style={styles.headerText}>{pilot.name}</Text>
+                        <Text style={styles.headerText}>{portCall.vessel.name}</Text> 
                     </View>
                     {/* Main view */}
                     <ScrollView>
                         <View style={styles.tableHeaderContainer}>
                             <Text key={-1} style={[styles.statementHeaderText]}>Arrival Vessel Berth</Text>
+                        </View>
+                        <View>
+                            <Image style={{width: 200, height: 200}} source={{ uri: portCall.vessel.photoURL}} />
                         </View>
                     </ScrollView>
 
@@ -70,7 +74,7 @@ const PilotDetails = (props) => {
     );
 };
 
-export default PilotDetails;  
+export default PortCallDetails;  
 
 const styles = StyleSheet.create({
     outerContainer: {

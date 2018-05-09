@@ -1,8 +1,5 @@
-
-
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import moment from 'moment';
 
 import {
   View,
@@ -10,28 +7,51 @@ import {
   Image,
   Dimensions,
   ScrollView,
+  RefreshControl,
+  Alert,
   Modal,
   Platform,
   TouchableWithoutFeedback,
 } from 'react-native';
 
 import {
+  List,
+  ListItem,
   Text,
   Button,
   Icon,
 } from 'react-native-elements';
 
+
 import TopHeader from '../top-header-view';
 import { APP_VERSION } from '../../config/version';
 import colorScheme from '../../config/colors';
-import PilotDetails from './sections/PilotDetails';
+import PortCallDetails from './sections/PortCallDetails';
+import PortCall from '../../PortCall.js';
+// Anton-Filip-Kod
+import {
+  fetchEventsForLocation,
+    updatePortCalls,
+    selectPortCall,
+    toggleFavoritePortCall,
+    toggleFavoriteVessel,
+    appendPortCalls,
+    bufferPortCalls,
+    setError,
+    fetchPortCallEvents,
+    fetchPortCall,
+    selectNewDate,
+    changeLookAheadDays,
+    changeLookBehindDays,
+    setFilterOnSources,
+ } from '../../actions';
 
 const portcallIndex = 0;
 
-export default class PilotTimeLineView extends Component {
+class PilotTimeLineView extends Component {
   constructor(props) {
-      super(props);
-      this.state = {showChangeLog: false, colWidth: 60, hoursLookingBack: 10, hoursLookingForward: 10, showTimelineDetailsModal: false};
+    super(props);
+    this.state = {showChangeLog: false, colWidth: 40, hoursLookingBack: 20, hoursLookingForward: 20, showTimelineDetailsModal: false};
 
     this.updateZoomState = this.updateZoomState.bind(this);
 
@@ -45,14 +65,12 @@ export default class PilotTimeLineView extends Component {
 
   intToDateString(timeObj) {
     if (timeObj.getHours() % 12 == 0) {
-      console.log(timeObj.getTime());
       return (timeObj.getDate()) + '/' + (timeObj.getMonth()+1);
     }
     return "";
   }
 
   componentDidMount() {
-    console.log(78);
     const fx = () => this.refs._scrollViewHorizontal.scrollTo({
       x: this.getLeftOffSet(this.now) - Dimensions.get('window').width/2,
       animated: false
@@ -67,12 +85,12 @@ export default class PilotTimeLineView extends Component {
   }
 
   updateZoomState(value) {
-    console.log(value);
+  //  console.log(value);
     this.setState(prevState => {
        return {colWidth: prevState.colWidth + value}
     });
     if (value>0) {
-      console.log("Forward");
+  //    console.log("Forward");
       this.setState(prevState => {
        return {hoursLookingForward: prevState.hoursLookingForward + 5}
       });
@@ -85,7 +103,7 @@ export default class PilotTimeLineView extends Component {
   }
 
   render() {
-    const BULLET = '\u2022';
+  const BULLET = '\u2022';
     this.firstTime = new Date(Math.floor(this.now.getTime()/1000/60/60)*1000*60*60);
     this.firstTime.setHours(this.firstTime.getHours()-this.state.hoursLookingBack);
 
@@ -96,17 +114,10 @@ export default class PilotTimeLineView extends Component {
       this.cols.push({key: j, timeObj: currentTime});
     }
 
-    this.portCalls = [];
-    for(var j = 0; j < 2; j++){
-      this.portCalls.push(new Date());
-    }
-
-    // Test för ny tid
-    var testDate = new Date();
-    testDate.setHours(testDate.getHours()+2);
-    this.portCalls.push(testDate);
+    const {portCalls} = this.props;
 
     let portcallIndex = 0;
+
 
     return(
       <View>
@@ -125,8 +136,7 @@ export default class PilotTimeLineView extends Component {
           firstPage
           navigation={this.props.navigation}
         />
-
-			<ScrollView ref='_scrollViewHorizontal' horizontal={true} style= {{height: 300}}>
+			<ScrollView ref='_scrollViewHorizontal' horizontal={true} style= {{height: 400}}>
 				<View style={
 					{
 					   borderRightColor: 'red',
@@ -157,19 +167,21 @@ export default class PilotTimeLineView extends Component {
 					))
 				}
         {
-          this.portCalls.map((item, key) =>
+          portCalls.map((item, key) =>
           (
-            <TouchableWithoutFeedback key = { key } onPress={ () => this.setState({showTimelineDetailsModal: !this.state.showTimelineDetailsModal, eventDetails: {id: 80}}) }> 
-            <View 
-              style = { [ styles.timelinePortcall, {left: this.getLeftOffSet(item.getTime()), top: portcallIndex++*40 }]}
-            >
+            <TouchableWithoutFeedback key = { key } onPress={ () => this.setState({showTimelineDetailsModal: !this.state.showTimelineDetailsModal, portCall: item}) }> 
+            
+            <View key = { key } style = { [ styles.timelinePortcall, {left: this.getLeftOffSet(new Date(item.startTime)), top: 50 + portcallIndex++*40 }]}>
+                <Text>
+                  {item.vessel.name}
+                </Text>
             </View>
             </TouchableWithoutFeedback>
           ))
         }
 		</ScrollView>
-    {this.state.showTimelineDetailsModal && <PilotDetails
-        pilot = {{ id: 80, "name": "Tja" }}
+    {this.state.showTimelineDetailsModal && <PortCallDetails
+        portCall = {this.state.portCall}
         isVisible={this.state.showTimelineDetailsModal}
         onClose={() => this.setState({showTimelineDetailsModal: false, eventDetails: {}})} 
         onViewPortCall={this.props.onViewPortCall}
@@ -200,26 +212,26 @@ const styles = StyleSheet.create({
       backgroundColor: 'red',
     },
     row: {
-      height: 200
+      height: 300
     },
     timelineHeader: {
       height: 50,
     },
     timelineRuler: {
       width: 1,
-      height: 300,
+      height: 400,
       backgroundColor: 'black',
       position: 'absolute',
       top: 50
     },
     timelinePortcall: {
-      width: 30,
+      width: 60,
       height: 30,
       borderColor: 'blue',
       borderWidth: 2,
       position: 'absolute',
       top: 50, 
-      backgroundColor: '#FFF',
+      backgroundColor: 'blue',
     },
     col: {
       borderRightColor: 'black',
@@ -254,3 +266,47 @@ const styles = StyleSheet.create({
 		   height: '100%'
 		}
 });
+
+// Anton-Filip-Kod
+function mapStateToProps(state) {
+    return {
+        portCalls: state.cache.portCalls,
+        cacheLimit: state.cache.limit,
+        favoritePortCalls: state.favorites.portCalls,
+        favoriteVessels: state.favorites.vessels,
+        showLoadingIcon: state.portCalls.portCallsAreLoading,
+        filters: state.filters,
+        error: state.error,
+        isAppendingPortCalls: state.cache.appendingPortCalls,
+
+
+        berth: state.berths.selectedLocation,
+        events: state.berths.events,
+        fetchingEvents: state.berths.fetchingEvents,
+        date: state.berths.fetchForDate,
+        error: state.error,
+        displayRatio: state.berths.displayRatio,
+        lookBehindDays: state.berths.lookBehindDays,
+        lookAheadDays: state.berths.lookAheadDays,
+        filterOnSources: state.berths.filterOnSources,
+        previousFilters: state.berths.previousFilters,
+    }
+}
+
+export default connect(mapStateToProps, {
+    updatePortCalls,
+    appendPortCalls,
+    selectPortCall,
+    toggleFavoritePortCall,
+    toggleFavoriteVessel,
+    bufferPortCalls,
+    setError,
+    fetchPortCallEvents,
+    fetchEventsForLocation,
+    selectNewDate,
+    fetchPortCall,
+    selectPortCall,
+    changeLookAheadDays,
+    changeLookBehindDays,
+    setFilterOnSources,
+})(PilotTimeLineView);
