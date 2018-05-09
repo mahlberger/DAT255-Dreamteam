@@ -55,11 +55,10 @@ class PilotTimeLineView extends Component {
                             ))
       //var timestamp = this.props.fetchPortCallEvents();
 
-      //var test = this.props.fetchPortCallEvents("urn:mrn:stm:portcdm:port_call:SEGOT:861f2e56-8289-4f48-80c0-4451900473c2");
-
       this.state = {showChangeLog: false, titleText: "Hejsan", hw: text2};
-      //search(portCalls, "Hanna")
       var onePortCall;
+
+      this.finishedFetchingEvents = this.finishedFetchingEvents.bind(this);
   }
 
   _onViewPortCall = (portCallId) => {
@@ -130,23 +129,20 @@ class PilotTimeLineView extends Component {
         <View>
           <View>
             <Text>
-    
-              
-{JSON.stringify(onePortCall)}
-          
-          
-STARTTID:
-          {onePortCall.startTime}
-SLUTTID:
-        {onePortCall.endTime}
-
+         
+              {this.props.fetchedEvents[0] ? JSON.stringify(this.props.fetchedEvents[0].portCallId) : null}
+                Ovan hämtar data från plats 0, har en if sats för att kolla så den inte är tom. Då hämtar vi portcall från 1. 
             </Text>
           </View>
         </View>
       </View>
     );
   }
+  
+// MÅSTE FIXA SORT OCH FILTERFUNKTIONEN FÖR FETCHED EVETS - finns färdiga metoder att ta inspiration ifrån. 
 
+
+  //     {JSON.stringify(this.props.fetchedEvents)}
   // {JSON.stringify(onePortCall)}  ger all data som finns lagrat i ett portcall. 
 
   isFavorite(portCall) {
