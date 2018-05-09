@@ -53,9 +53,9 @@ class EventView extends Component {
         return <View style={[styles.container]}>
                     <TimeHeader startTime={events.earliestTime} endTime={events.latestTime} displayRatio={displayRatio}/>
                     {this.renderDayLines(events, displayRatio, date)}
-                    <View style={[styles.ganttContainer]}><Text>hej</Text>
+                    <View style={[styles.ganttContainer]}>
                         {events.map((row, index) => {
-                            return <View key={index} style={[styles.rowContainer]}><Text>hej</Text>
+                            return <View key={index} style={[styles.rowContainer]}>
                                         {row.map((event, index2) => {
                                             if((!showExpired && event.isExpired) || !this.isValidSource(event, this.props.acceptSources)) {
                                                 return undefined;
@@ -136,7 +136,6 @@ class EventView extends Component {
                 })}
             </View>
         );
-    
     };
 }
 

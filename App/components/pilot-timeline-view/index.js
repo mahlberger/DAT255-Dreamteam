@@ -12,6 +12,7 @@ import {
   ScrollView,
   Modal,
   Platform,
+  TouchableWithoutFeedback,
 } from 'react-native';
 
 import {
@@ -19,16 +20,18 @@ import {
   Button,
   Icon,
 } from 'react-native-elements';
+
 import TopHeader from '../top-header-view';
 import { APP_VERSION } from '../../config/version';
 import colorScheme from '../../config/colors';
+import PilotDetails from './sections/PilotDetails';
 
 const portcallIndex = 0;
 
 export default class PilotTimeLineView extends Component {
   constructor(props) {
       super(props);
-      this.state = {showChangeLog: false, colWidth: 60, hoursLookingBack: 10, hoursLookingForward: 10 };
+      this.state = {showChangeLog: false, colWidth: 60, hoursLookingBack: 10, hoursLookingForward: 10, showTimelineDetailsModal: false};
 
     this.updateZoomState = this.updateZoomState.bind(this);
 
@@ -103,6 +106,8 @@ export default class PilotTimeLineView extends Component {
     testDate.setHours(testDate.getHours()+2);
     this.portCalls.push(testDate);
 
+    let portcallIndex = 0;
+
     return(
       <View>
         <Modal
@@ -154,11 +159,21 @@ export default class PilotTimeLineView extends Component {
         {
           this.portCalls.map((item, key) =>
           (
-            <View key = { key } style = { [ styles.timelinePortcall, {left: this.getLeftOffSet(item.getTime()), top: portcallIndex++*40 }]}>
+            <TouchableWithoutFeedback key = { key } onPress={ () => this.setState({showTimelineDetailsModal: !this.state.showTimelineDetailsModal, eventDetails: {id: 80}}) }> 
+            <View 
+              style = { [ styles.timelinePortcall, {left: this.getLeftOffSet(item.getTime()), top: portcallIndex++*40 }]}
+            >
             </View>
+            </TouchableWithoutFeedback>
           ))
         }
 		</ScrollView>
+    {this.state.showTimelineDetailsModal && <PilotDetails
+        pilot = {{ id: 80, "name": "Tja" }}
+        isVisible={this.state.showTimelineDetailsModal}
+        onClose={() => this.setState({showTimelineDetailsModal: false, eventDetails: {}})} 
+        onViewPortCall={this.props.onViewPortCall}
+    />}
     <Button
       onPress={ () => this.updateZoomState(10)}
       title="Zoom out"
@@ -179,6 +194,11 @@ export default class PilotTimeLineView extends Component {
 }
 
 const styles = StyleSheet.create({
+    timelineModal: {
+      width: 200,
+      height: 200,
+      backgroundColor: 'red',
+    },
     row: {
       height: 200
     },
@@ -198,7 +218,8 @@ const styles = StyleSheet.create({
       borderColor: 'blue',
       borderWidth: 2,
       position: 'absolute',
-      top: 50
+      top: 50, 
+      backgroundColor: '#FFF',
     },
     col: {
       borderRightColor: 'black',
