@@ -59,6 +59,7 @@ class PilotTimeLineView extends Component {
 
       this.state = {showChangeLog: false, titleText: "Hejsan", hw: text2};
       //search(portCalls, "Hanna")
+      var EttportCall;
   }
 
   _onViewPortCall = (portCallId) => {
@@ -66,9 +67,20 @@ class PilotTimeLineView extends Component {
         .then(this.props.selectPortCall)
         .then(() => this.props.navigation.navigate('TimeLine'))
 }
+  
+  componentWillMount() {
+    this.loadOperations();
+  }
+  
+  loadOperations() {
+  }
+
+  componentWillUnmount() {
+        clearInterval(timer);
+    }
 
   render() {
-    //const {portCalls} = this.props;
+    const {portCalls} = this.props;
 
 
     var listOfFavoritePortcalls = this.props.favoritePortCalls;
@@ -79,7 +91,28 @@ class PilotTimeLineView extends Component {
 
     var ettFavoritPortCall = listOfFavoritePortcalls[0];
 
-    
+    var EventsIEttPortCall = this.props.fetchPortCallEvents(EttportCall.portCallId).then(() => {
+            if(this.props.error.hasError) {
+                if(this.props.error.error.title == "RELIABILITY_FAIL") {
+                    Alert.alert(
+                        'Unable to fetch reliabilities!',
+                        'It can easily be turned on or off in the settings. Would you like to turn it off now?',
+                        [
+                            {text: 'No', onPress: () => this.props.navigation.navigate('PortCalls'), style: 'cancel'},
+                            {text: 'Yes', onPress: () => {
+                                this.props.changeFetchReliability(false);
+                                this.props.removeError();
+                                this.loadOperations(); //Maybe dangerous?
+                            }}
+                        ],
+                        {cancelable: false},
+                    );
+                } else {
+                    this.props.navigation.navigate('Error');                   
+                }
+            }
+        }); 
+
 
 //Metod för att kolla om det är en favorit eller ej 
     if (this.props.favoritePortCalls.includes(EttportCall.portCallId)) {
@@ -113,13 +146,15 @@ class PilotTimeLineView extends Component {
             <Text>
     
               
-{JSON.stringify(EttportCall)}
+//{JSON.stringify(EttportCall)}
           
           
 STARTTID:
           {EttportCall.startTime}
 SLUTTID:
         {EttportCall.endTime}
+
+        {JSON.stringify(EventsIEttPortCall)}
 
             </Text>
           </View>
