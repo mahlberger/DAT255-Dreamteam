@@ -141,3 +141,31 @@ To complete my assigned task - which is a requirement for my team mates to imple
 - Learning objective
 
 To learn how to fetch information from timestamps in the app. 
+
+
+
+## Individual reflection week 7, 14/5 ##
+
+
+
+- What do I want to learn or understand better?
+
+I want to learn more about testing, as this is something that has so far been done in an ad-hoc fashion in the project. More specifically, I want to learn about the tool DeepScan and how it is used, as it seems like a reasonably complex tool for this project's scope. 
+
+- How can I help someone else, or the entire team, to learn something new?
+
+I can help share the knowledge about JavaScript, React Native and the app that have been learned from Pontus to the rest of the group. 
+
+- What is my contribution towards the team's application of Scrum?
+
+I have this week as well taken an active role in the KPI's. For instance, I was invloved in the decision to the adjustments made to the overhead KPI and decision to keep the estimation accuracy KPI. I have also worked on my assigned US's and taken part in all the Scrum meetings. 
+
+- What is my contribution towards the team's deliveries?
+
+Completing my/our assigned tasks of fetching timestamp data.
+
+- Learning objective
+
+Testing and DeepScan.
+
+
