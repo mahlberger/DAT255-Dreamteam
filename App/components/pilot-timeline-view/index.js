@@ -165,7 +165,7 @@ class PilotTimeLineView extends Component {
           firstPage
           navigation={this.props.navigation}
         />
-        <View>
+        <ScrollView>
 			<ScrollView ref='_scrollViewHorizontal' horizontal={true} style= {{height: 1200}}>
 				<View style={
 					{
@@ -208,7 +208,7 @@ class PilotTimeLineView extends Component {
           ))
         }
 		</ScrollView>
-    </View>
+    </ScrollView>
 
       </View>
     );
