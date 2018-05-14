@@ -1,20 +1,27 @@
 ## Individuell reflection
 
+**v7**
+
+what do I want to learn or understand better?
+Learning about props and states in the previous sprint has helped the understanding alot.
+In the next sprint I want to understand how events, states and portcalls relate as this is central to our user story. We have previously learned that everything is based on something called Redux, and now that I have a basic understanding of props/states, I will revisit this in order to understand everything at a deeper level.
+
+how can I help someone else, or the entire team, to learn something new?
+I believe that through our pair programming excersises I can contribute a different perspective on problems we face and it helps us advance more rapidly. We are combining a trial and error approach with looking through existing code, trying to solve as much as we can - and for the things we get stuck on we try to gather as many questions as we can - in time for each Wednesday consultation time.
+
+
+what is my contribution towards the team’s application of scrum?
+In the previous sprint we were assessing a new KPI, and considering what we should do with our existing "Overhead"-KPI. I contributed to the discussion of whether or not the KPI should be removed, leaning towards keeping the KPI as there are other beneficial effects. The suggestion is now that we redefine so that it is clear what the goal of the KPI is. I suggested "Tidsdisposition" as it shows how we spent the time. The new metric then could be how many of the members have filled in how they spend their time. This way we make use of the info in the logbook in our scrum-process and lifting it from the logbook into our KPI's in a directly useful way, by making sure everyone is doing their part, and logging it. (as the logbook is otherwise just a tool for examiner, for grading/making sure students are contributing equally).
+
+
 **v6**
 
 what do I want to learn or understand better?
 
 Now that we are up and running and actually trying to contribute to the completion of the different user stories, learning more about Javascript, states and props is a priority. Coming from a basic understanding of Java, the way Javascripts deals with no types, and how assignments are done is confusing. The goal is to move from confusion to a basic understanding during the next sprint.
 
-
-
 how can I help someone else, or the entire team, to learn something new?
 In the previous sprint there was some benefits in sharing the progress between the programming pairs with regards to how we managed to accesss different types of information. By continueing to sit together when we program this process of knowledge sharing can easily be maintained, and I will promote that we keep on working in this fashion. We noted that there was a real benefit of having a definition of done that is clear and agreed on by everyone. It helps us divide our tasks efficiently and we can continue with new tasks during the sprint more easily if we can for certain say that something is done.
-
-
-
-
-
 
 what is my contribution towards the team’s application of scrum?
 
