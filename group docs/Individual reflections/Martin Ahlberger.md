@@ -1,3 +1,35 @@
+### Individual Reflection week 6
+
+#### 1. What do I want to learn or understand better?
+I want to learn more about the app, how the views are binded to each other and use this to get a better understanding about how the different views work. In main I want to understand the code better.
+
+#### 2. How can I help someone else, or the entire team, to learn something new?
+I think I can help people with my knowledge about programming.  I have been debuging code, solving common problems before and been working with larger projects with many contributors before. I hope that will be useful and I try to teach my group as much as I can.
+
+#### 3. What is my contribution towards the team’s application of scrum?
+I have participated in weekly scrum meetings and also discussed a potential change of KPI's. 
+
+#### 4. What is my contribution towards the team’s deliveries?
+I have been working on a timeline view which the product owner wanted. I have also helped the other memebers in the group with their development.
+
+---
+
+### Individual Reflection week 5
+
+#### 1. What do I want to learn or understand better?
+I want to learn more about React Native and how the current application uses it. I would also like to know more about the product since I have spent to much time focusing on technical problems.
+
+#### 2. How can I help someone else, or the entire team, to learn something new?
+I think I can help people with my knowledge about programming. I have been debuging code, solving common problems before and been working with larger projects with many contributors before. I hope that will be useful and I try to teach my group as much as I can.
+
+#### 3. What is my contribution towards the team’s application of scrum?
+I have been participating in the meetings and helped with analysis of our 3 KPI's.
+
+#### 4. What is my contribution towards the team’s deliveries?
+I have been helping with debuging the teams local environment so the application could run at all. After that I have been working on creating a timeline view. 
+
+---
+
 ### Individual Reflection week 4
 
 #### 1. What do I want to learn or understand better?

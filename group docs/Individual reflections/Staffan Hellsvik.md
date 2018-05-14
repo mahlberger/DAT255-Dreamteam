@@ -1,13 +1,49 @@
 ## Individuell reflection
 
-Now
-Goal
-Gap
+**v6**
+
+what do I want to learn or understand better?
+
+Now that we are up and running and actually trying to contribute to the completion of the different user stories, learning more about Javascript, states and props is a priority. Coming from a basic understanding of Java, the way Javascripts deals with no types, and how assignments are done is confusing. The goal is to move from confusion to a basic understanding during the next sprint.
+
+
+
+how can I help someone else, or the entire team, to learn something new?
+In the previous sprint there was some benefits in sharing the progress between the programming pairs with regards to how we managed to accesss different types of information. By continueing to sit together when we program this process of knowledge sharing can easily be maintained, and I will promote that we keep on working in this fashion. We noted that there was a real benefit of having a definition of done that is clear and agreed on by everyone. It helps us divide our tasks efficiently and we can continue with new tasks during the sprint more easily if we can for certain say that something is done.
+
+
+
+
+
+
+what is my contribution towards the team’s application of scrum?
+
+In the previous sprint we increased the amount of tasks of each user story. This made it easier to progress in our work. It did however not end up giving us a better accuracy when trying to estimate the tasks. I am thinking of how changing the standard pattern that we use for estimating user stories will help us. We need to make sure that we abide by the principles that Scrum sets out to a further extent. I believe that my contribution for the coming sprint can consist of assisting other team members in iterating that we need to follow the rules and abide by the processes that we have set out for ourselves, specifically how the order the work is done in when it comes to defining our user stories and splitting them into tasks, and estimating them.
+
+what is my contribution towards the team’s deliveries?
+We have had a successful Sprint when it comes to completing work that supports the other functions we are trying to develop. We tracked down and extracted information from a port call and tried to make that information available to the people working on the timeline. What remains is to extract specific information, which we will have to do in the next sprint. This is something that we did not have time to do as we underestimated the time it would take to locate and make use of a Portcall. The consultation time in the middle of the week was very helpful to move us forward here. To start getting better at estimates we have introduced a KPI that measures our estimation accuracy.
+
+
+**v5**
+what do I want to learn or understand better?
+Right at the start of the sprint the development was up and running. We had an assessment of our user story set to 24 hrs, but completed it in approx 12 hrs, so there is room for improvement. On the other hand, all the other estimations were wildly optimistic, even when adjusting for the delta between the hours we put in and the expected total work hours of the sprint. For the next sprint I want to increase the granularity of the task breakdown - hopefully this will translate into a more accurate assessment.
+The goal is to make a more accurate estimate than the previous sprint.
+
+how can I help someone else, or the entire team, to learn something new?
+The previous sprint we tried out pair programming and it worked well.
+I hope that by pair programming we will leverage each others strengths in order to progress forward. I suggested the addition to our social contract that we always make sure to tag new tasks on trello - this way the team will help eachother progress as those with easier tasks/more skill can move in and assist other team members.
+
+what is my contribution towards the team’s application of scrum?
+For the documentation on our drive I am also trying to migrate our team reflection goals into our weekly meetings to ensure we always push forward with the process. We also had discussions regarding our KPI's and if they are pushing us in the direction that we want. As for now - the three KPIs are satisfactory: Overhead, making sure we keep our meetings to the point, Communication, ensuring that we stay on top of our information sharing, and that we critically reflect on the process of communicating and Velocity, making sure that we take our time estimates seriously and that we actively try to assess the user stories' size as accurately as possible.
+
+
+what is my contribution towards the team’s deliveries?
+The user story we assigned to ourselves was to create an empty view in the app, accessible from the side menu. This is going to act as a future placeholder for content, most probably the Pilot Timeline, which is the working title of the view. We did this by first trying to copy an existing view and making that accessible through a new button on the menu, then gradually removing content from it until it was blank.
+
+
 **v4**
 what do I want to learn or understand better?
 In the previous sprint we underestimated the challenges of getting our development environment running. For the upcoming sprint there are lots of user stories that we have broken down that will need estimations, something that I want to be able to accurately asssess in the future. This sprint will be an opportunity to better understand what kind off efforts are needed and how long things actually take to get done. The previous sprint was both a success and a setback with regards to the development environment. I got it running on the old branch of our github but not on the master. At the moment I can access the login screen of the app but no more. I want to understand what is not working at the moment and move forward so that I can tackle other kinds of problems regarding the coding of the app.
-
-
 
 how can I help someone else, or the entire team, to learn something new?
 In the previous sprint I have participated in two meetings with the end user, the pilot. Translating their needs into a vision we can work towards requires communicating on the one hand the end users own description of for what they hope what the app will be, and reading between the lines what actual functionality is required. I hope that by focusing on visuals to orient us in terms of what is needed I can contribute to the teams learning and co-creation of the app for the coming sprint.
@@ -18,8 +54,6 @@ By providing a breakdown of the end users description into several categories or
 
 what is my contribution towards the team’s deliveries?
 By being  able to take a more active role in our second meeting with the pilot organizations manager, we could confirm the needs that the end users described to us in the first meeting. They are pressing for a "chat"-like function, which we have then discussed in anticipation of the product owners demands as to how it could be implemented. At the moment this has been my contribution, the facilitation of the needs of the end user into our list of wishes/requirements of the end user. My goal for the next sprint is to contribute some actual code for one of our user stories, pending the success in getting my development environment to work, which remains another goal.
-
-
 
 **v3**
 what do I want to learn or understand better?

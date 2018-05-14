@@ -14,16 +14,16 @@ import {
 } from 'react-native';
 
 import {
-  List,
-  ListItem,
-  Text,
-  Button,
-  Icon,
+    SearchBar,
+    Button,
+    List,
+    ListItem,
+    Icon,
+    Text,
 } from 'react-native-elements';
 
-// Anton-Filip-Kod
 import {
-  fetchEventsForLocation,
+    fetchEventsForLocation,
     updatePortCalls,
     selectPortCall,
     toggleFavoritePortCall,
@@ -46,6 +46,7 @@ import PortCall from '../../PortCall.js';
 
 const portcallIndex = 0;
 
+
 class PilotTimeLineView extends Component {
   constructor(props) {
       super(props);
@@ -62,6 +63,12 @@ class PilotTimeLineView extends Component {
     this.updateZoomState = this.updateZoomState.bind(this);
 
     this.now = new Date();
+    // Testa ifall detta kan tas bort
+     var text = "Hello World2!";
+      var text2;
+      this.state = { numLoadedPortCalls: 20,};
+      
+      this.state = {showChangeLog: false, titleText: "Hejsan", hw: text2};
 
   }
 
@@ -119,6 +126,8 @@ class PilotTimeLineView extends Component {
       currentTime.setTime(this.firstTime.getTime() + 1000*60*60*j); //add one hour
       this.cols.push({key: j, timeObj: currentTime});
     }
+
+ // var listOfFavoritePortcalls = this.props.favoritePortCalls; //An array of all favoritedPortcalls. 
     return(
       <View>
         <Modal
@@ -131,11 +140,13 @@ class PilotTimeLineView extends Component {
             <TopHeader modal title="Change log" backArrowFunction={() => this.setState({showChangeLog: false})}/>
 
         </Modal>
+
         <TopHeader
           title="Pilot Scheduling"
           firstPage
           navigation={this.props.navigation}
         />
+
 			<ScrollView ref='_scrollViewHorizontal' horizontal={true} style= {{height: 300}}>
 				<View style={
 					{
@@ -190,11 +201,11 @@ class PilotTimeLineView extends Component {
       color="#841584"
       accessibilityLabel="zoom in"
     />
-
       </View>
     );
-  }
+  
 }
+
 
 const styles = StyleSheet.create({
     row: {
@@ -252,7 +263,7 @@ const styles = StyleSheet.create({
 		}
 });
 
-// Anton-Filip-Kod
+
 function mapStateToProps(state) {
     return {
         portCalls: state.cache.portCalls,
@@ -262,6 +273,7 @@ function mapStateToProps(state) {
         showLoadingIcon: state.portCalls.portCallsAreLoading,
         filters: state.filters,
         error: state.error,
+
         isAppendingPortCalls: state.cache.appendingPortCalls,
 
 
@@ -275,6 +287,8 @@ function mapStateToProps(state) {
         lookAheadDays: state.berths.lookAheadDays,
         filterOnSources: state.berths.filterOnSources,
         previousFilters: state.berths.previousFilters,
+
+        isAppendingPortCalls: state.cache.appendingPortCalls
     }
 }
 
