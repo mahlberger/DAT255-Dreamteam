@@ -1,3 +1,178 @@
+# Team Reflection week 7, Monday 14/5
+
+**The chosen scope of the application under development including priority of features and for whom you are creating value**
+
+*Now:* The chosen scope still includes the epic to create a GANTT-schedule for scheduling of pilots. Since last sprint, we have gotten further feedback from the PO’s to make sure we are on the right track. The priority of features, after the GANTT-schedule epic, is as follows: chat function for port calls, notifications from changes in subscribed port calls. Those are not seen as reasonable to include in the project scope, however.
+
+*Goal:* To be able to show progress from last week to the PO’s on Wednesday’s meeting. 
+
+*Gap:* We need to evaluate the user stories during the Sprint Planning, to make sure they are still relevant. Then assign the user stories for the Sprint and try to complete as much as possible until Wednesday. 
+
+**Your social contract, which means you should create one in the first week**
+
+*Now:*  
+Everybody keeps following their roles and continues to follow the social contract. Our communication KPI still indicates that all group members are satisfied. 
+
+*Goal:* To continue having a social contract that all group members are satisfied with and follow.
+
+*Gap:* Continuing update the social contract whenever needed.
+
+**success criteria for the team in terms of what you want to achieve with your application**
+
+*Now:* We have determined to use two success criteria:
+* Graphical success: that the view in the app looks like our prototype and that everything is represented correctly.
+* Logical success: That the view in the app works as we have imagined it. For instance that the right states are represented and display the correct time or that it you can click on a port call and be transferred to the timeline for that port call. 
+
+Now we have established a graphical ground to base our coming work. We have also come to the point that we have fetched the data that we need. Now we’ve come to the point were we will merge these two. 
+
+*Goal:* To have reached the success criteria when the project is done. This week the focus will be on the cross functional attribetween the graphical and logical. 
+
+*Gap:* We need to complete the User Stories we have defined to work towards the success criteria. The gap right now is simply to just complete all the User Stories we have left in the Epic. 
+
+A possible option to make a success out of this is to establish cross functional groups between the pair programmers who have done the graphical work and the programmers who have done the logical work in order make the transition easier. 
+
+**your acceptance tests, such as how they were performed and with whom**
+
+*Now:* We still believe that we have not reached a high enough level of functionality in order to create value to the PO. It is therefore not worth the time and effort it takes to set up an acceptance test right now. Our idea is that this would be better to do once the first Epic is finished (since we then have an increased the functionality so that it creates value to the users). In this scenario, we would use two different people - one pilot planner and the boss of the pilots in the Gothenburg port. We would have both of these test the app to see that they are satisfied. If they both are, the acceptance test is seen as successful.
+
+*Goal:* Get done with our Epic so we can start doing acceptance tests.
+
+*Gap:* Complete more User Stories so that we have something of the required value to display.
+
+**the design of your application (choice of APIs, architecture patterns etc)**
+
+*Now:*  We have not used any API’s in the project, since the scope of the Epic does not require this. As we have continued to work with the US’s we have slowly gotten a better understanding of the app’s architecture (although this has not been a goal in itself). 
+
+*Goal:* Be open minded if we encounter a useful API. Have a well enough understanding about the structure behind the current application. The goal is to use an API, if needed.
+
+*Gap:* The gap is thereby not directly associated with API’s or architecture patterns. This will come naturally when we move forward in the project. 
+
+**the behavioural overview of your application (for instance through use cases, interaction diagrams or similar)**
+
+*Now:* We have started to implement a view that will mirror the system that the pilots already use. This far we’ve added a new view for the pilots that show vertical lines for every hour with another line for the current time. We’ve also been able to add boxes representing ships based on a Date object. We are going to implement the functionality to click on a port call in the view to be transferred to the timeline of this view. 
+
+
+*Goal:* The goal is to implement a natural behavioural pattern for the pilots that mimics how they currently use their own system (which they like) so that the user experience can be slick.
+
+*Gap:* To gather more information and opinions from the PO and use this to create a more polished version that can be showed to the end user.
+
+**the structural overview of your application (such as class diagrams, domain models or component diagrams)**
+
+*Now:* We have got a picture of the structural overview of the application from starting to develop the app. Since we are developing an existing app, we have agreed that it is not worth the time to get an even better understanding just by reading code. We have discovered that we get a better understanding of the code when we perform value-adding activities (learning by doing) instead of just reading code.
+
+We struggled to connect the methods from the Actions with our view. Pontus helped us by pointing us to the reducers and showed us how it was done with an example. We could from this figure out how to move forward. 
+
+*Goal:* Continue with our goal to be able to pinpoint where in the code that a given task should be performed without too much time or effort.
+
+*Gap:* Keep doing user stories and tasks so that we, as a side effect, can get a better understanding of the app structure. Also, ask Pontus for help to clarify any classes that might cause confusion for the group. 
+
+**your user stories in terms of using a standard pattern, acceptance criteria, task breakdown and effort estimation**
+
+*Now:* 
+
+We have become better with the use of Definition of Done on our user stories, which have helped us understanding what other group members our contributing to this sprints deliveries. 
+
+*Goal:* Our goal this sprint will be to improve our estimations of our user stories to reach our goal of a maximum of 40% deviation. 
+
+*Gap:* Try and use the experience we’ve accumulated during the project and also use the new KPI to get a more granular representation on where our estimations mistakes stems from. 
+
+**the three KPIs you use for monitoring your progress**
+
+*Now:*
+
+During this sprint we have evaluated our Overhead KPI once again. We came to the conclusion that the incentive to keep a well documented log book in order to fill this KPI with data is a nice indirect benefit. We believe that the indirect effect of a well documented logbook is important, as it creates a good discussion about the workload distribution in the group. The group has also realized that the original purpose of the Overhead KPI is not that value-adding as we first thought. The agile approach would be to alter our direction when new information has presented itself. As such, we have decided to change our Overhead KPI to monitor amount of filled in fields for our columns total, meeting and reflection time. This will still incentives to keep well documented logbooks, while being a better goal for the objective we want to achieve. 
+
+Our newly introduced KPI, Estimation Accuracy, is covering our ability to estimate task/user stories which the three others have not. This sprint result, a deviation of 52% between estimated/actual time, gave us an indication that there are still a lot of uncertainty which hinder us from making good prediction. Furthermore, we realized that the deviations arises both from overestimation as well as underestimation. 
+
+Since this KPI has been introduced late in the project it will not help as much as if introduced earlier, but we still feel that it was good that actually got a better overview of how good our estimates were.
+
+*Goal:* The overall goal is to now have four KPI’s that can motivate the team to move forward and reach the respective objectives set for these KPI’s. They should create incentives for good communication, maximize value of time spent, estimate the tasks in an accurate manner, perform the required tasks and complement each other in these regards. Our goal for this sprint is to keep performing well in our current KPI’s, as well as create good prerequisites for evaluating the new KPI about estimation accuracy for next week’s sprint retrospective. This weeks goal will also be to understand if we have as a group have any bias in overestimation or underestimation, which will be easier to examine with more sprints worth of data. 
+
+*Gap:* For the Velocity KPI: Reach the set objective for the sprint and evaluate how the new KPI complements velocity. 
+
+For the Overhead KPI: Reach the set objective for the sprint which is all fields being filled in.
+
+For the Communication KPI: We have seen higher and higher total averages, the following week will be a good indicator of whether our long term information sharing is working as intended.
+
+For the Estimation Accuracy KPI: Reach the set objective for the KPI which is a maximum of 40% deviation, actual time spent related to our estimates. 
+
+
+
+**code quality using a tool such as Findbugs (1 point if your code includes issues concerning correctness or bad style, 2 points if you have dodgy or performance issues and 3 points if the code is fine), only asses the code you have written yourself**
+
+*Now:* 
+In discussion with our supervisor we have come to the conclusion that we need to test the code, and we will try and use JEST and DeepScan for this. This has not been done for the code written in this sprint but will be done next sprint. For this sprint we’ve just tested the code by executing it and see if it works as intended. We found that most of the code was fine, but that there was elements added which has not been mentioned in any user story.
+
+*Goal:* Our goal this week will be to determine the right program to evaluate code with and have the whole group prepared for evaluating this sprints code with chosen test programs. 
+
+*Gap:* The group will assign a user story to evaluate JEST and DeepScan, to see which one would be most suitable to use for testing our code. The owners of the user story will then communicate their result,regarding which program to use to the rest of the group.  
+
+
+**The roles you have used within the team**
+
+*Now:* We have assigned the following role: Scrummaster, a responsible of booking group rooms, a secretary and meeting protocol responsible, responsible for Trello, reminding-of-individual-reflection and uploading team reflection responsible, responsible for contact with course examiner and Git-responsible. Everyone has the role of developer, where we are organized into pairs. 
+
+The roles we have assigned are working good. Each person have a responsible role either as official in the group or by doing hard work coding.
+
+As mentioned earlier we’re going to create a user story for the team to find and evaluate what software to use for testing purposes. Using this software will be connected to the code review and testing so no single individual will be responsible for this.
+
+*Goal:* Equal work burden for each person in the project.
+
+*Gap:* Continue the evaluation on the distribution of work, making sure the right person have the right role and that everyone is pleased with the current situation. We will do this by keeping an open discussion climate and continuously communicating how the work is distributed amongst the group members. Transparency is key.
+
+**the agile practices you have used for the current sprint**
+
+*Now:* 
+
+This sprint our group have become more comfortable in using Trello to move cards between different phases such as between “in development” and “testing”, which helped our team in the process of development. We’ve also improved on setting good success criteria for each user story so that we now when it is finished.
+
+We have improved our communication ability to tell the rest of the group when a pair programming team is stuck. By having a more clear structure in our Trello, it helps other members to more quickly respond to any request for guidance. 
+
+*Goal:*  As we are approaching our last full sprint, a major objective will be to have a functioning application to present to our product owners. To complete this objective we will need flexible with our resource allocation to complete the critical tasks which are most value-adding. 
+
+*Gap:*  To complete this goal we will need to have good communication so that all members of the team recieve help as soon as possible when stuck. This will be done by more effective use of  our chat, such as be better to seperate communication of technical question with more general around the project, into different chats.  
+
+
+**the time you have spent on the course (so keep track of your hours so you can describe the current situation)**
+
+*Now:* Last sprint we spent on average 15.5 hours. The last sprint consisted of one holiday and a klämdag which affected the total hours spent by each team member. The Bachelor thesis deadlines are also impacting the teams efforts and will continue to do so until the projects are finished.
+
+*Goal:* Get on track towards a 20 hours average for the end of the course, realising it will probably become 20 hours work weeks instead of an average time for all weeks.
+
+*Gap: Extra days need to be scheduled for the next sprint in order to increase the input of hours. Discussions about this have been held and should be confirmed for the next sprint. 
+
+
+**the sprint review (either in terms of outcome of the current week's exercise or meeting the product owner)**
+
+*Now:* 
+We have presented a visual representation of gantt-chart and port all fetch to the product owner, fulfilling the previous weeks goal. 
+The product owners now request that we have testing of our code to ensure it is working properly. 
+
+*Goal:* To be able to demo a enhanced visual representation of the achieved tasks during next sprint’s product owner meeting. Start implementing tests on our produced code, with a fitting framework, such as Jest or Deepscan.
+
+*Gap:* Establish a process and method(s) of testing our code that everyone understands and can use.
+
+
+**Best practices for using new tools and technologies (IDEs, version control, scrum boards etc.)**
+
+*Now:* Trello: is developing towards enabling a smooth sprint. We notice that there is a need for smoother handling of situations that come up as a result of code review, and assignment of people to code review. Assignment of people is probably due to us being new to conducting code review. No changes will be made here. However, what happens when something fails code review - we have no graphical representation or similar way to determine why a user story is moved back from “testing” to “In development”.
+We have established a new KPI that requires more active use of the Trello board: Estimation Accuracy.
+IDEs: For the PC users, it usually takes a couple of (or really really many) attempts to compile, and get the expo tunnel up and running. Currently we see no workaround, but working in pairs minimizes the impact of this as our Mac users are having less problems.
+
+*Goal:* Trello: be able to handle the situation where a User Story fails in the testing/code review phase correctly. Github: Have a greater part of the group comfortable with solving merge conflicts.
+
+*Gap:* Trello: establish a way to graphically represent when a User Story has failed testing/code review. Github: have people that have not previously solved merge conflicts actually do the merging... learning by doing!
+
+**Relation to literature and guest lectures (how do your reflections relate to what others have to say?)**
+
+*Now:* 
+We have not had any guest lectures since our last reflection - there is no new information to collect from guest lectures. About litterature we’ve collected information about how to test our code, i.e. by asking, via the Slack channel, other teams how they implement tests in their work.
+
+*Goal:* 
+Continue our work towards fully utilizing the available sources of information to avoid downtime due to gaps in knowledge.
+
+*Gap:* Continue gathering information from all available sources, now that there are no further lectures or guest lectures. Also provide useful tips to each other on how to find the right info in vast uncertainty. 
+
 # Team Reflection week 6, Monday 7/5
 
 **The chosen scope of the application under development including priority of features and for whom you are creating value**
