@@ -57,7 +57,6 @@ class PilotTimeLineView extends Component {
       for(var i = 0; i < this.props.portCalls.length;i++){
         this.portCalls.push(new PortCall(this.props.portCalls[i].startTime, this.props.portCalls[i].lastUpdatedState, this.props.portCalls[i].vessel.name));
       }
-      console.log(this.props.portCalls[0]);
       this.state = {showChangeLog: false, colWidth: 60, hoursLookingBack: 48, hoursLookingForward: 48 };
 
     this.updateZoomState = this.updateZoomState.bind(this);
@@ -166,7 +165,8 @@ class PilotTimeLineView extends Component {
           firstPage
           navigation={this.props.navigation}
         />
-			<ScrollView ref='_scrollViewHorizontal' horizontal={true} style= {{height: 300}}>
+        <View>
+			<ScrollView ref='_scrollViewHorizontal' horizontal={true} style= {{height: 1200}}>
 				<View style={
 					{
 					   borderRightColor: 'red',
@@ -208,19 +208,7 @@ class PilotTimeLineView extends Component {
           ))
         }
 		</ScrollView>
-    <Button
-      onPress={ () => this.updateZoomState(10)}
-      title="Zoom out"
-      color="#841584"
-      accessibilityLabel="zoom out"
-    />
-
-      <Button
-      onPress={ () => this.updateZoomState(-10)}
-      title="Zoom in"
-      color="#841584"
-      accessibilityLabel="zoom in"
-    />
+    </View>
 
       </View>
     );
@@ -236,7 +224,7 @@ const styles = StyleSheet.create({
     },
     timelineRuler: {
       width: 1,
-      height: 300,
+      height: 1200,
       backgroundColor: 'black',
       position: 'absolute',
       top: 50
