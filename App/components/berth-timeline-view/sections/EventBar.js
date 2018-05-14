@@ -15,7 +15,6 @@ import {
 import { getTimeString } from '../../../util/timeservices';
 import colorScheme from '../../../config/colors';
 
-
 function renderStartIndicator(event) {
     const ActualIndicator = (<View style={[styles.actualContainer]}>
         <Text style={styles.actualText}>A</Text>
@@ -53,7 +52,7 @@ const EventBar = (props) => {
 
     const width = Math.max((event.displayEndTime - event.displayStartTime) * props.displayRatio, 0); 
     const marginLeft = earliestTime ? (event.displayStartTime - earliestTime) * props.displayRatio : 0;
-
+	//width = the width of the bar
     return (
         <TouchableWithoutFeedback
             onPress={props.onClick}
