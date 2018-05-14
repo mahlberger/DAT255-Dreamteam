@@ -222,3 +222,39 @@ Plan to get to next week's objectives:
 2. Pair programming
 3. Be conscious about the time for each task and if it can get more efficient. 
 
+## Week 7
+
+### WHAT DO I WANT TO LEARN OR UNDERSTAND BETTER?
+I want to learn how the react native redux work, so I know how to work with it properly. Since I’ve been coding javascript some weeks, now I’ve want to take the next step and learn som conventions how one should do stuff. I also want to understand how props and states actually works and how to the my code. 
+
+
+### HOW CAN I HELP SOMEONE ELSE, OR THE ENTIRE TEAM, TO LEARN SOMETHING NEW?
+
+Since we are pair programming, I could share what we’ve done in our branch so they understood what they needed for their own development branch. I shared how to fetch a portcall and the data included in that (start time etc.). Next up is to share how to do with data within states, but first we have to understand it by our selves. 
+
+
+### WHAT IS MY CONTRIBUTION TOWARDS THE TEAM’S APPLICATION OF SCRUM?
+Been active in the discussion about our KPI:s, if we should keep our overhead KPI and include another one about precision. We will continue with both and review them together in the last sprint retrospective. Talking to the product owners and to make a prioritise list possible. 
+
+
+### WHAT IS MY CONTRIBUTION TOWARDS THE TEAM’S DELIVERIES?
+I worked my hours and almost got done with the User Story. Unfortunately the user story require a lot of javascript and react skills, which none in our team got at the moment. So we’re keeping learning that and hopefully it will be clear how to do solve it this week. I’m also being active in discussions about which User Stories we should do, and open if I can help another team member with something. 
+
+
+### Objectives 
+Last week objectives: 
+1. Get my assigned user stories done - ALMOST - code-problem 
+2. Understand Javascript better (which I’m doing every week) - DONE - but I want to learn it even more faster…
+3. Think about how long it takes to do the user stories (and tasks) in order to improve it and for the new KPI - DONE, and I think the KPI makes sense after the first week. 
+
+Next week objectives: 
+
+1. Know how to work with states
+2. Start with testing of code
+
+
+Plan to get to next week's objectives:
+1. Think
+2. Trial and error
+2. Ask Pontus
+
