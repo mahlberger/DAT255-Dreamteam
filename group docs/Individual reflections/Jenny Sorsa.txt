@@ -84,3 +84,16 @@ This week my main focus has been on reviewing the process and reflecting upon th
 
 4. What is my contribution towards the team’s deliveries? 
 I've been working on the creation of user stories in order to demo our progress to the product owners next sprint.
+
+-- Individual Reflection week 7, 14/5 --
+1. What do I want to learn or understand better?
+Last week I wanted to reach a deeper understanding of the javascript code, something which I believe I have achieved. During next sprint I would like to learn more about testing the code in a correct way, by implemented some sort of method for doing this. 
+
+2. How can I help someone else, or the entire team, to learn something new?
+I can help my programming partner to learn which features that are most important for the product owners in the followint User Stories that we create together.
+
+3. What is my contribution towards the team's application of Scrum?
+
+
+4. What is my contribution towards the team's deliveries?
+
