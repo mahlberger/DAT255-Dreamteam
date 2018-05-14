@@ -72,8 +72,10 @@ class PilotTimeLineView extends Component {
   }
   
   loadOperations() {
-    onePortCall = this.props.portCalls[6];
-    this.props.fetchPortCallEvents(onePortCall.portCallId).then(this.finishedFetchingEvents);
+    //for (i=0; i < this.props.portCalls.length; i++) {
+      onePortCall = this.props.portCalls[0];
+      this.props.fetchPortCallEvents(onePortCall.portCallId).then(this.finishedFetchingEvents);
+    //}
   }
 
   componentWillUnmount() {
@@ -85,6 +87,8 @@ class PilotTimeLineView extends Component {
     console.log(JSON.stringify(this.props.fetchedEvents));
     //console.log(JSON.stringify(this.state.fetchedEvents));
     console.log("hej igen");
+    console.log(this.props.portCalls.length);
+    //console.log(this.props.fetchedEvents.Arrival_Vessel_Berth)
   }
 
   render() {
@@ -130,7 +134,7 @@ class PilotTimeLineView extends Component {
           <View>
             <Text>
          
-              {this.props.fetchedEvents[0] ? JSON.stringify(this.props.fetchedEvents[0].portCallId) : null}
+              {JSON.stringify(this.props.fetchedEvents)}
                 Ovan hämtar data från plats 0, har en if sats för att kolla så den inte är tom. Då hämtar vi portcall från 1. 
             </Text>
           </View>
@@ -140,7 +144,7 @@ class PilotTimeLineView extends Component {
   }
   
 // MÅSTE FIXA SORT OCH FILTERFUNKTIONEN FÖR FETCHED EVETS - finns färdiga metoder att ta inspiration ifrån. 
-
+// ? JSON.stringify(this.props.fetchedEvents[0].portCallId) : null
 
   //     {JSON.stringify(this.props.fetchedEvents)}
   // {JSON.stringify(onePortCall)}  ger all data som finns lagrat i ett portcall. 
