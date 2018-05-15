@@ -1,5 +1,22 @@
 # Individual Reflection
 
+## Week 7
+- **what do I want to learn or understand better?**
+
+Last weeks estimates were not that good, we were off by quite a bit. But we did add a new KPI that will hopefully show that we improve next sprint. I guess I still need to to improve on estemating the time required for user stories. Excluding that I feel that I just want to improve on included in the course, though I do need to learn more about testing, which I feel is not as fun as the javascript/react native so that is what I really want to improve further on. 
+
+- **how can I help someone else, or the entire team, to learn something new?**
+
+By doing pair-programming. I feel that I've said that quite some times now but I feel that this is the best way to help someone learn something new when we're all quite on the same level. One can as said before act as a sounding board, bouncing ideas back and forth.  
+
+- **what is my contribution towards the team’s application of scrum?**
+
+I've taken part in the scrum meetings and tried to help in the discussion of our new KPI. 
+
+- **what is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week's ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation).**
+
+I do understand states more now which has helped in the coding as we have succesfully rendered boxes connected to portcalls so that they are at the right place in the timeline and has a specific color based on what the last state in the portcall was.
+
 ## Week 6
 - **what do I want to learn or understand better?**
 
