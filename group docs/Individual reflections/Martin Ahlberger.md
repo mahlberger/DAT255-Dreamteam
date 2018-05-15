@@ -1,3 +1,19 @@
+### Individual Reflection week 7
+
+#### 1. What do I want to learn or understand better?
+How to perform tests on a graphical view which I think is harder than logical functions. I still want to learn more about the app.
+
+#### 2. How can I help someone else, or the entire team, to learn something new?
+I think I can help people with my knowledge about programming.  I have been debuging code, solving common problems before and been working with larger projects with many contributors before. I hope that will be useful and I try to teach my group as much as I can.
+
+#### 3. What is my contribution towards the team’s application of scrum?
+I have participated in weekly scrum meetings and discussed about possible the change of KPI.
+
+#### 4. What is my contribution towards the team’s deliveries?
+I have continued to work on a timeline view and with a little more focus rewriting code to a more sustainable level and trying to make the best use of react's strengths. 
+
+---
+
 ### Individual Reflection week 6
 
 #### 1. What do I want to learn or understand better?
