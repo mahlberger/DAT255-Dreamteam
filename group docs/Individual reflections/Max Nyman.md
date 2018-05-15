@@ -1,6 +1,22 @@
 ### Individual Reflection week 6
 
 #### 1. What do I want to learn or understand better?
+How test produced code in order to guarantee it's quality. How to connect the timestamps to actual portcalls.
+
+#### 2. How can I help someone else, or the entire team, to learn something new?
+By further share my knowledge of css, which still seem to be viable to use in the current context. Fortuermore I'd like to continue contributing in creating good userstories and contributing in our pair programming.
+
+#### 3. What is my contribution towards the team’s application of scrum?
+In my role as scrum master I have made sure the weekly team reflections and team retrospective is carrried through in a decent manner.
+
+#### 4. What is my contribution towards the team’s deliveries?
+I've implemented the vizualization of portcalls based on real data (the port call is placed according to the start time of the last event for the current port call).
+
+---
+
+### Individual Reflection week 6
+
+#### 1. What do I want to learn or understand better?
 How to create and use classes. How to import port calls into a view and minipulate them as I want to do.
 
 #### 2. How can I help someone else, or the entire team, to learn something new?
