@@ -23,7 +23,7 @@ import {
 
 // Anton-Filip-Kod
 import {
-  fetchEventsForLocation,
+    fetchEventsForLocation,
     updatePortCalls,
     selectPortCall,
     toggleFavoritePortCall,
@@ -51,13 +51,14 @@ class PilotTimeLineView extends Component {
 
       // Fetching portCalls
       const {portCalls} = this.props;
-	  
+
 	  // colWidth = the width (in pixels) representing an hour
       this.state = {showChangeLog: false, colWidth: 40, hoursLookingBack: 48, hoursLookingForward: 48 };
 
 	  this.updateZoomState = this.updateZoomState.bind(this);
 
 	  this.now = new Date();
+    portcallIndex = 0;
 
   }
 
@@ -79,17 +80,17 @@ class PilotTimeLineView extends Component {
     });
     timerid = setTimeout( fx, 30 );
   }
-  
+
   getLeftOffSet(date){
     var offset;
     offset = ((date-this.firstTime)/(1000*60*60))*(this.state.colWidth);
     return offset;
   }
-  
+
   getWidth(startTime, endTime){
     return this.getLeftOffSet(endTime) - this.getLeftOffSet(startTime);
   }
-  
+
   updateZoomState(value) {
   //  console.log(value);
     this.setState(prevState => {
