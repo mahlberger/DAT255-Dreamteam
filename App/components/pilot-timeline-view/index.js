@@ -27,7 +27,7 @@ import TopHeader from '../top-header-view';
 import { APP_VERSION } from '../../config/version';
 import colorScheme from '../../config/colors';
 import PortCallDetails from './sections/PortCallDetails';
-import PortCall from '../../PortCall.js';
+
 // Anton-Filip-Kod
 import {
   fetchEventsForLocation,
@@ -51,7 +51,7 @@ const portcallIndex = 0;
 class PilotTimeLineView extends Component {
   constructor(props) {
     super(props);
-    this.state = {showChangeLog: false, colWidth: 40, hoursLookingBack: 20, hoursLookingForward: 20, showTimelineDetailsModal: false};
+    this.state = {showChangeLog: false, colWidth: 60, portCallHeight: 30, hoursLookingBack: 48, hoursLookingForward: 48, showTimelineDetailsModal: false};
 
     this.updateZoomState = this.updateZoomState.bind(this);
 
@@ -102,6 +102,35 @@ class PilotTimeLineView extends Component {
     }
   }
 
+  getColorByState(state){
+//    console.log(state);
+  switch (state) {
+  case 'Arrival_Vessel_Berth':
+      return 'green';
+      break;
+  case 'Arrival_Vessel_TrafficArea':
+      return 'red';
+      break;
+  case 'Departure_Vessel_Berth':
+      return 'yellow';
+      break;
+  case 'Departure_Vessel_TrafficArea':
+      return 'purple';
+      break;
+  case 'SludgeOp_Requested':
+      return 'orange';
+      break;
+  case 'Arrival_Vessel_AnchorageArea':
+      return 'black';
+      break;
+  case 'SludgeOp_Completed':
+      return 'green';
+  default:
+      return 'blue';
+}
+
+  }
+
   render() {
   const BULLET = '\u2022';
     this.firstTime = new Date(Math.floor(this.now.getTime()/1000/60/60)*1000*60*60);
@@ -114,8 +143,12 @@ class PilotTimeLineView extends Component {
       this.cols.push({key: j, timeObj: currentTime});
     }
 
-    const {portCalls} = this.props;
+    let {portCalls, navigation} = this.props;
+    const {navigate} = navigation;
 
+    portCalls = portCalls.filter(portcall => portcall.vessel.favorite = true);
+    console.log(portCalls);
+    console.log("hej");
     let portcallIndex = 0;
 
 
@@ -136,7 +169,9 @@ class PilotTimeLineView extends Component {
           firstPage
           navigation={this.props.navigation}
         />
-			<ScrollView ref='_scrollViewHorizontal' horizontal={true} style= {{height: 400}}>
+
+        <ScrollView>
+			<ScrollView ref='_scrollViewHorizontal' horizontal={true} style= {{height: 1200}}>
 				<View style={
 					{
 					   borderRightColor: 'red',
@@ -167,11 +202,17 @@ class PilotTimeLineView extends Component {
 					))
 				}
         {
-          portCalls.map((item, key) =>
+          this.props.portCalls.map((item, key) =>
           (
-            <TouchableWithoutFeedback key = { key } onPress={ () => this.setState({showTimelineDetailsModal: !this.state.showTimelineDetailsModal, portCall: item}) }> 
-            
-            <View key = { key } style = { [ styles.timelinePortcall, {left: this.getLeftOffSet(new Date(item.startTime)), top: 50 + portcallIndex++*40 }]}>
+            <TouchableWithoutFeedback key = { key } onPress={
+            () => {
+              console.log(99);
+              selectPortCall(item);
+              navigate('TimeLine');
+            }}
+            > 
+            <View key = { key } style = { [ styles.stylePortCall, {left: this.getLeftOffSet(new Date(item.startTime)),
+              top: 50 + portcallIndex++*this.state.portCallHeight, height: this.state.portCallHeight, backgroundColor: this.getColorByState(item.lastUpdatedState)}]}>
                 <Text>
                   {item.vessel.name}
                 </Text>
@@ -186,19 +227,7 @@ class PilotTimeLineView extends Component {
         onClose={() => this.setState({showTimelineDetailsModal: false, eventDetails: {}})} 
         onViewPortCall={this.props.onViewPortCall}
     />}
-    <Button
-      onPress={ () => this.updateZoomState(10)}
-      title="Zoom out"
-      color="#841584"
-      accessibilityLabel="zoom out"
-    />
-
-      <Button
-      onPress={ () => this.updateZoomState(-10)}
-      title="Zoom in"
-      color="#841584"
-      accessibilityLabel="zoom in"
-    />
+    </ScrollView>
 
       </View>
     );
@@ -219,19 +248,16 @@ const styles = StyleSheet.create({
     },
     timelineRuler: {
       width: 1,
-      height: 400,
+      height: 1200,
       backgroundColor: 'black',
       position: 'absolute',
       top: 50
     },
-    timelinePortcall: {
-      width: 60,
-      height: 30,
-      borderColor: 'blue',
-      borderWidth: 2,
-      position: 'absolute',
-      top: 50, 
-      backgroundColor: 'blue',
+    stylePortCall: {
+      width: 60, 
+      borderWidth: 0,
+	    backgroundColor: 'blue',
+      position: 'absolute'
     },
     col: {
       borderRightColor: 'black',
@@ -247,14 +273,6 @@ const styles = StyleSheet.create({
     },
     colText: {
       textAlign: 'center'
-    },
-    square: {
-      width: 20,
-      height: 20,
-      borderColor: 'blue',
-      borderWidth: 2,
-      position: 'absolute'
-
     },
 		lineCurrentTime: {
 		   borderRightColor: 'red',

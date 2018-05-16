@@ -58,3 +58,42 @@ I've been contributing by informing the group about the dialogue with Jean-Pierr
 
 4. What is my contribution towards the team’s deliveries? 
 I've gotten a better understanding of the application by studying its' various functions, this can hopefully help the team deliver functions deriving from our user stories and tasks. I've also contributed in breaking down Epic's into user stories and deciding which ones to prioritize during the next sprint. My goal last week was to spend more time on the project, which I have done. Next week's goal is to get familiar with javascript in React Native by producing and texting code together with a small group. 
+
+-- Individual Reflection week 5, 1/5 --
+1. What do I want to learn or understand better?
+I would like to learn how to create decent code in the implementation process for our user stories and make sure it works the way we want it to.
+
+2. How can I help someone else, or the entire team, to learn something new?
+By co-coding together with my coding partner, I can hopefully help my team learn about our progress in the programming and creation of functions to our application.
+
+3. What is my contribution towards the team’s application of scrum?
+This week I have been sick for several days of the sprint, which has unfortunately made me unable to work the full week. In the beginning of sprint 5 I contributed by being active in our group meeting where we made decisions about the group collaboration and progress,  making sure I was on track with the different tasks of the week.
+
+4. What is my contribution towards the team’s deliveries? 
+Since I missed a couple of days due to illness my deliveries were only good in the beginning of the sprint, where I contributed with ideas regarding what to demo for the Product Owners and later on created "print screens" of the design and functions of the user stories we are currently developing. Until next week I would like to improve the process in going from idea to implementation regarding the user stories.
+
+-- Individual Reflection week 6, 9/5 --
+1. What do I want to learn or understand better?
+Last week my learning goal was to learn how to create decent code for our user stories. I believe that a part of that goal is reached, since I felt a greater understanding of how to interpret and create the code needed for our user story. Until next sprint I would like to understand even more code in the process of creating user stories. I also want to start reviewing all of our team reflections in the process in order to get an overview of how the entire project and team work has been.
+
+2. How can I help someone else, or the entire team, to learn something new?
+By studying the team's gathered reflections since the very first sprint, I will be responsible for slowly starting the process of collecting the data needed for the final reflection report.
+
+3. What is my contribution towards the team’s application of scrum?
+This week my main focus has been on reviewing the process and reflecting upon the new KPI the team decided to implement last sprint review.
+
+4. What is my contribution towards the team’s deliveries? 
+I've been working on the creation of user stories in order to demo our progress to the product owners next sprint.
+
+-- Individual Reflection week 7, 14/5 --
+1. What do I want to learn or understand better?
+Last week I wanted to reach a deeper understanding of the javascript code, something which I believe I have achieved. During next sprint I would like to learn more about testing the code in a correct way, by implemented some sort of method for doing this. 
+
+2. How can I help someone else, or the entire team, to learn something new?
+I can help my programming partner to learn which features that are most important for the product owners in the followint User Stories that we create together.
+
+3. What is my contribution towards the team's application of Scrum?
+
+
+4. What is my contribution towards the team's deliveries?
+

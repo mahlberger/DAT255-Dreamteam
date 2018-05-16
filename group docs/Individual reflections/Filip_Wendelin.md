@@ -138,9 +138,123 @@ Next week objectives:
 2. Create a product (I'll be working on how we can handle subscribed portcalls) 
 3. Be able to create working code piece with react native. 
 
-
 Plan to get to next week's objectives:
 1. communication within the group
 2. Pair programming
 3. See stackoverflow and read the source code for the app 
 4. Trial and error 
+
+
+## Week 5
+
+### WHAT DO I WANT TO LEARN OR UNDERSTAND BETTER?
+Understand how the app works - how do different views correlate with each other, how do they communicate. 
+In order to do that, I need a better understanding of javascript. 
+
+### HOW CAN I HELP SOMEONE ELSE, OR THE ENTIRE TEAM, TO LEARN SOMETHING NEW?
+We are pair programming, and I’m programming with Anton. I will try to make sure we both understand how the stuff we change work and the understanding behind it. Me and Anton can also help other pair programmers with our mistakes to make the process for everybody more smooth. 
+If I learn javascribt better, I can help my fellows more. 
+
+
+### WHAT IS MY CONTRIBUTION TOWARDS THE TEAM’S APPLICATION OF SCRUM?
+Attending the meeting and helping to make sure we actually are doing some kind of scrum accoring to the rules. For instance how we do the review, retrospective and sprint-stuff. 
+Using Trello in a suitable way 
+Working on my user story and trying to finish it (my role a developer in the team)  
+As our scrum master had to leave on wednesday, I took his part in the scrum of scrum. There i took up the question about a chat-function between the actors. No one had the plan to develop even though some end users might appropriate it (we are probably not either implement it, since we focus on a specific view to the pilots instead). 
+
+### WHAT IS MY CONTRIBUTION TOWARDS THE TEAM’S DELIVERIES?
+*Worked on my user story that is about to fetch data about all berths that are among the favourites. Later that will be implemented in the Gantt scheme so we can show the PO our achievments. 
+Spend resonable time (20h isch) doing my user story 
+
+
+
+### Objectives 
+Last week objectives: 
+1. Understand the app and what we want to change - HALF DONE. Understand what we want to change, but not the app totaly. 
+2. Create a product (I'll be working on how we can handle subscribed portcalls) - NOT DONE, started, but everything take longer time than you thing. 
+3. Be able to create working code piece with react native. - DONE. Can create new text views, write stuff to the console etc. 
+
+Next week objectives: 
+1. Get last week user story done. 
+
+
+Plan to get to next week's objectives:
+1. Read code
+2. Pair programming
+3. Google 
+4. Trial and error 
+
+## Week 6
+
+### WHAT DO I WANT TO LEARN OR UNDERSTAND BETTER?
+I want to understand the backend of the app better, more precisely I want to fully understand how the where and how the portcalls are stored, and also if there are two different storing areas for favorited portcalls and the one that are ordinary. By doing that, I will be easier to fetch the data we need, like ETA:s and statuses on vessels. I also want to improve my estimation of tasks and user stories since we’ll start with a new KPI about that this week. Though I believe that is very much about gut feeling. 
+
+I also started looking on different code testing methods. That’s an area I want more knowledge about if we have time to do it the last sprint. 
+
+### HOW CAN I HELP SOMEONE ELSE, OR THE ENTIRE TEAM, TO LEARN SOMETHING NEW?
+
+Me and Anton finished with our user story last sprint where we created an array with all the  favouritezed PortCalls to our view. Since we got a little hang of it how it could be done, this week we will help another pair that caught problem with fetching data from a portcall/portcallID. In that way, we can contribute by what we did and what we tried. 
+I also took initiative to ask Pontus (tech support) questions that provided help for the entire team. 
+
+
+### WHAT IS MY CONTRIBUTION TOWARDS THE TEAM’S APPLICATION OF SCRUM?
+Keeping attending all meetings, talking to the productowner etc. I take part of discussions, like this week when we created a new KPI about precision of estimation of tasks. I also made sure that our definition of done would be the best way possible - I want a concrete results that can be shared among the team, and not just “Now I understand how it works” since it’s hard to spread the knowledge. Also contributing by writing and discussion about the retrospective. 
+
+
+
+### WHAT IS MY CONTRIBUTION TOWARDS THE TEAM’S DELIVERIES?
+I worked my hours and I did my assign user story. Since my user story ended when I had some working time left, I started to look on how we can test the code with a third part library like snapshot with JEST. I started a discussion about how we should look on the testing, and that we probably should prioritise coding for the app instead, since the PO:s are not going to use our code immodesty, but want our ideas. There it creates more value by coding what we think.  
+
+
+
+### Objectives 
+Last week objectives: 
+1. Get last week user story done. - DONE. Creates a nice feeling in the gut. Thanks to Pontus it took a lot less time than we thought - we had no idea we were working with react redux as well. 
+
+Next week objectives: 
+Get my assigned user stories done
+Understand Javascript better (which I’m doing every week)
+Think about how long it takes to do the user stories (and tasks) in order to improve it and for the new KPI. 
+
+
+Plan to get to next week's objectives:
+1. Read code and trial and error. 
+2. Pair programming
+3. Be conscious about the time for each task and if it can get more efficient. 
+
+## Week 7
+
+### WHAT DO I WANT TO LEARN OR UNDERSTAND BETTER?
+I want to learn how the react native redux work, so I know how to work with it properly. Since I’ve been coding javascript some weeks, now I’ve want to take the next step and learn som conventions how one should do stuff. I also want to understand how props and states actually works and how to the my code. 
+
+
+### HOW CAN I HELP SOMEONE ELSE, OR THE ENTIRE TEAM, TO LEARN SOMETHING NEW?
+
+Since we are pair programming, I could share what we’ve done in our branch so they understood what they needed for their own development branch. I shared how to fetch a portcall and the data included in that (start time etc.). Next up is to share how to do with data within states, but first we have to understand it by our selves. 
+
+
+### WHAT IS MY CONTRIBUTION TOWARDS THE TEAM’S APPLICATION OF SCRUM?
+Been active in the discussion about our KPI:s, if we should keep our overhead KPI and include another one about precision. We will continue with both and review them together in the last sprint retrospective. Talking to the product owners and to make a prioritise list possible. 
+
+
+### WHAT IS MY CONTRIBUTION TOWARDS THE TEAM’S DELIVERIES?
+I worked my hours and almost got done with the User Story. Unfortunately the user story require a lot of javascript and react skills, which none in our team got at the moment. So we’re keeping learning that and hopefully it will be clear how to do solve it this week. I’m also being active in discussions about which User Stories we should do, and open if I can help another team member with something. 
+
+
+### Objectives 
+Last week objectives: 
+1. Get my assigned user stories done - ALMOST - code-problem 
+2. Understand Javascript better (which I’m doing every week) - DONE - but I want to learn it even more faster…
+3. Think about how long it takes to do the user stories (and tasks) in order to improve it and for the new KPI - DONE, and I think the KPI makes sense after the first week. 
+
+Next week objectives: 
+
+1. Know how to work with states
+2. Start with testing of code
+
+
+Plan to get to next week's objectives:
+1. Think
+2. Trial and error
+2. Ask Pontus
+

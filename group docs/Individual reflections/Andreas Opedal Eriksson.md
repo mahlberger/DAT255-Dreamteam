@@ -89,3 +89,83 @@ As the previous sprint, it has been to do my part in completing the tasks (which
 - Learning objective
 
 As stated above, learn how to implement a new "view" in the app and access this view from the menu in the app. 
+
+
+
+## Individual reflection week 5, 30/4 ##
+
+
+
+- What do I want to learn or understand better?
+
+For this sprint, my assigned tasks include displaying information from all timestamps for a given portcall (so that we later can display this information in the GANTT-chart). I therefore want to understand how to do exactly this right now.
+
+- How can I help someone else, or the entire team, to learn something new?
+
+We have divided tasks into groups of two. However, we will all sit together when we write code (mostly). We do this so that we can be easily available to each other if help is needed, which means that I will be open to help out with anything I can during the whole sprint. I will mainly help my peer programming mate understand and move forward, and he will do the same with me.
+
+- What is my contribution towards the team's application of Scrum?
+
+As earlier - been active in all the Scrum meetings. This past sprint my contribution has mainly been to complete my assigned tasks. I was also one of the team members who presented our progress to the PO's and discussed our prioritization of user stories with them. It is also worth mentioning that I have taken responsibility in my role as room booking responsible. 
+
+- What is my contribution towards the team's deliveries?
+
+As above - complete my tasks and help move the whole group forward by prioritizing user stories.
+
+- Learning objective
+
+My learning objective for this sprint is to learn what is needed to complete the sprint's task. 
+
+
+
+## Individual reflection week 6, 7/5 ##
+
+
+
+- What do I want to learn or understand better?
+
+I currently want to deepen my knowledge about how to fetch data about timestamps from the backend and to translate this into a graphical format in the grid system we are implementing. I also want to get better at estimating User Stories and tasks, as this is connected to a new KPI we are evaluating this coming sprint. 
+
+- How can I help someone else, or the entire team, to learn something new?
+
+Since my peer and I were not able to fully complete our assigned tasks for last sprint (as they proved to take more time than estimated), we decided to share the rest of the tasks with another pair within the team. We will therefore need to share our made progress and knowledge with them, so that everyone is on the same level when we finish the rest of the tasks. 
+
+- What is my contribution towards the team's application of Scrum?
+
+During today's Sprint Retrospective, I helped develop the new KPI about estimation accuracy. We are for this sprint going to put this new KPI on trial and will replace one of the current ones if it works out well. I was also a driving force behind us getting a structured way of using DoD's. I took an active role in the rest of the meeting as well, for example I partaked in planning which User Stories that would be taken on for this sprint and how they should prioritized. A lot of the things I wrote about last week are relevant this week as well. 
+
+- What is my contribution towards the team's deliveries?
+
+To complete my assigned task - which is a requirement for my team mates to implement timestamp information in the grid. 
+
+- Learning objective
+
+To learn how to fetch information from timestamps in the app. 
+
+
+
+## Individual reflection week 7, 14/5 ##
+
+
+
+- What do I want to learn or understand better?
+
+I want to learn more about testing, as this is something that has so far been done in an ad-hoc fashion in the project. More specifically, I want to learn about the tool DeepScan and how it is used, as it seems like a reasonably complex tool for this project's scope. 
+
+- How can I help someone else, or the entire team, to learn something new?
+
+I can help share the knowledge about JavaScript, React Native and the app that have been learned from Pontus to the rest of the group. 
+
+- What is my contribution towards the team's application of Scrum?
+
+I have this week as well taken an active role in the KPI's. For instance, I was invloved in the decision to the adjustments made to the overhead KPI and decision to keep the estimation accuracy KPI. I have also worked on my assigned US's and taken part in all the Scrum meetings. 
+
+- What is my contribution towards the team's deliveries?
+
+Completing my/our assigned tasks of fetching timestamp data.
+
+- Learning objective
+
+Testing and DeepScan.
+
+

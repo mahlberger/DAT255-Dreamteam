@@ -2,4 +2,7 @@
 # bupa_docs/*
 .DS_Store
 App/android/app/src/dev19/java/host/exp/exponent/DetachBuildConstants.java
+<<<<<<< HEAD
+=======
 App/android/app/src/dev19/java/host/exp/exponent/DetachBuildConstants.java
+>>>>>>> 58e983a32839ffab5b1cb23b69f5a78eaf4c60b7
