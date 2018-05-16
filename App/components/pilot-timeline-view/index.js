@@ -42,7 +42,6 @@ import {
 import TopHeader from '../top-header-view';
 import { APP_VERSION } from '../../config/version';
 import colorScheme from '../../config/colors';
-import PortCall from '../../PortCall.js';
 
 const portcallIndex = 0;
 
@@ -52,11 +51,7 @@ class PilotTimeLineView extends Component {
 
       // Fetching portCalls
       const {portCalls} = this.props;
-      this.portCalls = [];
-      // Pushing each portCall to array
-      for(var i = 0; i < this.props.portCalls.length;i++){
-        this.portCalls.push(new PortCall(this.props.portCalls[i].startTime, this.props.portCalls[i].lastUpdatedState, this.props.portCalls[i].vessel.name));
-      }
+
       this.state = {showChangeLog: false, colWidth: 60, hoursLookingBack: 48, hoursLookingForward: 48 };
 
     this.updateZoomState = this.updateZoomState.bind(this);
@@ -197,12 +192,12 @@ class PilotTimeLineView extends Component {
 					))
 				}
         {
-          this.portCalls.map((item, key) =>
+          this.props.portCalls.map((item, key) =>
           (
-            <View key = { key } style = { [ styles.stylePortCall, {left: this.getLeftOffSet(item.getDate().getTime()),
-              top: 50 + portcallIndex++*40, backgroundColor: this.getColorByState(item.getLastState())}]}>
+            <View key = { key } style = { [ styles.stylePortCall, {left: this.getLeftOffSet(new Date(item.startTime)),
+              top: 50 + portcallIndex++*40, backgroundColor: this.getColorByState(item.lastUpdatedState)}]}>
                 <Text>
-                  {item.getVesselName()}
+                  {item.vessel.name}
                 </Text>
             </View>
           ))
@@ -304,4 +299,4 @@ export default connect(mapStateToProps, {
     changeLookAheadDays,
     changeLookBehindDays,
     setFilterOnSources,
-})(PilotTimeLineView); 
+})(PilotTimeLineView);
