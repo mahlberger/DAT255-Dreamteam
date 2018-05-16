@@ -51,12 +51,13 @@ class PilotTimeLineView extends Component {
 
       // Fetching portCalls
       const {portCalls} = this.props;
+	  
+	  // colWidth = the width (in pixels) representing an hour
+      this.state = {showChangeLog: false, colWidth: 40, hoursLookingBack: 48, hoursLookingForward: 48 };
 
-      this.state = {showChangeLog: false, colWidth: 60, hoursLookingBack: 48, hoursLookingForward: 48 };
+	  this.updateZoomState = this.updateZoomState.bind(this);
 
-    this.updateZoomState = this.updateZoomState.bind(this);
-
-    this.now = new Date();
+	  this.now = new Date();
 
   }
 
@@ -78,13 +79,17 @@ class PilotTimeLineView extends Component {
     });
     timerid = setTimeout( fx, 30 );
   }
-
-  getLeftOffSet(date, string){
+  
+  getLeftOffSet(date){
     var offset;
     offset = ((date-this.firstTime)/(1000*60*60))*(this.state.colWidth);
     return offset;
   }
-
+  
+  getWidth(startTime, endTime){
+    return this.getLeftOffSet(endTime) - this.getLeftOffSet(startTime);
+  }
+  
   updateZoomState(value) {
   //  console.log(value);
     this.setState(prevState => {
@@ -104,7 +109,7 @@ class PilotTimeLineView extends Component {
   }
 
   getColorByState(state){
-//    console.log(state);
+//    console.log(portcallIndex);
   switch (state) {
   case 'Arrival_Vessel_Berth':
       return 'green';
@@ -194,12 +199,23 @@ class PilotTimeLineView extends Component {
         {
           this.props.portCalls.map((item, key) =>
           (
+		  <View key = { key } style = {[{position: 'absolute'}]}>
             <View key = { key } style = { [ styles.stylePortCall, {left: this.getLeftOffSet(new Date(item.startTime)),
-              top: 50 + portcallIndex++*40, backgroundColor: this.getColorByState(item.lastUpdatedState)}]}>
+              top: 50 + portcallIndex*40, backgroundColor: this.getColorByState(item.lastUpdatedState),
+			  width: this.getWidth(new Date(item.startTime), new Date(item.endTime))}]}>
                 <Text>
                   {item.vessel.name}
                 </Text>
             </View>
+		    <View key = { key } style = { [ styles.stylePortCallEndLines, {left: this.getLeftOffSet(new Date(item.startTime) - 1000*60*60),
+              top: 50 + portcallIndex*40,
+			  width: this.getWidth(new Date(item.startTime).getTime() - 1000*60*60, new Date(item.startTime))}]}>
+            </View>
+		    <View key = { key } style = { [ styles.stylePortCallConnectingLine, {left: this.getLeftOffSet(new Date(item.startTime) - 1000*60*60),
+              top: 50 + portcallIndex++*40,
+			  width: this.getWidth(new Date(item.startTime).getTime() - 1000*60*60, new Date(item.startTime))}]}>
+            </View>
+		  </View>
           ))
         }
 		</ScrollView>
@@ -229,8 +245,28 @@ const styles = StyleSheet.create({
       height: 30,
       borderWidth: 0,
 	  backgroundColor: 'blue',
-      position: 'absolute'
+      position: 'absolute',
     },
+    stylePortCallEndLines: {
+      height: 30,
+      backgroundColor: 'transparent',
+      borderTopWidth: 0,
+      borderBottomWidth: 0,
+      borderLeftWidth: 2,
+      borderRightWidth: 0,
+      borderColor: 'black',
+      position: 'absolute',
+    },
+    stylePortCallConnectingLine: {
+      height: 15,
+      backgroundColor: 'transparent',
+      borderTopWidth: 0,
+      borderBottomWidth: 2,
+      borderLeftWidth: 0,
+      borderRightWidth: 0,
+      borderColor: 'black',
+      position: 'absolute',
+	  },
     col: {
       borderRightColor: 'black',
       borderRightWidth: 1
