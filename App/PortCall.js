@@ -1,17 +1,24 @@
 export default class PortCall {
   date: string;
-  stateType: string;
-  constructor(date, stateType) {
-      this.date = new Date(date);
-	  this.stateType = stateType;
+  lastState: string;
+  vesselName: string;
+  constructor(date, lastState, vesselName) {
+    this.date = new Date(date);
+	  this.lastState = lastState;
+    this.vesselName = vesselName;
   }
 
-  getStateType(){
-    return this.stateType;
+  getLastState(){
+    console.log(this.lastState);
+    return this.lastState;
   }
 
   getDate(){
 	  return this.date;
+  }
+
+  getVesselName(){
+    return this.vesselName;
   }
 
 }

@@ -14,16 +14,16 @@ import {
 } from 'react-native';
 
 import {
-    SearchBar,
-    Button,
-    List,
-    ListItem,
-    Icon,
-    Text,
+  List,
+  ListItem,
+  Text,
+  Button,
+  Icon,
 } from 'react-native-elements';
 
+// Anton-Filip-Kod
 import {
-    fetchEventsForLocation,
+  fetchEventsForLocation,
     updatePortCalls,
     selectPortCall,
     toggleFavoritePortCall,
@@ -46,7 +46,6 @@ import PortCall from '../../PortCall.js';
 
 const portcallIndex = 0;
 
-
 class PilotTimeLineView extends Component {
   constructor(props) {
       super(props);
@@ -56,19 +55,13 @@ class PilotTimeLineView extends Component {
       this.portCalls = [];
       // Pushing each portCall to array
       for(var i = 0; i < this.props.portCalls.length;i++){
-        this.portCalls.push(new PortCall(this.props.portCalls[i].startTime, this.props.portCalls[i].vessel.name));
+        this.portCalls.push(new PortCall(this.props.portCalls[i].startTime, this.props.portCalls[i].lastUpdatedState, this.props.portCalls[i].vessel.name));
       }
       this.state = {showChangeLog: false, colWidth: 60, hoursLookingBack: 48, hoursLookingForward: 48 };
 
     this.updateZoomState = this.updateZoomState.bind(this);
 
     this.now = new Date();
-    // Testa ifall detta kan tas bort
-     var text = "Hello World2!";
-      var text2;
-      this.state = { numLoadedPortCalls: 20,};
-      
-      this.state = {showChangeLog: false, titleText: "Hejsan", hw: text2};
 
   }
 
@@ -115,6 +108,35 @@ class PilotTimeLineView extends Component {
     }
   }
 
+  getColorByState(state){
+//    console.log(state);
+  switch (state) {
+  case 'Arrival_Vessel_Berth':
+      return 'green';
+      break;
+  case 'Arrival_Vessel_TrafficArea':
+      return 'red';
+      break;
+  case 'Departure_Vessel_Berth':
+      return 'yellow';
+      break;
+  case 'Departure_Vessel_TrafficArea':
+      return 'purple';
+      break;
+  case 'SludgeOp_Requested':
+      return 'orange';
+      break;
+  case 'Arrival_Vessel_AnchorageArea':
+      return 'black';
+      break;
+  case 'SludgeOp_Completed':
+      return 'green';
+  default:
+      return 'blue';
+}
+
+  }
+
   render() {
   const BULLET = '\u2022';
     this.firstTime = new Date(Math.floor(this.now.getTime()/1000/60/60)*1000*60*60);
@@ -126,8 +148,6 @@ class PilotTimeLineView extends Component {
       currentTime.setTime(this.firstTime.getTime() + 1000*60*60*j); //add one hour
       this.cols.push({key: j, timeObj: currentTime});
     }
-
- // var listOfFavoritePortcalls = this.props.favoritePortCalls; //An array of all favoritedPortcalls. 
     return(
       <View>
         <Modal
@@ -140,14 +160,13 @@ class PilotTimeLineView extends Component {
             <TopHeader modal title="Change log" backArrowFunction={() => this.setState({showChangeLog: false})}/>
 
         </Modal>
-
         <TopHeader
           title="Pilot Scheduling"
           firstPage
           navigation={this.props.navigation}
         />
-
-			<ScrollView ref='_scrollViewHorizontal' horizontal={true} style= {{height: 300}}>
+        <ScrollView>
+			<ScrollView ref='_scrollViewHorizontal' horizontal={true} style= {{height: 1200}}>
 				<View style={
 					{
 					   borderRightColor: 'red',
@@ -180,32 +199,21 @@ class PilotTimeLineView extends Component {
         {
           this.portCalls.map((item, key) =>
           (
-            <View key = { key } style = { [ styles.timelinePortcall, {left: this.getLeftOffSet(item.getDate().getTime()), top: 50 + portcallIndex++*40 }]}>
+            <View key = { key } style = { [ styles.stylePortCall, {left: this.getLeftOffSet(item.getDate().getTime()),
+              top: 50 + portcallIndex++*40, backgroundColor: this.getColorByState(item.getLastState())}]}>
                 <Text>
-                  {item.getStateType()}
+                  {item.getVesselName()}
                 </Text>
             </View>
           ))
         }
 		</ScrollView>
-    <Button
-      onPress={ () => this.updateZoomState(10)}
-      title="Zoom out"
-      color="#841584"
-      accessibilityLabel="zoom out"
-    />
+    </ScrollView>
 
-      <Button
-      onPress={ () => this.updateZoomState(-10)}
-      title="Zoom in"
-      color="#841584"
-      accessibilityLabel="zoom in"
-    />
       </View>
     );
-  
+  }
 }
-
 
 const styles = StyleSheet.create({
     row: {
@@ -216,16 +224,15 @@ const styles = StyleSheet.create({
     },
     timelineRuler: {
       width: 1,
-      height: 300,
+      height: 1200,
       backgroundColor: 'black',
       position: 'absolute',
       top: 50
     },
-    timelinePortcall: {
+    stylePortCall: {
       width: 60,
       height: 30,
-      borderColor: 'blue',
-      borderWidth: 2,
+      borderWidth: 0,
 	  backgroundColor: 'blue',
       position: 'absolute'
     },
@@ -244,14 +251,6 @@ const styles = StyleSheet.create({
     colText: {
       textAlign: 'center'
     },
-    square: {
-      width: 20,
-      height: 20,
-      borderColor: 'blue',
-      borderWidth: 2,
-      position: 'absolute'
-
-    },
 		lineCurrentTime: {
 		   borderRightColor: 'red',
 		   borderRightWidth: 2,
@@ -263,7 +262,7 @@ const styles = StyleSheet.create({
 		}
 });
 
-
+// Anton-Filip-Kod
 function mapStateToProps(state) {
     return {
         portCalls: state.cache.portCalls,
@@ -273,7 +272,6 @@ function mapStateToProps(state) {
         showLoadingIcon: state.portCalls.portCallsAreLoading,
         filters: state.filters,
         error: state.error,
-
         isAppendingPortCalls: state.cache.appendingPortCalls,
 
 
@@ -287,8 +285,6 @@ function mapStateToProps(state) {
         lookAheadDays: state.berths.lookAheadDays,
         filterOnSources: state.berths.filterOnSources,
         previousFilters: state.berths.previousFilters,
-
-        isAppendingPortCalls: state.cache.appendingPortCalls
     }
 }
 
@@ -308,4 +304,4 @@ export default connect(mapStateToProps, {
     changeLookAheadDays,
     changeLookBehindDays,
     setFilterOnSources,
-})(PilotTimeLineView);
+})(PilotTimeLineView); 
