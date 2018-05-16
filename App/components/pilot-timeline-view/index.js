@@ -74,19 +74,40 @@ class PilotTimeLineView extends Component {
   loadOperations() {
     //for (i=0; i < this.props.portCalls.length; i++) {
       onePortCall = this.props.portCalls[0];
-      this.props.fetchPortCallEvents(onePortCall.portCallId).then(this.finishedFetchingEvents);
+      oneFavPortCall = this.props.favoritePortCalls[0];
+      //console.log(oneFavPortCall);
+      //this.props.fetchPortCallEvents(onePortCall.portCallId).then(this.finishedFetchingEvents);
+      this.props.fetchPortCallEvents(oneFavPortCall).then(this.finishedFetchingEvents);
+
     //}
   }
 
-  componentWillUnmount() {
-        clearInterval(timer);
-    }
-
   finishedFetchingEvents() {
     console.log("hej");
-    console.log(JSON.stringify(this.props.fetchedEvents));
+    //console.log(this.props.fetchedEvents);
+
+    let events = this.props.fetchedEvents;
+
+    events = events.filter(event => {
+      console.log("hej96");
+      for (var i = 0; i < event.statements.length; i++)
+      {
+        console.log("tja98");
+        if (event.statements[i].stateDefinition == "Pilotage_Completed")
+        {
+          return true;
+        }
+      }
+      return false;
+    });
+    console.log("Tjabbatjena");
+    console.log(events);
+
+
+    console.log(JSON.stringify(oneFavPortCall));
     //console.log(JSON.stringify(this.state.fetchedEvents));
     console.log("hej igen");
+    console.log(JSON.stringify(oneFavPortCall));
     console.log(this.props.portCalls.length);
     //console.log(this.props.fetchedEvents.Arrival_Vessel_Berth)
   }
@@ -104,7 +125,7 @@ class PilotTimeLineView extends Component {
 
 
 //Metod för att kolla om det är en favorit eller ej 
-    if (this.props.favoritePortCalls.includes(onePortCall.portCallId)) {
+    if (this.props.favoritePortCalls.includes(oneFavPortCall)) {
       console.log("DET HÄR ÄR EN FAVORIT")}
       else {
       console.log("DEt här är inte en favorit")
@@ -129,12 +150,21 @@ class PilotTimeLineView extends Component {
           firstPage
           navigation={this.props.navigation}
         />
-
         <View>
           <View>
             <Text>
          
-              {JSON.stringify(this.props.fetchedEvents)}
+
+              {this.props.oneFavPortCall}              
+
+              AVSKILJARE 
+
+              
+              
+
+
+              
+
                 Ovan hämtar data från plats 0, har en if sats för att kolla så den inte är tom. Då hämtar vi portcall från 1. 
             </Text>
           </View>
