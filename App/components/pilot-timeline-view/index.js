@@ -167,9 +167,9 @@ class PilotTimeLineView extends Component {
   }
 
   getWidth(startTime, endTime){
-    return 100;
+    // return 100;
     if(startTime == null || startTime == 0 || endTime == null || endTime == 0) return 0;
-    return this.getLeftOffSet(endTime) - this.getLeftOffSet(startTime);
+    return this.getLeftOffSet(new Date(endTime)) - this.getLeftOffSet(new Date(startTime));
   }
 
   updateZoomState(value) {
