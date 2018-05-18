@@ -45,6 +45,18 @@ import colorScheme from '../../config/colors';
 
 const portcallIndex = 0;
 
+/*
+{
+  this.state.events.map((event) => (
+    event.startTime
+    event.endTime
+    event.startTimeType
+    event.endTimeType
+    event.portCallId
+  ))
+}
+*/
+
 class PilotTimeLineView extends Component {
   constructor(props) {
       super(props);
@@ -53,12 +65,42 @@ class PilotTimeLineView extends Component {
       const {portCalls} = this.props;
 
 	  // colWidth = the width (in pixels) representing an hour
-      this.state = {showChangeLog: false, colWidth: 40, hoursLookingBack: 48, hoursLookingForward: 48 };
+      this.state = {showChangeLog: false, colWidth: 40, hoursLookingBack: 48, hoursLookingForward: 48, events: [] };
 
 	  this.updateZoomState = this.updateZoomState.bind(this);
 
 	  this.now = new Date();
     portcallIndex = 0;
+    this.finishedFetchingEvents = this.finishedFetchingEvents.bind(this);
+  }
+
+  componentWillMount() {
+    this.loadOperations();
+  }
+
+  loadOperations() {
+    //for (i=0; i < this.props.portCalls.length; i++) {
+      onePortCall = this.props.portCalls[0];
+      oneFavPortCall = this.props.favoritePortCalls[0];
+      console.log(oneFavPortCall);
+      //this.props.fetchPortCallEvents(onePortCall.portCallId).then(this.finishedFetchingEvents);
+      this.props.fetchPortCallEvents(oneFavPortCall).then(this.finishedFetchingEvents);
+
+    //}
+  }
+
+  finishedFetchingEvents() {
+    let events = this.props.fetchedEvents;
+
+    events = events.filter(event => {
+      if (event.definitionId == "PILOTAGE_OPERATION") {
+        return true;
+      }
+      return false;
+    });
+    console.log(events);
+    console.log("events fetched");
+    this.setState({events: events});
 
   }
 
@@ -138,8 +180,28 @@ class PilotTimeLineView extends Component {
 
   }
 
+  test(){
+    return '⇒';
+  };
+
   render() {
-  const BULLET = '\u2022';
+    console.log("hej");
+    //console.log(this.props.fetchedEvents);
+
+    let events = this.state.events;
+
+    console.log("Tjabbatjena");
+
+    if (events[0]) {
+    console.log(events[0].startTime);
+    console.log(events[0].startTimeType);
+    console.log(events[0].endTime);
+    console.log(events[0].endTimeType);
+    }
+
+    console.log(events);
+
+    const BULLET = '\u2022';
     this.firstTime = new Date(Math.floor(this.now.getTime()/1000/60/60)*1000*60*60);
     this.firstTime.setHours(this.firstTime.getHours()-this.state.hoursLookingBack);
 
@@ -198,14 +260,14 @@ class PilotTimeLineView extends Component {
 					))
 				}
         {
-          this.props.portCalls.map((item, key) =>
+          events.map((item, key) =>
           (
-		  <View key = { key } style = {[{position: 'absolute'}]}>
+		  <View key = { key } style = {[{position: 'absolute'}]}><Text>88</Text>
             <View key = { key } style = { [ styles.stylePortCall, {left: this.getLeftOffSet(new Date(item.startTime)),
-              top: 50 + portcallIndex*40, backgroundColor: this.getColorByState(item.lastUpdatedState),
+              top: 50 + portcallIndex*40, backgroundColor: this.getColorByState('PLACEHOLDER'),
 			  width: this.getWidth(new Date(item.startTime), new Date(item.endTime))}]}>
-                <Text>
-                  {item.vessel.name}
+                <Text>hej
+                  {this.test()}
                 </Text>
             </View>
 		    <View key = { key } style = { [ styles.stylePortCallEndLines, {left: this.getLeftOffSet(new Date(item.startTime) - 1000*60*60),
@@ -225,6 +287,24 @@ class PilotTimeLineView extends Component {
       </View>
     );
   }
+
+  isFavorite(portCall) {
+    return this.props.favoritePortCalls.includes(portCall.portCallId) ||
+    this.props.favoriteVessels.includes(portCall.vessel.imo);
+  }
+
+//{listOfFavoritePortcalls.toString()}
+  search(portCalls, searchTerm) {
+        let { filters } = this.props;
+
+        return portCalls.filter(portCall => {
+            return (portCall.vessel.name.toUpperCase().includes(searchTerm.toUpperCase()) ||
+            portCall.vessel.imo.split('IMO:')[1].startsWith(searchTerm) ||
+            portCall.vessel.mmsi.split('MMSI:')[1].startsWith(searchTerm)) &&
+            (!portCall.stage || filters.stages.includes(portCall.stage));
+        }).sort((a,b) => this.sortFilters(a,b))//.sort((a,b) => a.status !== 'OK' ? -1 : 1)
+        .slice(0, this.state.numLoadedPortCalls);
+    }
 }
 
 const styles = StyleSheet.create({
@@ -306,6 +386,7 @@ function mapStateToProps(state) {
         error: state.error,
         isAppendingPortCalls: state.cache.appendingPortCalls,
 
+        fetchedEvents: state.portCalls.selectedPortCallOperations, //Denna har vi lagt till
 
         berth: state.berths.selectedLocation,
         events: state.berths.events,
