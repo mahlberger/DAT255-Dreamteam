@@ -79,14 +79,15 @@ class PilotTimeLineView extends Component {
   }
 
   loadOperations() {
-    //for (i=0; i < this.props.portCalls.length; i++) {
-      onePortCall = this.props.portCalls[0];
-      oneFavPortCall = this.props.favoritePortCalls[0];
-      console.log(oneFavPortCall);
+    oneFavPortCall = [];
+    for (i=0; i < this.props.favoritePortCalls.length; i++) {
+    //  onePortCall = this.props.portCalls[0];
+      oneFavPortCall[i] = this.props.favoritePortCalls[i];
+    //  console.log(oneFavPortCall);
       //this.props.fetchPortCallEvents(onePortCall.portCallId).then(this.finishedFetchingEvents);
-      this.props.fetchPortCallEvents(oneFavPortCall).then(this.finishedFetchingEvents);
+      this.props.fetchPortCallEvents(oneFavPortCall[i]).then(this.finishedFetchingEvents);
 
-    //}
+    }
   }
 
   finishedFetchingEvents() {
@@ -98,8 +99,8 @@ class PilotTimeLineView extends Component {
       }
       return false;
     });
-    console.log(events);
-    console.log("events fetched");
+  //  console.log(events);
+  //  console.log("events fetched");
     this.setState({events: events});
 
   }
@@ -192,14 +193,14 @@ class PilotTimeLineView extends Component {
 
     console.log("Tjabbatjena");
 
-    if (events[0]) {
+/*    if (events[0]) {
     console.log(events[0].startTime);
     console.log(events[0].startTimeType);
     console.log(events[0].endTime);
     console.log(events[0].endTimeType);
-    }
+  }*/
 
-    console.log(events);
+  //  console.log(events);
 
     const BULLET = '\u2022';
     this.firstTime = new Date(Math.floor(this.now.getTime()/1000/60/60)*1000*60*60);
@@ -270,11 +271,11 @@ class PilotTimeLineView extends Component {
                   {this.test()}
                 </Text>
             </View>
-		    <View key = { key } style = { [ styles.stylePortCallEndLines, {left: this.getLeftOffSet(new Date(item.startTime) - 1000*60*60),
+		    <View key = { key + 1000 } style = { [ styles.stylePortCallEndLines, {left: this.getLeftOffSet(new Date(item.startTime) - 1000*60*60),
               top: 50 + portcallIndex*40,
 			  width: this.getWidth(new Date(item.startTime).getTime() - 1000*60*60, new Date(item.startTime))}]}>
             </View>
-		    <View key = { key } style = { [ styles.stylePortCallConnectingLine, {left: this.getLeftOffSet(new Date(item.startTime) - 1000*60*60),
+		    <View key = { key + 2000 } style = { [ styles.stylePortCallConnectingLine, {left: this.getLeftOffSet(new Date(item.startTime) - 1000*60*60),
               top: 50 + portcallIndex++*40,
 			  width: this.getWidth(new Date(item.startTime).getTime() - 1000*60*60, new Date(item.startTime))}]}>
             </View>
