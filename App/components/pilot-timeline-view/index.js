@@ -147,16 +147,26 @@ class PilotTimeLineView extends Component {
     timerid = setTimeout( fx, 30 );
   }
 
+  getStartOfPortCall(startTime, endTime){
+    console.log('tider');
+    console.log(startTime);
+    console.log(endTime);
+    if((startTime == null || startTime == 0) && (endTime == null || endTime == 0)){
+      return this.getLeftOffSet(new Date());
+    }else if(startTime == null || startTime == 0){
+      return this.getLeftOffSet(new Date(endTime.getTime()-1000*60*60*1.5));
+    }else{
+      return this.getLeftOffSet(startTime);
+    }
+  }
+
   getLeftOffSet(date){
     var offset;
-    offset = ((date-this.firstTime)/(1000*60*60))*(this.state.colWidth);
+    offset = ((date.getTime()-this.firstTime.getTime())/(1000*60*60))*(this.state.colWidth);
     return offset;
   }
 
   getWidth(startTime, endTime){
-    console.log('tider');
-    console.log(startTime);
-    console.log(endTime);
     return 100;
     if(startTime == null || startTime == 0 || endTime == null || endTime == 0) return 0;
     return this.getLeftOffSet(endTime) - this.getLeftOffSet(startTime);
@@ -247,6 +257,7 @@ class PilotTimeLineView extends Component {
       currentTime.setTime(this.firstTime.getTime() + 1000*60*60*j); //add one hour
       this.cols.push({key: j, timeObj: currentTime});
     }
+    console.log(events);
     return(
       <View>
         <Modal
@@ -298,21 +309,22 @@ class PilotTimeLineView extends Component {
         {
             events.map((event, key) =>
                 (
-          		  <View>
-                  <View  style = { [ styles.stylePortCall, {left: this.getLeftOffSet(new Date(event.startTime)),
+          		  <View key = { key } style = {[{position: 'absolute'}]}>
+                  <View  key = { key + 1000 } style = { [ styles.stylePortCall, {left: this.getStartOfPortCall(new Date(event.startTime),
+                  new Date(event.endTime)),
                     top: 50 + portcallIndex*40, backgroundColor: this.getColorByState('PLACEHOLDER'),
-      			  width: this.getWidth(new Date(event.startTime), new Date(event.endTime))}]}>
+      			  width: this.getWidth(new Date(event.startTime).getTime(), new Date(event.endTime).getTime())}]}>
                       <Text>
                         {this.getPortCallById(event.portCallId).vessel.name}
                       </Text>
                   </View>
-          		    <View key = { key + 1000 } style = { [ styles.stylePortCallEndLines, {left: this.getLeftOffSet(new Date(event.startTime) - 1000*60*60),
+          		    <View key = { key + 2000 } style = { [ styles.stylePortCallEndLines, {left: this.getLeftOffSet(new Date(new Date(event.startTime).getTime() - 1000*60*60)),
                         top: 50 + portcallIndex*40,
-          			  width: this.getWidth(new Date(event.startTime).getTime() - 1000*60*60, new Date(event.startTime))}]}>
+          			  width: this.getWidth(new Date(event.startTime).getTime() - 1000*60*60, new Date(event.startTime).getTime())}]}>
                   </View>
-          		    <View key = { key + 2000 } style = { [ styles.stylePortCallConnectingLine, {left: this.getLeftOffSet(new Date(event.startTime) - 1000*60*60),
+          		    <View key = { key + 3000 } style = { [ styles.stylePortCallConnectingLine, {left: this.getLeftOffSet(new Date(new Date(event.startTime).getTime() - 1000*60*60)),
                         top: 50 + portcallIndex++*40,
-          			  width: this.getWidth(new Date(event.startTime).getTime() - 1000*60*60, new Date(event.startTime))}]}>
+          			  width: this.getWidth(new Date(event.startTime).getTime() - 1000*60*60, new Date(event.startTime).getTime())}]}>
                   </View>
           		  </View>
             ))
