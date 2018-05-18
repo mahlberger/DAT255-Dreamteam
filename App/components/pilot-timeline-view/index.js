@@ -90,19 +90,22 @@ class PilotTimeLineView extends Component {
 
     events = events.filter(event => {
       console.log("hej96");
-      for (var i = 0; i < event.statements.length; i++)
-      {
-        console.log("tja98");
-        if (event.statements[i].stateDefinition == "Pilotage_Completed")
-        {
-          return true;
-        }
+      if (event.definitionId == "PILOTAGE_OPERATION") {
+        return true;
       }
       return false;
     });
-    console.log("Tjabbatjena");
-    console.log(events);
 
+
+
+    console.log("Tjabbatjena");
+    
+    console.log(events[0].startTime);
+    console.log(events[0].startTimeType);
+    console.log(events[0].endTime);
+    console.log(events[0].endTimeType);
+    console.log("Här kommer hela skiten");
+    console.log(events);
 
     console.log(JSON.stringify(oneFavPortCall));
     //console.log(JSON.stringify(this.state.fetchedEvents));
