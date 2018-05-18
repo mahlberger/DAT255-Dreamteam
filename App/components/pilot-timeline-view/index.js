@@ -109,7 +109,7 @@ class PilotTimeLineView extends Component {
       }
       return false;
     });
-    */
+
   //  console.log(events);
   //  console.log("events fetched");
 //    this.setState({events: events});
@@ -157,6 +157,7 @@ class PilotTimeLineView extends Component {
     console.log('tider');
     console.log(startTime);
     console.log(endTime);
+    return 100;
     if(startTime == null || startTime == 0 || endTime == null || endTime == 0) return 0;
     return this.getLeftOffSet(endTime) - this.getLeftOffSet(startTime);
   }
@@ -224,15 +225,15 @@ class PilotTimeLineView extends Component {
     return '⇒';
   };
 
-  render() {
-    portcallIndex = 0;
-
   shouldComponentUpdate() {
     if (this.j >= this.props.portCalls.length) {
       return true;
     }
     return false;
   }
+
+  render() {
+    portcallIndex = 0;
 
     const {events} = this.state;
 
