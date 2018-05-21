@@ -4,25 +4,13 @@ import { connect } from 'react-redux';
 import {
   View,
   StyleSheet,
-  Image,
   Dimensions,
   ScrollView,
-  RefreshControl,
-  Alert,
   Modal,
-  Platform,
   TouchableWithoutFeedback,
+  Text,
 } from 'react-native';
 
-import {
-  List,
-  ListItem,
-  Text,
-  Button,
-  Icon,
-} from 'react-native-elements';
-
-// Anton-Filip-Kod
 import {
     fetchEventsForLocation,
     updatePortCalls,
@@ -41,7 +29,6 @@ import {
  } from '../../actions';
 
 import TopHeader from '../top-header-view';
-import { APP_VERSION } from '../../config/version';
 import colorScheme from '../../config/colors';
 
 let portcallIndex = 0;
@@ -66,9 +53,6 @@ class PilotTimeLineView extends Component {
   constructor(props) {
     super(props);
 
-    // Fetching portCalls
-    const {portCalls} = this.props;
-
 	  // colWidth = the width (in pixels) representing an hour
     this.state = {showChangeLog: false, colWidth: 40, hoursLookingBack: 96, hoursLookingForward: 96, events: [] };
 
@@ -84,7 +68,7 @@ class PilotTimeLineView extends Component {
   }
 
   loadOperations() {
-    for (i=0; i < this.props.portCalls.length; i++) {
+    for (let i=0; i < this.props.portCalls.length; i++) {
       this.props.fetchPortCallEvents(this.props.portCalls[i].portCallId).then(this.finishedFetchingEvents);
     }
   }
@@ -103,7 +87,7 @@ class PilotTimeLineView extends Component {
 
     this.j++;
 
-    if (events.length >= 1 && events !== undefined) {
+    if (events !== undefined && events.length >= 1) {
       this.events = this.events.concat(events);
     }
 
@@ -238,7 +222,7 @@ class PilotTimeLineView extends Component {
   render() {
     portcallIndex = 0;
 
-    const {navigation, showLoadingIcon, portCalls, selectPortCall} = this.props;
+    const {navigation, selectPortCall} = this.props;
     const {navigate} = navigation;
     let {events} = this.state;
 
@@ -249,7 +233,6 @@ class PilotTimeLineView extends Component {
       return false;
     });
 
-    const BULLET = '\u2022';
     this.firstTime = new Date(Math.floor(this.now.getTime()/1000/60/60)*1000*60*60);
     this.firstTime.setHours(this.firstTime.getHours()-this.state.hoursLookingBack);
 
@@ -380,7 +363,6 @@ const styles = StyleSheet.create({
     stylePortCall: {
       width: 60,
       height: 30,
-      borderWidth: 0,
 	    backgroundColor: 'brown',
       position: 'absolute',
       borderWidth: 2
@@ -449,7 +431,6 @@ function mapStateToProps(state) {
         events: state.berths.events,
         fetchingEvents: state.berths.fetchingEvents,
         date: state.berths.fetchForDate,
-        error: state.error,
         displayRatio: state.berths.displayRatio,
         lookBehindDays: state.berths.lookBehindDays,
         lookAheadDays: state.berths.lookAheadDays,
@@ -470,7 +451,6 @@ export default connect(mapStateToProps, {
     fetchEventsForLocation,
     selectNewDate,
     fetchPortCall,
-    selectPortCall,
     changeLookAheadDays,
     changeLookBehindDays,
     setFilterOnSources,
