@@ -9,6 +9,7 @@ import {
   Modal,
   TouchableWithoutFeedback,
   Text,
+  Button,
 } from 'react-native';
 
 import {
@@ -151,16 +152,22 @@ componentDidMount() {
 
   updateZoomState(value) {
     this.setState(prevState => {
+      if (prevState.colWidth + value > 0) {
        return {colWidth: prevState.colWidth + value}
+      }
+      return;
     });
+  }
+
+  loadExtraTime(value) {
     if (value>0) {
       this.setState(prevState => {
-       return {hoursLookingForward: prevState.hoursLookingForward + 5}
+       return {hoursLookingForward: prevState.hoursLookingForward + value}
       });
     }
     else {
       this.setState(prevState => {
-       return {hoursLookingBack: prevState.hoursLookingBack + 5}
+       return {hoursLookingBack: prevState.hoursLookingBack + Math.abs(value)}
       });
     }
   }
@@ -259,6 +266,36 @@ componentDidMount() {
           firstPage
           navigation={this.props.navigation}
         />
+        <View>
+          <Button
+            onPress={ () => this.updateZoomState(-5)}
+            title="Zoom out"
+            color="#999"
+            accessibilityLabel="zoom out"
+            
+          />
+          <Button
+            onPress={ () => this.updateZoomState(5)}
+            title="Zoom in"
+            color="#777"
+            accessibilityLabel="zoom in"
+            
+          />
+          <Button
+            onPress={ () => this.loadExtraTime(-5)}
+            title="Load backward time"
+            color="#999"
+            accessibilityLabel="zoom in"
+            
+          />
+          <Button
+            onPress={ () => this.loadExtraTime(5)}
+            title="Load forward time"
+            color="#777"
+            accessibilityLabel="zoom in"
+            
+          />
+        </View>
         <ScrollView>
 			<ScrollView ref='_scrollViewHorizontal' horizontal={true} style= {{height: 1200}}>
 				<View style={
@@ -322,6 +359,7 @@ componentDidMount() {
           }
 		</ScrollView>
     </ScrollView>
+
 
       </View>
     );
