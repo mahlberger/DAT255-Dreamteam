@@ -74,7 +74,7 @@ class PilotTimeLineView extends Component {
   }
 
   getPortCallById(portCallId) {
-    for (i=0; i < this.props.portCalls.length; i++) {
+    for (let i=0; i < this.props.portCalls.length; i++) {
       if (this.props.portCalls[i].portCallId == portCallId) {
         return this.props.portCalls[i];
       }
