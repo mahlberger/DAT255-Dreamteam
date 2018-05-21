@@ -4,26 +4,15 @@ import { connect } from 'react-redux';
 import {
   View,
   StyleSheet,
-  Image,
   Dimensions,
   ScrollView,
-  RefreshControl,
-  Alert,
   Modal,
-  Platform,
+  TouchableWithoutFeedback,
+  Text,
 } from 'react-native';
 
 import {
-  List,
-  ListItem,
-  Text,
-  Button,
-  Icon,
-} from 'react-native-elements';
-
-// Anton-Filip-Kod
-import {
-  fetchEventsForLocation,
+    fetchEventsForLocation,
     updatePortCalls,
     selectPortCall,
     toggleFavoritePortCall,
@@ -40,24 +29,71 @@ import {
  } from '../../actions';
 
 import TopHeader from '../top-header-view';
-import { APP_VERSION } from '../../config/version';
 import colorScheme from '../../config/colors';
 
-const portcallIndex = 0;
+let portcallIndex = 0;
+
+/*
+{
+  this.state.events.map((event) => (
+    event.startTime
+    event.endTime
+    event.startTimeType
+    event.endTimeType
+    event.portCallId
+  ))
+}
+*/
 
 class PilotTimeLineView extends Component {
+  j = 0;
+  portCalls = [];
+  events = [];
+
   constructor(props) {
-      super(props);
+    super(props);
 
-      // Fetching portCalls
-      const {portCalls} = this.props;
+	  // colWidth = the width (in pixels) representing an hour
+    this.state = {showChangeLog: false, colWidth: 40, hoursLookingBack: 96, hoursLookingForward: 96, events: [] };
 
-      this.state = {showChangeLog: false, colWidth: 60, hoursLookingBack: 48, hoursLookingForward: 48 };
+	  this.updateZoomState = this.updateZoomState.bind(this);
 
-    this.updateZoomState = this.updateZoomState.bind(this);
+	  this.now = new Date();
 
-    this.now = new Date();
+    this.finishedFetchingEvents = this.finishedFetchingEvents.bind(this);
+  }
 
+  componentWillMount() {
+    this.loadOperations();
+  }
+
+  loadOperations() {
+    for (let i=0; i < this.props.portCalls.length; i++) {
+      this.props.fetchPortCallEvents(this.props.portCalls[i].portCallId).then(this.finishedFetchingEvents);
+    }
+  }
+
+  getPortCallById(portCallId) {
+    for (let i=0; i < this.props.portCalls.length; i++) {
+      if (this.props.portCalls[i].portCallId == portCallId) {
+        return this.props.portCalls[i];
+      }
+    }
+    return false;
+  }
+
+  finishedFetchingEvents() {
+    let events = this.props.fetchedEvents;
+
+    this.j++;
+
+    if (events !== undefined && events.length >= 1) {
+      this.events = this.events.concat(events);
+    }
+
+    if (this.j == this.props.portCalls.length) {
+      this.setState({events: this.events});
+    }
   }
 
   intToTimeString(timeObj) {
@@ -71,7 +107,7 @@ class PilotTimeLineView extends Component {
     return "";
   }
 
-  componentDidMount() {
+componentDidMount() {
     const fx = () => this.refs._scrollViewHorizontal.scrollTo({
       x: this.getLeftOffSet(this.now) - Dimensions.get('window').width/2,
       animated: false
@@ -79,19 +115,45 @@ class PilotTimeLineView extends Component {
     timerid = setTimeout( fx, 30 );
   }
 
-  getLeftOffSet(date, string){
+  getStartOfPortCall(startTime, endTime){
+    if((startTime == null || startTime.getTime() == 0) && (endTime == null || endTime.getTime() == 0)){
+      return this.getLeftOffSet(new Date());
+    }else if(startTime == null || startTime.getTime() == 0){
+      return this.getLeftOffSet(new Date(endTime.getTime()-1000*60*60*1.5));
+    }else{
+      return this.getLeftOffSet(startTime);
+    }
+  }
+
+  getLeftOffSet(date){
     var offset;
-    offset = ((date-this.firstTime)/(1000*60*60))*(this.state.colWidth);
+    offset = ((date.getTime()-this.firstTime.getTime())/(1000*60*60))*(this.state.colWidth);
     return offset;
   }
 
+  getWidth(startTime, endTime){
+    // return 100;
+    if(startTime == null || startTime == 0 || endTime == null || endTime == 0) return 0;
+    return this.getLeftOffSet(new Date(endTime)) - this.getLeftOffSet(new Date(startTime));
+  }
+
+  getWidthOfPortCall(startTime, endTime){
+    if((startTime == null || startTime.getTime() == 0) && (endTime == null || endTime.getTime() == 0)){
+      return this.getWidth(new Date().getTime(), new Date().getTime()+(1000*60*60)*1.5);
+    }else if(startTime == null || startTime.getTime() == 0){
+      return this.getWidth(endTime.getTime(), endTime.getTime()+(1000*60*60)*1.5);
+    }else if(endTime == null || endTime.getTime() == 0){
+      return this.getWidth(startTime.getTime(), startTime.getTime()+(1000*60*60)*1.5);
+    }else{
+      return this.getWidth(startTime.getTime(), endTime.getTime());
+    }
+  }
+
   updateZoomState(value) {
-  //  console.log(value);
     this.setState(prevState => {
        return {colWidth: prevState.colWidth + value}
     });
     if (value>0) {
-  //    console.log("Forward");
       this.setState(prevState => {
        return {hoursLookingForward: prevState.hoursLookingForward + 5}
       });
@@ -103,37 +165,74 @@ class PilotTimeLineView extends Component {
     }
   }
 
-  getColorByState(state){
-//    console.log(state);
-  switch (state) {
-  case 'Arrival_Vessel_Berth':
-      return 'green';
-      break;
-  case 'Arrival_Vessel_TrafficArea':
-      return 'red';
-      break;
-  case 'Departure_Vessel_Berth':
-      return 'yellow';
-      break;
-  case 'Departure_Vessel_TrafficArea':
-      return 'purple';
-      break;
-  case 'SludgeOp_Requested':
-      return 'orange';
-      break;
-  case 'Arrival_Vessel_AnchorageArea':
-      return 'black';
-      break;
-  case 'SludgeOp_Completed':
-      return 'green';
-  default:
-      return 'blue';
-}
+  getColorsByState(event){
 
+    if (event.startTimeType == null) {
+      if (event.endTimeType == null) {
+        return ['red', 'white', 'red'];
+      }
+      else if (event.endTimeType == 'ESTIMATED') {
+        return ['white', 'black', 'purple']; //purple ram
+      }
+      else if (event.endTimeType == 'ACTUAL') {
+        return ['white', 'black', 'black']; //svart ram
+      }
+      else {
+        return ['white', 'white', 'white'];
+      }
+    }
+    else if (event.startTimeType == 'ESTIMATED') {
+      if (event.endTimeType == null) {
+        return ['white', 'black', 'green']; //grön ram
+      }
+      else if (event.endTimeType == 'ESTIMATED') {
+        return ['green', 'white', 'green'];
+      }
+      else if (event.endTimeType == 'ACTUAL') {
+        return ['black', 'white', 'black'];
+      }
+      else {
+        return ['grey', 'white', 'grey'];
+      }
+    }
+    else if (event.startTimeType == 'ACTUAL') {
+      if (event.endTimeType == null) {
+        return ['white', 'black', 'black']; //svart ram
+      }
+      else if (event.endTimeType == 'ESTIMATED') {
+        return ['blue', 'white', 'blue'];
+      }
+      else if (event.endTimeType == 'ACTUAL') {
+        return ['black', 'white', 'black'];
+      }
+      else {
+        return ['pink', 'white', 'pink'];
+      }
+    }
+    return ['brown', 'white', 'brown'];
+  }
+
+  shouldComponentUpdate() {
+    if (this.j >= this.props.portCalls.length) {
+      return true;
+    }
+    return false;
   }
 
   render() {
-  const BULLET = '\u2022';
+    portcallIndex = 0;
+
+    const {navigation, selectPortCall} = this.props;
+    const {navigate} = navigation;
+    let {events} = this.state;
+
+    events = events.filter(event => {
+      if (event.definitionId == "PILOTAGE_OPERATION" && (event.statements[0].stateDefinition == "Pilotage_Completed" || event.statements[0].stateDefinition == "Pilotage_Commenced" ) ) {
+        return true;
+      }
+      return false;
+    });
+
     this.firstTime = new Date(Math.floor(this.now.getTime()/1000/60/60)*1000*60*60);
     this.firstTime.setHours(this.firstTime.getHours()-this.state.hoursLookingBack);
 
@@ -192,22 +291,59 @@ class PilotTimeLineView extends Component {
 					))
 				}
         {
-          this.props.portCalls.map((item, key) =>
-          (
-            <View key = { key } style = { [ styles.stylePortCall, {left: this.getLeftOffSet(new Date(item.startTime)),
-              top: 50 + portcallIndex++*40, backgroundColor: this.getColorByState(item.lastUpdatedState)}]}>
-                <Text>
-                  {item.vessel.name}
-                </Text>
-            </View>
-          ))
-        }
+            events.map((event, key) =>
+              (
+          		  <View key = { key } style = {[{position: 'absolute'}]}>
+                  <TouchableWithoutFeedback key = { key } onPress={
+            () => {
+              selectPortCall(this.getPortCallById(event.portCallId));
+              navigate('TimeLine');
+            }}
+            >
+                  <View  key = { key + 1000 } style = { [ styles.stylePortCall, {left: this.getStartOfPortCall(new Date(event.startTime),
+                  new Date(event.endTime)),
+                    top: 50 + portcallIndex*40, backgroundColor: this.getColorsByState(event)[0], borderColor: this.getColorsByState(event)[2],
+      			  width: this.getWidthOfPortCall(new Date(event.startTime), new Date(event.endTime))}]}>
+                      <Text style = {[{ color: this.getColorsByState(event)[1] }]}>
+                        {this.getPortCallById(event.portCallId).vessel.name}
+                      </Text>
+                  </View>
+                  </TouchableWithoutFeedback>
+          		    <View key = { key + 2000 } style = { [ styles.stylePortCallEndLines, {left: this.getStartOfPortCall(new Date(event.startTime), new Date(event.endTime))-1*this.state.colWidth,
+                        top: 50 + portcallIndex*40,
+          			  width: this.getWidth(new Date(event.startTime).getTime() - 1000*60*60, new Date(event.startTime).getTime())}]}>
+                  </View>
+          		    <View key = { key + 3000 } style = { [ styles.stylePortCallConnectingLine, {left: this.getStartOfPortCall(new Date(event.startTime), new Date(event.endTime))-1*this.state.colWidth,
+                        top: 50 + portcallIndex++*40,
+          			  width: this.state.colWidth}]}>
+                  </View>
+          		  </View>
+            ))
+          }
 		</ScrollView>
     </ScrollView>
 
       </View>
     );
   }
+
+  isFavorite(portCall) {
+    return this.props.favoritePortCalls.includes(portCall.portCallId) ||
+    this.props.favoriteVessels.includes(portCall.vessel.imo);
+  }
+
+//{listOfFavoritePortcalls.toString()}
+  search(portCalls, searchTerm) {
+        let { filters } = this.props;
+
+        return portCalls.filter(portCall => {
+            return (portCall.vessel.name.toUpperCase().includes(searchTerm.toUpperCase()) ||
+            portCall.vessel.imo.split('IMO:')[1].startsWith(searchTerm) ||
+            portCall.vessel.mmsi.split('MMSI:')[1].startsWith(searchTerm)) &&
+            (!portCall.stage || filters.stages.includes(portCall.stage));
+        }).sort((a,b) => this.sortFilters(a,b))//.sort((a,b) => a.status !== 'OK' ? -1 : 1)
+        .slice(0, this.state.numLoadedPortCalls);
+    }
 }
 
 const styles = StyleSheet.create({
@@ -227,10 +363,30 @@ const styles = StyleSheet.create({
     stylePortCall: {
       width: 60,
       height: 30,
-      borderWidth: 0,
-	  backgroundColor: 'blue',
+	    backgroundColor: 'brown',
+      position: 'absolute',
+      borderWidth: 2
+    },
+    stylePortCallEndLines: {
+      height: 30,
+      backgroundColor: 'transparent',
+      borderTopWidth: 0,
+      borderBottomWidth: 0,
+      borderLeftWidth: 2,
+      borderRightWidth: 0,
+      borderColor: 'black',
       position: 'absolute'
     },
+    stylePortCallConnectingLine: {
+      height: 15,
+      backgroundColor: 'transparent',
+      borderTopWidth: 0,
+      borderBottomWidth: 2,
+      borderLeftWidth: 0,
+      borderRightWidth: 0,
+      borderColor: 'black',
+      position: 'absolute',
+	  },
     col: {
       borderRightColor: 'black',
       borderRightWidth: 1
@@ -269,12 +425,12 @@ function mapStateToProps(state) {
         error: state.error,
         isAppendingPortCalls: state.cache.appendingPortCalls,
 
+        fetchedEvents: state.portCalls.selectedPortCallOperations, //Denna har vi lagt till
 
         berth: state.berths.selectedLocation,
         events: state.berths.events,
         fetchingEvents: state.berths.fetchingEvents,
         date: state.berths.fetchForDate,
-        error: state.error,
         displayRatio: state.berths.displayRatio,
         lookBehindDays: state.berths.lookBehindDays,
         lookAheadDays: state.berths.lookAheadDays,
@@ -295,7 +451,6 @@ export default connect(mapStateToProps, {
     fetchEventsForLocation,
     selectNewDate,
     fetchPortCall,
-    selectPortCall,
     changeLookAheadDays,
     changeLookBehindDays,
     setFilterOnSources,
