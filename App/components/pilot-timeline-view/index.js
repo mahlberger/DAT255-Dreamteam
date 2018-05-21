@@ -55,7 +55,7 @@ class PilotTimeLineView extends Component {
     super(props);
 
 	  // colWidth = the width (in pixels) representing an hour
-    this.state = {showChangeLog: false, colWidth: 40, hoursLookingBack: 24, hoursLookingForward: 24, events: [] };
+    this.state = {showChangeLog: false, colWidth: 40, hoursLookingBack: 48, hoursLookingForward: 48, events: [] };
 
 	  this.updateZoomState = this.updateZoomState.bind(this);
 
@@ -267,36 +267,25 @@ componentDidMount() {
           firstPage
           navigation={this.props.navigation}
         />
-        <View>
-          <Button
-            onPress={ () => this.updateZoomState(-5)}
-            title="Zoom out"
-            color="#999"
-            accessibilityLabel="zoom out"
-            
-          />
-          <Button
-            onPress={ () => this.updateZoomState(5)}
-            title="Zoom in"
-            color="#777"
-            accessibilityLabel="zoom in"
-            
-          />
-          <Button
-            onPress={ () => this.loadExtraTime(-6)}
-            title="Load backward time"
-            color="#999"
-            accessibilityLabel="zoom in"
-            
-          />
-          <Button
-            onPress={ () => this.loadExtraTime(6)}
-            title="Load forward time"
-            color="#777"
-            accessibilityLabel="zoom in"
-            
-          />
+        <View style = {[{ flexDirection: 'row', justifyContent: 'flex-end', width: '100%'}]} >
+          <View style = {[{ width: '50%'  }]}>
+            <Button
+              onPress={ () => this.loadExtraTime(-6)}
+              title="Load backward time"
+              color="#999"
+              accessibilityLabel="zoom in"
+            />
+          </View>
+          <View style = {[{ width: '50%'  }]}>
+            <Button
+              onPress={ () => this.loadExtraTime(6)}
+              title="Load forward time"
+              color="#777"
+              accessibilityLabel="zoom in"
+            />
+          </View>
         </View>
+        
         <ScrollView>
 			<ScrollView ref='_scrollViewHorizontal' horizontal={true} style= {{height: 1200}}>
 				<View style={
