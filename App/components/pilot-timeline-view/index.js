@@ -70,7 +70,7 @@ class PilotTimeLineView extends Component {
     const {portCalls} = this.props;
     console.log(portCalls);
 
-    this.state = {showChangeLog: false, colWidth: 40, hoursLookingBack: 48, hoursLookingForward: 48, events: [] };
+    this.state = {showChangeLog: false, colWidth: 20, hoursLookingBack: 96, hoursLookingForward: 96, events: [] };
 
 	  this.updateZoomState = this.updateZoomState.bind(this);
 
@@ -175,7 +175,51 @@ class PilotTimeLineView extends Component {
     }
   }
 
-  getColorByState(state, timeType){
+  getColorsByState(event){
+
+    if (event.startTimeType == null) {
+      if (event.endTimeType == null) {
+        return ['red', 'white', 'red'];
+      }
+      else if (event.endTimeType == 'ESTIMATED') {
+        return ['transparent', 'white', 'purple']; //purple ram 
+      }
+      else if (event.endTimeType == 'ACTUAL') {
+        return ['transparent', 'white', 'black']; //svart ram
+      }
+      else {
+        return ['white', 'white', 'white'];
+      }
+    }
+    else if (event.startTimeType == 'ESTIMATED') {
+      if (event.endTimeType == null) {
+        return ['transparent', 'white', 'green']; //grön ram
+      }
+      else if (event.endTimeType == 'ESTIMATED') {
+        return ['green', 'white', 'green']; 
+      }
+      else if (event.endTimeType == 'ACTUAL') {
+        return ['black', 'white', 'black'];
+      }
+      else {
+        return ['grey', 'white', 'grey'];
+      }
+    }
+    else if (event.startTimeType == 'ACTUAL') {
+      if (event.endTimeType == null) {
+        return ['transparent', 'white', 'black']; //svart ram
+      }
+      else if (event.endTimeType == 'ESTIMATED') {
+        return ['blue', 'white', 'blue']; 
+      }
+      else if (event.endTimeType == 'ACTUAL') {
+        return ['black', 'white', 'black'];
+      }
+      else {
+        return ['pink', 'white', 'pink'];
+      }
+    }
+    return ['brown', 'white', 'brown'];
 
     if(state == 'Pilotage_Completed' && timeType == 'ACTUAL'){
       return 'black';
@@ -232,8 +276,7 @@ class PilotTimeLineView extends Component {
     let {events} = this.state;
 
     events = events.filter(event => {
-      if (event.definitionId == "PILOTAGE_OPERATION" && (event.statements[0].stateDefinition == "Pilotage_Completed" || event.statements[0].stateDefinition == "Pilotage_Commenced")
-        && (this.getLeftOffSet(new Date(event.startTime)) > 0 && this.getLeftOffSet(new Date(event.startTime)) < this.state.colWidth*(this.state.hoursLookingForward + this.state.hoursLookingBack) ) ) {
+      if (event.definitionId == "PILOTAGE_OPERATION" && (event.statements[0].stateDefinition == "Pilotage_Completed" || event.statements[0].stateDefinition == "Pilotage_Commenced" ) ) {
         return true;
       }
       return false;
@@ -249,7 +292,7 @@ class PilotTimeLineView extends Component {
       currentTime.setTime(this.firstTime.getTime() + 1000*60*60*j); //add one hour
       this.cols.push({key: j, timeObj: currentTime});
     }
-    //console.log(events);
+    console.log(events);
     return(
       <View>
         <Modal
@@ -300,13 +343,13 @@ class PilotTimeLineView extends Component {
 				}
         {
             events.map((event, key) =>
-                (
+              (
           		  <View key = { key } style = {[{position: 'absolute'}]}>
                   <View  key = { key + 1000 } style = { [ styles.stylePortCall, {left: this.getStartOfPortCall(new Date(event.startTime),
                   new Date(event.endTime)),
-                    top: 50 + portcallIndex*40, backgroundColor: this.getColorByState('PLACEHOLDER'),
+                    top: 50 + portcallIndex*40, backgroundColor: this.getColorsByState(event)[0], borderColor: this.getColorsByState(event)[2],
       			  width: this.getWidth(new Date(event.startTime).getTime(), new Date(event.endTime).getTime())}]}>
-                      <Text>
+                      <Text style = {[{ color: this.getColorsByState(event)[1] }]}>
                         {this.getPortCallById(event.portCallId).vessel.name}
                       </Text>
                   </View>
@@ -365,8 +408,9 @@ const styles = StyleSheet.create({
       width: 60,
       height: 30,
       borderWidth: 0,
-	  backgroundColor: 'blue',
-      position: 'absolute'
+	    backgroundColor: 'brown',
+      position: 'absolute',
+      borderWidth: 2
     },
     stylePortCallEndLines: {
       height: 30,
