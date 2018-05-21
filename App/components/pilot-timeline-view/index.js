@@ -64,13 +64,13 @@ class PilotTimeLineView extends Component {
   events = [];
 
   constructor(props) {
-      super(props);
+    super(props);
 
-      // Fetching portCalls
-      const {portCalls} = this.props;
+    // Fetching portCalls
+    const {portCalls} = this.props;
+    console.log(portCalls);
 
-	  // colWidth = the width (in pixels) representing an hour
-      this.state = {showChangeLog: false, colWidth: 40, hoursLookingBack: 48, hoursLookingForward: 48, events: [] };
+    this.state = {showChangeLog: false, colWidth: 40, hoursLookingBack: 48, hoursLookingForward: 48, events: [] };
 
 	  this.updateZoomState = this.updateZoomState.bind(this);
 
@@ -101,10 +101,12 @@ class PilotTimeLineView extends Component {
 
   finishedFetchingEvents() {
     let events = this.props.fetchedEvents;
-    console.log("95: " + events);
+    
+    this.j++;
 
     events = events.filter(event => {
-      if (event.definitionId == "PILOTAGE_OPERATION" && (event.statements[0].stateDefinition == "Pilotage_Completed" || event.statements[0].stateDefinition == "Pilotage_Commenced")) {
+      if (event.definitionId == "PILOTAGE_OPERATION" && (event.statements[0].stateDefinition == "Pilotage_Completed" || event.statements[0].stateDefinition == "Pilotage_Commenced")
+        && (this.getLeftOffSet(new Date(event.startTime)) > 0 && this.getLeftOffSet(new Date(event.startTime)) < this.state.colWidth*(this.state.hoursLookingForward + this.state.hoursLookingBack) ) ) {
         return true;
       }
       return false;
@@ -119,11 +121,7 @@ class PilotTimeLineView extends Component {
       this.events = this.events.concat(events);
     }
 
-    this.j++;
-    console.log("j: " + this.j + " / " + this.props.portCalls.length);
-
     if (this.j == this.props.portCalls.length) {
-      console.log("update State");
       this.setState({events: this.events});
     }
   }
@@ -191,7 +189,6 @@ class PilotTimeLineView extends Component {
   }
 
   getColorByState(state, timeType){
-    console.log("portcallindex: " + portcallIndex);
 
     if(state == 'Pilotage_Completed' && timeType == 'ACTUAL'){
       return 'black';
@@ -257,7 +254,7 @@ class PilotTimeLineView extends Component {
       currentTime.setTime(this.firstTime.getTime() + 1000*60*60*j); //add one hour
       this.cols.push({key: j, timeObj: currentTime});
     }
-    console.log(events);
+    //console.log(events);
     return(
       <View>
         <Modal
