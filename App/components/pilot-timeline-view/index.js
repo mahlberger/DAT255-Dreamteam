@@ -55,7 +55,7 @@ class PilotTimeLineView extends Component {
     super(props);
 
 	  // colWidth = the width (in pixels) representing an hour
-    this.state = {showChangeLog: false, colWidth: 40, hoursLookingBack: 96, hoursLookingForward: 96, events: [] };
+    this.state = {showChangeLog: false, colWidth: 40, hoursLookingBack: 24, hoursLookingForward: 24, events: [] };
 
 	  this.updateZoomState = this.updateZoomState.bind(this);
 
@@ -234,7 +234,8 @@ componentDidMount() {
     let {events} = this.state;
 
     events = events.filter(event => {
-      if (event.definitionId == "PILOTAGE_OPERATION" && (event.statements[0].stateDefinition == "Pilotage_Completed" || event.statements[0].stateDefinition == "Pilotage_Commenced" ) ) {
+      if (event.definitionId == "PILOTAGE_OPERATION" && (event.statements[0].stateDefinition == "Pilotage_Completed" || event.statements[0].stateDefinition == "Pilotage_Commenced")
+        && (this.getLeftOffSet(new Date(event.startTime)) > 0 && this.getLeftOffSet(new Date(event.startTime)) < this.state.colWidth*(this.state.hoursLookingForward + this.state.hoursLookingBack) ) ) {
         return true;
       }
       return false;
@@ -282,14 +283,14 @@ componentDidMount() {
             
           />
           <Button
-            onPress={ () => this.loadExtraTime(-5)}
+            onPress={ () => this.loadExtraTime(-6)}
             title="Load backward time"
             color="#999"
             accessibilityLabel="zoom in"
             
           />
           <Button
-            onPress={ () => this.loadExtraTime(5)}
+            onPress={ () => this.loadExtraTime(6)}
             title="Load forward time"
             color="#777"
             accessibilityLabel="zoom in"
