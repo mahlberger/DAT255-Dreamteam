@@ -44,7 +44,7 @@ import TopHeader from '../top-header-view';
 import { APP_VERSION } from '../../config/version';
 import colorScheme from '../../config/colors';
 
-const portcallIndex = 0;
+let portcallIndex = 0;
 
 /*
 {
