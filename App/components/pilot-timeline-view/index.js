@@ -104,19 +104,6 @@ class PilotTimeLineView extends Component {
     
     this.j++;
 
-    events = events.filter(event => {
-      if (event.definitionId == "PILOTAGE_OPERATION" && (event.statements[0].stateDefinition == "Pilotage_Completed" || event.statements[0].stateDefinition == "Pilotage_Commenced")
-        && (this.getLeftOffSet(new Date(event.startTime)) > 0 && this.getLeftOffSet(new Date(event.startTime)) < this.state.colWidth*(this.state.hoursLookingForward + this.state.hoursLookingBack) ) ) {
-        return true;
-      }
-      return false;
-    });
-
-  //  console.log(events);
-  //  console.log("events fetched");
-//    this.setState({events: events});
-
-
     if (events.length >= 1 && events !== undefined) {
       this.events = this.events.concat(events);
     }
@@ -242,7 +229,15 @@ class PilotTimeLineView extends Component {
   render() {
     portcallIndex = 0;
 
-    const {events} = this.state;
+    let {events} = this.state;
+
+    events = events.filter(event => {
+      if (event.definitionId == "PILOTAGE_OPERATION" && (event.statements[0].stateDefinition == "Pilotage_Completed" || event.statements[0].stateDefinition == "Pilotage_Commenced")
+        && (this.getLeftOffSet(new Date(event.startTime)) > 0 && this.getLeftOffSet(new Date(event.startTime)) < this.state.colWidth*(this.state.hoursLookingForward + this.state.hoursLookingBack) ) ) {
+        return true;
+      }
+      return false;
+    });
 
     const BULLET = '\u2022';
     this.firstTime = new Date(Math.floor(this.now.getTime()/1000/60/60)*1000*60*60);
