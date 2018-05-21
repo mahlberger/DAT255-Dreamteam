@@ -70,7 +70,7 @@ class PilotTimeLineView extends Component {
     const {portCalls} = this.props;
 
 	  // colWidth = the width (in pixels) representing an hour
-    this.state = {showChangeLog: false, colWidth: 20, hoursLookingBack: 96, hoursLookingForward: 96, events: [] };
+    this.state = {showChangeLog: false, colWidth: 40, hoursLookingBack: 96, hoursLookingForward: 96, events: [] };
 
 	  this.updateZoomState = this.updateZoomState.bind(this);
 
@@ -101,7 +101,7 @@ class PilotTimeLineView extends Component {
 
   finishedFetchingEvents() {
     let events = this.props.fetchedEvents;
-    
+
     this.j++;
 
     if (events.length >= 1 && events !== undefined) {
@@ -189,7 +189,7 @@ class PilotTimeLineView extends Component {
         return ['red', 'white', 'red'];
       }
       else if (event.endTimeType == 'ESTIMATED') {
-        return ['white', 'black', 'purple']; //purple ram 
+        return ['white', 'black', 'purple']; //purple ram
       }
       else if (event.endTimeType == 'ACTUAL') {
         return ['white', 'black', 'black']; //svart ram
@@ -203,7 +203,7 @@ class PilotTimeLineView extends Component {
         return ['white', 'black', 'green']; //grön ram
       }
       else if (event.endTimeType == 'ESTIMATED') {
-        return ['green', 'white', 'green']; 
+        return ['green', 'white', 'green'];
       }
       else if (event.endTimeType == 'ACTUAL') {
         return ['black', 'white', 'black'];
@@ -217,7 +217,7 @@ class PilotTimeLineView extends Component {
         return ['white', 'black', 'black']; //svart ram
       }
       else if (event.endTimeType == 'ESTIMATED') {
-        return ['blue', 'white', 'blue']; 
+        return ['blue', 'white', 'blue'];
       }
       else if (event.endTimeType == 'ACTUAL') {
         return ['black', 'white', 'black'];
@@ -321,13 +321,13 @@ class PilotTimeLineView extends Component {
               selectPortCall(this.getPortCallById(event.portCallId));
               navigate('TimeLine');
             }}
-            > 
+            >
                   <View  key = { key + 1000 } style = { [ styles.stylePortCall, {left: this.getStartOfPortCall(new Date(event.startTime),
                   new Date(event.endTime)),
                     top: 50 + portcallIndex*40, backgroundColor: this.getColorsByState(event)[0], borderColor: this.getColorsByState(event)[2],
       			  width: this.getWidthOfPortCall(new Date(event.startTime), new Date(event.endTime))}]}>
                       <Text style = {[{ color: this.getColorsByState(event)[1] }]}>
-                        {this.getPortCallById(event.portCallId).vessel.name} 
+                        {this.getPortCallById(event.portCallId).vessel.name}
                       </Text>
                   </View>
                   </TouchableWithoutFeedback>
