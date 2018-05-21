@@ -107,11 +107,7 @@ class PilotTimeLineView extends Component {
     return "";
   }
 
-  oijsfoijsfoihasfoih(){
-    return 0;
-  }
-
-  componentDidMount() {
+componentDidMount() {
     const fx = () => this.refs._scrollViewHorizontal.scrollTo({
       x: this.getLeftOffSet(this.now) - Dimensions.get('window').width/2,
       animated: false
