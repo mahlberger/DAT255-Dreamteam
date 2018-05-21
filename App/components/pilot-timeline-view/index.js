@@ -70,7 +70,7 @@ class PilotTimeLineView extends Component {
       const {portCalls} = this.props;
 
 	  // colWidth = the width (in pixels) representing an hour
-      this.state = {showChangeLog: false, colWidth: 40, hoursLookingBack: 48, hoursLookingForward: 48, events: [] };
+      this.state = {showChangeLog: false, colWidth: 40, hoursLookingBack: 96, hoursLookingForward: 96, events: [] };
 
 	  this.updateZoomState = this.updateZoomState.bind(this);
 
@@ -101,7 +101,6 @@ class PilotTimeLineView extends Component {
 
   finishedFetchingEvents() {
     let events = this.props.fetchedEvents;
-    console.log("95: " + events);
 
     events = events.filter(event => {
       if (event.definitionId == "PILOTAGE_OPERATION" && (event.statements[0].stateDefinition == "Pilotage_Completed" || event.statements[0].stateDefinition == "Pilotage_Commenced")) {
@@ -110,20 +109,13 @@ class PilotTimeLineView extends Component {
       return false;
     });
 
-  //  console.log(events);
-  //  console.log("events fetched");
-//    this.setState({events: events});
-
-
     if (events.length >= 1 && events !== undefined) {
       this.events = this.events.concat(events);
     }
 
     this.j++;
-    console.log("j: " + this.j + " / " + this.props.portCalls.length);
 
     if (this.j == this.props.portCalls.length) {
-      console.log("update State");
       this.setState({events: this.events});
     }
   }
@@ -148,12 +140,9 @@ class PilotTimeLineView extends Component {
   }
 
   getStartOfPortCall(startTime, endTime){
-    console.log('tider');
-    console.log(startTime);
-    console.log(endTime);
-    if((startTime == null || startTime == 0) && (endTime == null || endTime == 0)){
+    if((startTime == null || startTime.getTime() == 0) && (endTime == null || endTime.getTime() == 0)){
       return this.getLeftOffSet(new Date());
-    }else if(startTime == null || startTime == 0){
+    }else if(startTime == null || startTime.getTime() == 0){
       return this.getLeftOffSet(new Date(endTime.getTime()-1000*60*60*1.5));
     }else{
       return this.getLeftOffSet(startTime);
@@ -172,13 +161,23 @@ class PilotTimeLineView extends Component {
     return this.getLeftOffSet(new Date(endTime)) - this.getLeftOffSet(new Date(startTime));
   }
 
+  getWidthOfPortCall(startTime, endTime){
+    if((startTime == null || startTime.getTime() == 0) && (endTime == null || endTime.getTime() == 0)){
+      return this.getWidth(new Date().getTime(), new Date().getTime()+(1000*60*60)*1.5);
+    }else if(startTime == null || startTime.getTime() == 0){
+      return this.getWidth(endTime.getTime(), endTime.getTime()+(1000*60*60)*1.5);
+    }else if(endTime == null || endTime.getTime() == 0){
+      return this.getWidth(startTime.getTime(), startTime.getTime()+(1000*60*60)*1.5);
+    }else{
+      return this.getWidth(startTime.getTime(), endTime.getTime());
+    }
+  }
+
   updateZoomState(value) {
-  //  console.log(value);
     this.setState(prevState => {
        return {colWidth: prevState.colWidth + value}
     });
     if (value>0) {
-  //    console.log("Forward");
       this.setState(prevState => {
        return {hoursLookingForward: prevState.hoursLookingForward + 5}
       });
@@ -191,8 +190,6 @@ class PilotTimeLineView extends Component {
   }
 
   getColorByState(state, timeType){
-    console.log("portcallindex: " + portcallIndex);
-
     if(state == 'Pilotage_Completed' && timeType == 'ACTUAL'){
       return 'black';
     }else if(state == 'Pilotage_Commenced' && timeType == 'ACTUAL'){
@@ -200,35 +197,9 @@ class PilotTimeLineView extends Component {
     }else if(state == 'Pilotage_Commenced' && timeType == 'ESTIMATED'){
       return 'green';
     }else{
+      console.log('all red');
       return 'red'; //This is a errornous state
     }
-/*
-  switch (state) {
-  case 'Arrival_Vessel_Berth':
-      return 'green';
-      break;
-  case 'Arrival_Vessel_TrafficArea':
-      return 'red';
-      break;
-  case 'Departure_Vessel_Berth':
-      return 'yellow';
-      break;
-  case 'Departure_Vessel_TrafficArea':
-      return 'purple';
-      break;
-  case 'SludgeOp_Requested':
-      return 'orange';
-      break;
-  case 'Arrival_Vessel_AnchorageArea':
-      return 'black';
-      break;
-  case 'SludgeOp_Completed':
-      return 'green';
-  default:
-      return 'blue';
-
-    }
-*/
   }
 
   test(){
@@ -257,7 +228,6 @@ class PilotTimeLineView extends Component {
       currentTime.setTime(this.firstTime.getTime() + 1000*60*60*j); //add one hour
       this.cols.push({key: j, timeObj: currentTime});
     }
-    console.log(events);
     return(
       <View>
         <Modal
@@ -313,18 +283,18 @@ class PilotTimeLineView extends Component {
                   <View  key = { key + 1000 } style = { [ styles.stylePortCall, {left: this.getStartOfPortCall(new Date(event.startTime),
                   new Date(event.endTime)),
                     top: 50 + portcallIndex*40, backgroundColor: this.getColorByState('PLACEHOLDER'),
-      			  width: this.getWidth(new Date(event.startTime).getTime(), new Date(event.endTime).getTime())}]}>
+      			  width: this.getWidthOfPortCall(new Date(event.startTime), new Date(event.endTime))}]}>
                       <Text>
                         {this.getPortCallById(event.portCallId).vessel.name}
                       </Text>
                   </View>
-          		    <View key = { key + 2000 } style = { [ styles.stylePortCallEndLines, {left: this.getLeftOffSet(new Date(new Date(event.startTime).getTime() - 1000*60*60)),
+          		    <View key = { key + 2000 } style = { [ styles.stylePortCallEndLines, {left: this.getStartOfPortCall(new Date(event.startTime), new Date(event.endTime))-1*this.state.colWidth,
                         top: 50 + portcallIndex*40,
           			  width: this.getWidth(new Date(event.startTime).getTime() - 1000*60*60, new Date(event.startTime).getTime())}]}>
                   </View>
-          		    <View key = { key + 3000 } style = { [ styles.stylePortCallConnectingLine, {left: this.getLeftOffSet(new Date(new Date(event.startTime).getTime() - 1000*60*60)),
+          		    <View key = { key + 3000 } style = { [ styles.stylePortCallConnectingLine, {left: this.getStartOfPortCall(new Date(event.startTime), new Date(event.endTime))-1*this.state.colWidth,
                         top: 50 + portcallIndex++*40,
-          			  width: this.getWidth(new Date(event.startTime).getTime() - 1000*60*60, new Date(event.startTime).getTime())}]}>
+          			  width: this.state.colWidth}]}>
                   </View>
           		  </View>
             ))
