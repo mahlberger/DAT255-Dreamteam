@@ -75,7 +75,6 @@ class PilotTimeLineView extends Component {
 	  this.updateZoomState = this.updateZoomState.bind(this);
 
 	  this.now = new Date();
-    portcallIndex = 0;
 
     this.finishedFetchingEvents = this.finishedFetchingEvents.bind(this);
   }
@@ -228,10 +227,6 @@ class PilotTimeLineView extends Component {
     }
     return ['brown', 'white', 'brown'];
   }
-
-  test(){
-    return '⇒';
-  };
 
   shouldComponentUpdate() {
     if (this.j >= this.props.portCalls.length) {
