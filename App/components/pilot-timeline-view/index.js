@@ -101,6 +101,7 @@ class PilotTimeLineView extends Component {
 
   finishedFetchingEvents() {
     let events = this.props.fetchedEvents;
+    console.log("95: " + events);
 
     events = events.filter(event => {
       if (event.definitionId == "PILOTAGE_OPERATION" && (event.statements[0].stateDefinition == "Pilotage_Completed" || event.statements[0].stateDefinition == "Pilotage_Commenced")
@@ -109,6 +110,10 @@ class PilotTimeLineView extends Component {
       }
       return false;
     });
+
+  //  console.log(events);
+  //  console.log("events fetched");
+//    this.setState({events: events});
 
 
     if (events.length >= 1 && events !== undefined) {
@@ -143,15 +148,29 @@ class PilotTimeLineView extends Component {
     timerid = setTimeout( fx, 30 );
   }
 
-  getLeftOffSet(date, char){
+  getStartOfPortCall(startTime, endTime){
+    console.log('tider');
+    console.log(startTime);
+    console.log(endTime);
+    if((startTime == null || startTime == 0) && (endTime == null || endTime == 0)){
+      return this.getLeftOffSet(new Date());
+    }else if(startTime == null || startTime == 0){
+      return this.getLeftOffSet(new Date(endTime.getTime()-1000*60*60*1.5));
+    }else{
+      return this.getLeftOffSet(startTime);
+    }
+  }
+
+  getLeftOffSet(date){
     var offset;
-    offset = ((date-this.firstTime)/(1000*60*60))*(this.state.colWidth);
-    console.log("149-" + char + ": " + date + " . " + this.firstTime + ": " + offset);
+    offset = ((date.getTime()-this.firstTime.getTime())/(1000*60*60))*(this.state.colWidth);
     return offset;
   }
 
   getWidth(startTime, endTime){
-    return this.getLeftOffSet(endTime, "0") - this.getLeftOffSet(startTime, "0");
+    return 100;
+    if(startTime == null || startTime == 0 || endTime == null || endTime == 0) return 0;
+    return this.getLeftOffSet(endTime) - this.getLeftOffSet(startTime);
   }
 
   updateZoomState(value) {
@@ -172,8 +191,19 @@ class PilotTimeLineView extends Component {
     }
   }
 
-  getColorByState(state){
-//    console.log(portcallIndex);
+  getColorByState(state, timeType){
+    console.log("portcallindex: " + portcallIndex);
+
+    if(state == 'Pilotage_Completed' && timeType == 'ACTUAL'){
+      return 'black';
+    }else if(state == 'Pilotage_Commenced' && timeType == 'ACTUAL'){
+      return 'blue';
+    }else if(state == 'Pilotage_Commenced' && timeType == 'ESTIMATED'){
+      return 'green';
+    }else{
+      return 'red'; //This is a errornous state
+    }
+/*
   switch (state) {
   case 'Arrival_Vessel_Berth':
       return 'green';
@@ -197,8 +227,9 @@ class PilotTimeLineView extends Component {
       return 'green';
   default:
       return 'blue';
-}
 
+    }
+*/
   }
 
   test(){
@@ -213,13 +244,15 @@ class PilotTimeLineView extends Component {
   }
 
   render() {
-    console.log("render");
+    portcallIndex = 0;
+
     const {events} = this.state;
 
     console.log("Tjabbatjena");
     console.log(events);
     
     var portcallIndex = 0;
+
     const BULLET = '\u2022';
     this.firstTime = new Date(Math.floor(this.now.getTime()/1000/60/60)*1000*60*60);
     this.firstTime.setHours(this.firstTime.getHours()-this.state.hoursLookingBack);
@@ -230,6 +263,7 @@ class PilotTimeLineView extends Component {
       currentTime.setTime(this.firstTime.getTime() + 1000*60*60*j); //add one hour
       this.cols.push({key: j, timeObj: currentTime});
     }
+    console.log(events);
     return(
       <View>
         <Modal
@@ -281,23 +315,22 @@ class PilotTimeLineView extends Component {
         {
             events.map((event, key) =>
                 (
-                
-                
-          		  <View key = { key }>
-                  <View  style = { [ styles.stylePortCall, {left: this.getLeftOffSet(new Date(event.startTime), 'p'),
+          		  <View key = { key } style = {[{position: 'absolute'}]}>
+                  <View  key = { key + 1000 } style = { [ styles.stylePortCall, {left: this.getStartOfPortCall(new Date(event.startTime),
+                  new Date(event.endTime)),
                     top: 50 + portcallIndex*40, backgroundColor: this.getColorByState('PLACEHOLDER'),
-      			  width: this.getWidth(new Date(event.startTime), new Date(event.endTime))}]}>
+      			  width: this.getWidth(new Date(event.startTime).getTime(), new Date(event.endTime).getTime())}]}>
                       <Text>
                         {console.log("291: " + new Date(event.startTime) + " : " + event.eventId + " " + this.getPortCallById(event.portCallId).vessel.name)}
                       </Text>
                   </View>
-          		    <View key = { key + 1000 } style = { [ styles.stylePortCallEndLines, {left: this.getLeftOffSet(new Date(event.startTime), 'ä'),
+          		    <View key = { key + 2000 } style = { [ styles.stylePortCallEndLines, {left: this.getLeftOffSet(new Date(new Date(event.startTime).getTime() - 1000*60*60)),
                         top: 50 + portcallIndex*40,
-          			  width: this.getWidth(new Date(event.startTime).getTime() - 4000*60*60, new Date(event.startTime))}]}>
+          			  width: this.getWidth(new Date(event.startTime).getTime() - 1000*60*60, new Date(event.startTime).getTime())}]}>
                   </View>
-          		    <View key = { key + 2000 } style = { [ styles.stylePortCallConnectingLine, {left: this.getLeftOffSet(new Date(event.startTime), 'ö'),
+          		    <View key = { key + 3000 } style = { [ styles.stylePortCallConnectingLine, {left: this.getLeftOffSet(new Date(new Date(event.startTime).getTime() - 1000*60*60)),
                         top: 50 + portcallIndex++*40,
-          			  width: this.getWidth(new Date(event.startTime).getTime() - 4000*60*60, new Date(event.startTime))}]}>
+          			  width: this.getWidth(new Date(event.startTime).getTime() - 1000*60*60, new Date(event.startTime).getTime())}]}>
                   </View>
           		  </View>
             ))
@@ -347,7 +380,7 @@ const styles = StyleSheet.create({
       height: 30,
       borderWidth: 0,
 	  backgroundColor: 'blue',
-      position: 'absolute',
+      position: 'absolute'
     },
     stylePortCallEndLines: {
       height: 30,
@@ -357,7 +390,7 @@ const styles = StyleSheet.create({
       borderLeftWidth: 2,
       borderRightWidth: 0,
       borderColor: 'black',
-      position: 'absolute',
+      position: 'absolute'
     },
     stylePortCallConnectingLine: {
       height: 15,
