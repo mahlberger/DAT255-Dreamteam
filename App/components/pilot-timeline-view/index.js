@@ -173,12 +173,38 @@ componentDidMount() {
   }
 
   getColorsByState(event){
-
+    if (event.statements[0].stateDefinition == 'Pilotage_Requested') {
+      if (event.startTimeType == 'null') {
+        return ['white', 'black', 'black'];
+      }
+      if (event.startTimeType == 'PLANNING') {
+        return ['white', 'black', 'red'];
+      }
+      return ['white', 'black', 'purple'];
+    }
+    if (event.statements[0].stateDefinition == 'Pilotage_ReqReceived') {
+      if (event.startTimeType == 'null') {
+        return ['gray', 'black', 'black'];
+      }
+      if (event.startTimeType == 'PLANNING') {
+        return ['white', 'black', 'blue'];
+      }
+      return ['gray', 'black', 'purple'];
+    }
+    if (event.statements[0].stateDefinition == 'Pilotage_Confirmed') {
+      if (event.startTimeType == 'null') {
+        return ['gray', 'black', 'black'];
+      }
+      if (event.startTimeType == 'PLANNING') {
+        return ['white', 'black', 'green'];
+      }
+      return ['gray', 'black', 'purple'];
+    }
     if (event.startTimeType == null) {
       if (event.endTimeType == null) {
-        return ['red', 'white', 'red'];
+        return ['red', 'white', 'red']; //background, text, border
       }
-      else if (event.endTimeType == 'ESTIMATED') {
+      else if (event.endTimeType == 'ESTIMATED' || event.endTimeType == 'PLANNING') {
         return ['white', 'black', 'purple']; //purple ram
       }
       else if (event.endTimeType == 'ACTUAL') {
@@ -188,11 +214,11 @@ componentDidMount() {
         return ['white', 'white', 'white'];
       }
     }
-    else if (event.startTimeType == 'ESTIMATED') {
+    else if (event.startTimeType == 'ESTIMATED' || event.startTimeType == 'PLANNING') {
       if (event.endTimeType == null) {
         return ['white', 'black', 'green']; //grön ram
       }
-      else if (event.endTimeType == 'ESTIMATED') {
+      else if (event.endTimeType == 'ESTIMATED' || event.endTimeType == 'PLANNING') {
         return ['green', 'white', 'green'];
       }
       else if (event.endTimeType == 'ACTUAL') {
@@ -206,7 +232,7 @@ componentDidMount() {
       if (event.endTimeType == null) {
         return ['white', 'black', 'black']; //svart ram
       }
-      else if (event.endTimeType == 'ESTIMATED') {
+      else if (event.endTimeType == 'ESTIMATED' || event.endTimeType == 'PLANNING') {
         return ['blue', 'white', 'blue'];
       }
       else if (event.endTimeType == 'ACTUAL') {
@@ -233,9 +259,19 @@ componentDidMount() {
     const {navigate} = navigation;
     let {events} = this.state;
 
+    console.log(events);
+
+    req_events = events.filter(event => {
+      if (event.definitionId == "PILOTAGE_OPERATION" && (event.statements[0].stateDefinition == "Pilotage_Requested" || event.statements[0].stateDefinition == "Pilotage_ReqReceived" || event.statements[0].stateDefinition == "Pilotage_Confirmed")
+        && (this.getStartOfPortCall(new Date(event.startTime), new Date(event.endTime)) > 0 && this.getStartOfPortCall(new Date(event.startTime), new Date(event.endTime)) < this.state.colWidth*(this.state.hoursLookingForward + this.state.hoursLookingBack) ) ) {
+        return true;
+      }
+      return false;
+    });
+
     events = events.filter(event => {
       if (event.definitionId == "PILOTAGE_OPERATION" && (event.statements[0].stateDefinition == "Pilotage_Completed" || event.statements[0].stateDefinition == "Pilotage_Commenced")
-        && (this.getLeftOffSet(new Date(event.startTime)) > 0 && this.getLeftOffSet(new Date(event.startTime)) < this.state.colWidth*(this.state.hoursLookingForward + this.state.hoursLookingBack) ) ) {
+        && (this.getStartOfPortCall(new Date(event.startTime), new Date(event.endTime)) > 0 && this.getStartOfPortCall(new Date(event.startTime), new Date(event.endTime)) < this.state.colWidth*(this.state.hoursLookingForward + this.state.hoursLookingBack) ) ) {
         return true;
       }
       return false;
@@ -318,9 +354,28 @@ componentDidMount() {
 					))
 				}
         {
+            req_events.map((event, key) =>
+              (
+                <View key = { key } style = {[{position: 'absolute'}]}>
+                  <TouchableWithoutFeedback key = { key } onPress={
+            () => {
+              selectPortCall(this.getPortCallById(event.portCallId));
+              navigate('TimeLine');
+            }}
+            >
+                  <View  key = { key + 1000 } style = { [ styles.stylePortCallReq, {left: this.getStartOfPortCall(new Date(event.startTime),
+                  new Date(event.endTime))-15,
+                    top: 50 + portcallIndex++*40, backgroundColor: this.getColorsByState(event)[0], borderColor: this.getColorsByState(event)[2],}]}>
+                      
+                  </View>
+                  </TouchableWithoutFeedback>
+                </View>
+            ))
+        }
+        {
             events.map((event, key) =>
               (
-          		  <View key = { key } style = {[{position: 'absolute'}]}>
+                <View key = { key } style = {[{position: 'absolute'}]}>
                   <TouchableWithoutFeedback key = { key } onPress={
             () => {
               selectPortCall(this.getPortCallById(event.portCallId));
@@ -330,21 +385,21 @@ componentDidMount() {
                   <View  key = { key + 1000 } style = { [ styles.stylePortCall, {left: this.getStartOfPortCall(new Date(event.startTime),
                   new Date(event.endTime)),
                     top: 50 + portcallIndex*40, backgroundColor: this.getColorsByState(event)[0], borderColor: this.getColorsByState(event)[2],
-      			  width: this.getWidthOfPortCall(new Date(event.startTime), new Date(event.endTime))}]}>
+              width: this.getWidthOfPortCall(new Date(event.startTime), new Date(event.endTime))}]}>
                       <Text style = {[{ color: this.getColorsByState(event)[1] }]}>
                         {this.getPortCallById(event.portCallId).vessel.name}
                       </Text>
                   </View>
                   </TouchableWithoutFeedback>
-          		    <View key = { key + 2000 } style = { [ styles.stylePortCallEndLines, {left: this.getStartOfPortCall(new Date(event.startTime), new Date(event.endTime))-1*this.state.colWidth,
+                  <View key = { key + 2000 } style = { [ styles.stylePortCallEndLines, {left: this.getStartOfPortCall(new Date(event.startTime), new Date(event.endTime))-1*this.state.colWidth,
                         top: 50 + portcallIndex*40,
-          			  width: this.getWidth(new Date(event.startTime).getTime() - 1000*60*60, new Date(event.startTime).getTime())}]}>
+                  width: this.getWidth(new Date(event.startTime).getTime() - 1000*60*60, new Date(event.startTime).getTime())}]}>
                   </View>
-          		    <View key = { key + 3000 } style = { [ styles.stylePortCallConnectingLine, {left: this.getStartOfPortCall(new Date(event.startTime), new Date(event.endTime))-1*this.state.colWidth,
+                  <View key = { key + 3000 } style = { [ styles.stylePortCallConnectingLine, {left: this.getStartOfPortCall(new Date(event.startTime), new Date(event.endTime))-1*this.state.colWidth,
                         top: 50 + portcallIndex++*40,
-          			  width: this.state.colWidth}]}>
+                  width: this.state.colWidth}]}>
                   </View>
-          		  </View>
+                </View>
             ))
           }
 		</ScrollView>
@@ -394,6 +449,12 @@ const styles = StyleSheet.create({
 	    backgroundColor: 'brown',
       position: 'absolute',
       borderWidth: 2
+    },
+    stylePortCallReq: {
+      width: 30,
+      height: 30,
+      borderRadius: 15,
+      borderWidth: 2,
     },
     stylePortCallEndLines: {
       height: 30,
