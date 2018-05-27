@@ -25,14 +25,16 @@ Throughout the course, I have enjoyed building up the framework of documentation
 
 Examples of this includes creating the documentation for our meetings, so that we have ready-to-go algorithms with meeting points that ensures that all points of a sprint review, sprint retrospective etc is done in the right way. I have made sure that the agile process of improvement within the team has been logged, and that our decisions are saved so that we can easily backtrack when we want to know why/when we made a certain decision during the course of the project.
 
-This final week, my contributions consisted building the presentation material, as well as presenting our work, to the product owners and other stakeholders.
-
 In the future, I want to try on the role of Scrummaster, the purpose of this goal is to get a more holistic view of the Scrum process, and the participation in Scrum of Scrums and the collaborative efforts those meetings strive to coordinate.
 
 To fullfil this goal, I will apply for the role of Scrummaster in my next project having the effect that I also must do my very best in order to not hamper the potential of my team, and rather try to help the team members maximize their own potential.
 
+what is my contribution towards the team’s deliveries?
+Throughout the course, my contributions have consisted of a mix of my experience and knowledge if the shipping industry, completing important User Stories for us as developers, and working on the User stories towards the PO. These different parts all come together in how we define our user stories, and what goes into each delivery. Through pair programming, I have worked closely together with Andreas on several user stories related to finding, extracting and modifying the information stored in different port calls. This final week, my contributions consisted building the presentation material, as well as presenting our work, to the product owners and other stakeholders. We have tried to build an app that looks and feels much like the existing UI that the Pilot organization works with. From the feedback we got from the end user during the final presentation, I would say that we were successful in this goal, as the comments from the pilot organizer was that everything looked familiar. While he did comment that some elements of the UI were color coded differently, such aspects of the interface are easy to modify. I made sure that we documented his answers so that they could be included in our reflections. As such, they will then be accessible to the people working with portCDM through our repository, and our findings can be used to improve the Piloting aspect of the app in the future.
 
+My goal for future contributions in any project is to continue taking on challenging deliveries that push my abilities. The purpose of this goal is to maximize the potential for new knowledge with every delivery.
 
+In order to achieve this goal I will try to pair up with more experienced programmers in the future so that they can challenge me to push myself, but also to help and assist when I get stuck on a problem for too long. The effect of such a setup will be that I can quickly progress and become a better programmer.
 
 **v7**
 
