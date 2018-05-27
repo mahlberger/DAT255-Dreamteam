@@ -1,5 +1,39 @@
 ## Individuell reflection
 
+**v8, final reflection**
+
+what do I want to learn or understand better?
+During this course I have had many different learning goals of either a technical character or regarding the application of Scrum. Looking back, I can now say with confidence that I have gained valuable knowledge of what it means to work in a team contributing towards a larger project using Scrum methodology.
+
+Learning how to apply the Scrum methodology, and working in ways that others have previously identified as best practice (such as working during fixed times and close together to promote information sharing) has been a learning experience that -more than any previous course- has been applicable to actually working professionally within the IT field. I now feel comfortable in saying that I can apply the Scrum framework when assigned to a new development project. Getting familiar with the terminology, such as Sprints, reviews and retrospectives, daily scrums, Scrum of scrums, velocity etc etc, has removed the barrier to entry which would otherwise have had to be overcome at a later point in a career within IT. This course has also provided the foundation for filling the other roles that we have encountered (or taken upon ourselves) within the course, in a more competent manner (ex: Product Owner, developer, scrummaster).
+
+For the technical aspects, learning how development of a frontend application is done, and how it is tied together with a backend database, has been very interesting, and has been a long standing ambition to learn on my own prior to this course. Learning about react native, redux, and the language javascript, has been a large step towards getting a more well rounded experience of programming, and more specifically, how apps are made.
+
+For the future, I would like to test and solidify the knowledge gained by building an app similar to the one in the project, from the ground up, together with a team of developers and using the Scrum process. The purpose of this goal is to gain further confidence in my skills and abilities in this arena.
+
+In order to do reach this goal, I will need to find a suitable next project. As a summer intern within the IT field for this summer, I will have many opportunities to join teams working on similar projects that could help me reach this goal, with the effect of reinforcing what I have learned in the past months.
+
+how can I help someone else, or the entire team, to learn something new?
+By providing the governing structure surrounding the application of Scrum that ensured that we on set dates and times meet and work together, each team member has been able to in an efficient way provide the different parts of the puzzle of successfully applying Scrum. When team members contribute with their own pieces of knowledge and experience to the team and the process, we increase the speed of learning as we share information. We have logged our KPI's, how we spend our time, and integrated velocity estimations vs actual time into our Trello board. My specific technical knowledge of shipping, and how the different actors come together in a port call, was early on my main contribution. It helped us decide on a hypothesis and kept us on a straight trajectory with an agreed purpose for what our app should do. Through my knowledge we could maximize the potential of our meetings with the end user, and understand their needs. We could then take this to the product owner for approval. It was also a learning experience for myself to fill this kind of role where I had a fair amount of knowledge and experience of a specific area that I needed to share with the rest of the group to reduce our truck factor.
+
+A future goal for helping others to learn is to improve my ability to see my knowledge from the perspective of my team mates. I want to improve how I synthesize the value of my experience so that I can present it in a coherent and unbiased way. The purpose of this goal is that I want to become a better teacher, and a better interview subject. I feel that I too easily introduce the bias of my professional perspective into the information I provide others (in this case a communications perspective, meaning that I think alot in terms of size of a payload, different information carriers etc etc, which has little value in most contexts for the team).
+
+In order to achieve this goal, the next time someone wants to learn something from me, I need to mentally put myself in their position, and think about the context of their questions, to see what is relevant and what is not.
+
+what is my contribution towards the team’s application of scrum?
+Throughout the course, I have enjoyed building up the framework of documentation, and establishing the work routines, that help guide and shape the work of the team so that it for every passing sprint more and more conforms to the Scrum methodology.
+
+Examples of this includes creating the documentation for our meetings, so that we have ready-to-go algorithms with meeting points that ensures that all points of a sprint review, sprint retrospective etc is done in the right way. I have made sure that the agile process of improvement within the team has been logged, and that our decisions are saved so that we can easily backtrack when we want to know why/when we made a certain decision during the course of the project.
+
+This final week, my contributions consisted building the presentation material, as well as presenting our work, to the product owners and other stakeholders.
+
+In the future, I want to try on the role of Scrummaster, the purpose of this goal is to get a more holistic view of the Scrum process, and the participation in Scrum of Scrums and the collaborative efforts those meetings strive to coordinate.
+
+To fullfil this goal, I will apply for the role of Scrummaster in my next project having the effect that I also must do my very best in order to not hamper the potential of my team, and rather try to help the team members maximize their own potential.
+
+
+
+
 **v7**
 
 what do I want to learn or understand better?
