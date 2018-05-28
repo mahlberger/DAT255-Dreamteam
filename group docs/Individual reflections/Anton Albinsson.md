@@ -163,3 +163,43 @@ Last sprint the user stories on receiving relevant time stamps were not quite co
 A part of this week’s goal will be to complete the testing procedure user story. As we are approaching deadline for this project we need to get the application to work as intended. I therefore also want to take an active role in our group meetings to listen to any needs of help where I could contribute to complete said user story.  
 
 
+## Week 8 - FINAL ##
+
+**what do I want to learn or understand better?**
+At the beginning of this project my approach to learning has always been to set up a detailed plan for the upcoming weeks and then stick to the plan until I achieve my goal. Therefore, I experienced it quite as a shock when facing all the uncertainties which exists in this project. 
+
+Initially I learned about all the different Scrum elements but after that I didn't know where to put my focus. Here I learned that our group meetings (with sprint retrospectives & planning) was really useful to realize what was actually important to learn this week and to not worry as much about what would happen in a month or so. This is reflected in my learning objectives which has spanned from in the beginning to gain PortableCDM knowledge when we need to created ideas for epics and later towards a focus on developer environment/React Native when our project hit the coding stage. 
+
+As this was my first real time trying to build upon an existing code base I realized the importance of reusing code and this was represented by a shift in learning objectives from generic ReactNative tutorials to start playing with the code and to learn more specifically about those components that are useful to our US (user stories).
+
+This was also my first time being part of larger group working towards a common goal which was reflected in my learning objective to understand the integration of different branches. By having this objective, I learned about importance of "Definition of Done" and how to solve a merge conflict. 
+
+In the final sprint my goal was to find out more about the testing procedures. Here I learned that different programs as DeepScan versus JEST has different purpose and requires different amount of effort to implement. 
+
+My main goal for future project will be to practice what I have learned about not having a static long-term planning and instead embrace uncertainty and prepare to adapt to new changes. To achieve this goal, I will have to involve more frequent reviews of my process to understand my current position. I must also take an active role to receive feedback in order to know what alignments must be made to meet the project goals. To tackle the uncertainty my focus will be on testing different approaches, analyze results and thereby learning more about how the action-consequence relation might look like. 
+
+**How can I help someone else, or the entire team, to learn something new?**
+At the beginning of the project I took on the role as Trello Responsible which resulted in a learning objective to help our team get started in Trello, which took some time but as time matured the group became more comfortable in using it.
+
+As we were approaching the coding stage of the project I initially had a learning objective to summarize my findings of online tutorials on JavaScript/React Native to help my pair programming colleague. In retrospect this was a rather bad goal because since I did not know what was relevant most of it would never come in to use and there was no clear definition of when it was done or how long it could actually take. 
+
+As the project progressed our programming teams learned about different aspects in the code base. During this phase the group faced a particular difficult user story that we put two programming teams on. Here I focused my learning objectives on helping the other programming team understand the purpose of the components we had interacted with, which was a much better goal than the general summarization of online tutorials. 
+
+During this final sprint I was able to help the group learn about testing procedures presented in a cheat sheet. During our group meetings I also spoke about the pro's and con's of different testing programs, so if anyone will continue working in software project they will be aware of their existence. 
+
+Even though I barely scratched the surface around testing procedures I realized the vast importance of catching code errors early before they become huge headaches. Towards future project I want dive deeper into testing and be able to help team members in creating good testing procedures. If I want to help other people, my first priority must be to learn more about the subject. Thereafter I believe in an agile approach to experiment by trying different testing routines, reviewing them and then successively finding one that fits the team.  
+
+**What is my contribution towards the team’s application of scrum?**
+As the Trello responsible my focus has been, besides of course being active in our group meetings and providing input, to create a Trello board that enable us to practice scrum in an efficient way. Early in the project this included setting up some simple rules to the Trello Board and explaining some basic functionality. After setting up the board I was faced with uncertainty in how the separation between Epics, US and tasks should be implemented in Trello as no definite answer existed. Here I used the scrum methodology and told the group we would try a particular setup for one sprint, and during the sprint retrospective I would bring up the subject and ask for the groups input and then make some small alterations of the board if necessary. 
+
+To have a successful scrum implementation it is important that we put a reasonable amount of US in our sprint backlog, not too few and not too many. This puts pressure on the estimation accuracy. During our retrospectives we had a hunch that our estimation capability might be impacted of both over and under estimations. To solve this issue, I presented an idea of an Estimation Accuracy (KPI), which would both create incentives for inputting time spent on tasks as well as help realize any eventual problems in our estimation. 
+As my goal for this final sprint was to follow up on the Estimation Accuracy KPI I can conclude that we see a small improvement. Furthermore, this more granular representation shows a story that most US was in fact overestimated. 
+
+In successfully implementing Scrum I believe that certain tools could ease the implementation and augment the positive sides. When working in future project I therefore want to contribute in the application of Scrum by setting up & customizing the right tools, for example Trello. To achieve this, I believe that moderation is key, since introduction of everything at once has the risk of information overload as well as it’s difficult to find out which tools that actually provide value.
+
+**What is my contribution towards the team’s deliveries?**
+My contribution to our team deliveries has been a mix of focus on US towards the product owner as well as US that helps us as developers. I, together with Filip, formed a pair programming team with focus on fetching the right information which would then be displayed in our graphical pilot timeline view. This required us to dig deep into the codebase to understand how the interaction between different components works, which was harder than anticipated. After managing to filter out relevant portcalls we teamed up with another pair programming team to extract the right information from our selected portcalls. We managed to successfully complete this US as well as coordinating with the other pair programing teams to create a product that we felt got much appreciation from the different stakeholders in this project. 
+
+My contribution to improve our internal process as developers has been targeted at creating an efficient Trello setup as well as providing testing procedures for quality checks around our produced code. This last sprint I was able to contribute towards our deliveries by testing our code and together with other team members we were able to correct some of the issues that arise during the testing process.  
+
+During this project I have realized the importance of cooperation in order to more efficiently create deliveries. Therefore, a goal for future project will be to become better in collaborating with various members of different skillsets. I want to achieve this by more frequent take interest in other peoples current progress so I know any problems/knowledge they might have as well as clearly communicating my current situation.  
