@@ -258,3 +258,62 @@ Plan to get to next week's objectives:
 2. Trial and error
 2. Ask Pontus
 
+
+## Week 8 
+
+### WHAT DO I WANT TO LEARN OR UNDERSTAND BETTER?
+
+We’ve now come to the last individual reflection and will summarise my thought from this journey under respective question. 
+
+When the course started I had never worked with an agile process before, and obviously not scrum. I had also never been in contact with react native and javascript. I found the agile process very interesting, read the course literature early to get my own picture of scrum and listened carefully on the lectures. After like three weeks I felt pretty comfortable working agile and the fast changing objectives. Even though this course have given me a lot of practise in scrum and agile methods, I’m far from full learned. I would really like to try longer sprint cycles, try new KPI:s and do scrum at a workplace. But now I’ve the knowledge and experience, so if you place me at work where they are using scrum, I would understand and be able to contribute to the process. What’ve recon, scrum is much about best practise and not wasting time. In order to be an expert, you have to practise it a lot. Hopefully I can get the change to do that. 
+
+When it comes to the technical bit of the course it has been a lot bigger obstacle. I’ve every week said I wanted to understand the code and javascript/react native better. In combination with development environment problems it has taken a lot of time to come to a level where you actually understand what you are doing. In a future project where I encounter a new coding language, I will change approach in order to decrease the struggle. Instead of trying to read the existing code and try to understand how it’s written, I will give myself some days where I learn the basics and convention of the language. I think that would increase the outcome in the long term perspective. 
+
+During the last sprint, together we manage to complete the epic we picked previous weeks which felt great. During the product presentation I also got insights how to present a software the best way, something I’ve never done. It was a lot of fun meeting people from portCDM and pilots, confirming that we actually created something valuable. That is something I will bring with me into the future, together we can create value on a short time, and how to present it in a good way for PO:s. 
+
+
+### HOW CAN I HELP SOMEONE ELSE, OR THE ENTIRE TEAM, TO LEARN SOMETHING NEW?
+
+During the course I’ve always wanted to help with what I’ve could. There has been mainly three ways: 
+I learn something by myself, for example the scrum methodology, and share my findings for the rest of the team so they don’t have to read about it as carefully as I did.
+I have also helped the team by being an active team member where I’ve discussed, shared my thoughts and perspectives in order to make the process and product as good as possible.
+Since we’ve been doing pair programming, it has also been a good way to help someone else to learn something new. When you’re coding you stumble upon a lot of problems and error messages. Sharing how I handled them can help someone else eliminate time waste which I’ve seen during this projekt. We have been sitting together pretty much during the projekt which has lowered the helping - barrier. That’s have been really important the last week, when we were four people working on the US about making the states work properly. Together we manage to make something about it. We also shared our knowledges to our team mates working with the graphics and gridview to make the merge easier. 
+
+In order to help someone else you have to know how to do it. I’ve learnt and practised three ways to do that, which I will bring with me into coming projects. Before 
+
+
+### WHAT IS MY CONTRIBUTION TOWARDS THE TEAM’S APPLICATION OF SCRUM?
+
+I was the driving force how we set up our application of scrum since I read both the “the scrum guide” and “Scrum and the XP from the trenches” in an early stage of the course. I was responsible for the scrum “formula” how to execute the sprint planning, daily scrum, sprint review, sprint retrospective which we used during the whole course. I’ve also taken part in almost all meetings, trying to lowering the meeting time but still doing all the value adding stuff. An important aspect while working with scrum is the User Story and how to handle them. We tried to slice vertical and use the INVEST-criteria where I took an active part. Also I’ve contributed with the KPI; which one we should have, if we should keep them or come up with new etc. 
+
+In future project where I come in and they use scrum, I will have a comfortable feeling. I’ve understanding for the process and can contribute. In order to maintain that though, I have to keep stay updated if any bigger differences occurs for the methods. 
+
+
+
+### WHAT IS MY CONTRIBUTION TOWARDS THE TEAM’S DELIVERIES?
+
+During all weeks I’ve been trying to contribute towards the teams’s deliveries the most I’ve could. Both when it comes to time spend, but also effort. Since we didn’t start to code the first two-three weeks, I spent my hours learning and reading how we should our process. I had a little hard time to keep me motivated, since I appropriate to have a goal to strive for instead of doing pre-work for something unclear. That is something I’ve learnt by this course - it’s really important to set goals for tasks that don’t produce anything concrete, like improvements in a process. Otherwise it’s hard for me to motivate myself. When we started coding, it was a lot more easier to have clear goals and made it more fun to spend time on the project. Code wise I manage to complete several user stories with my programming buddy Anton. The tasks was much about how to fetch data from portcalls and states, which we had a lot of problem to do since we at first didn’t understand that we worked with react native redux. It didn’t end up with many lines code, but it was a lot of thoughts behind them. 
+
+My contribution towards the team deliveries against the processen was much about the structure of our scrum, that we kept working agile, discussions about the KPI:s, working with the user stories and tasks, how we implemented DoD and similar tasks. 
+
+During the last presentation I stood by our table and presented what we had done for some portableCDM people. It was a lot of fun and interesting to see all the other projects. 
+
+To summarise everything: what we accomplished was a team effort, both the product and the process. It’s important to keep that into the future, since I believe it creates more value for everybody involved. 
+
+### Objectives 
+Last week objectives: 
+1. Know how to work with states - YES!! AT LAST!!
+2. Start with testing of code - yepp, we found deepscan which was very simple to use 
+
+Objectives for future life:
+
+1. Maintain the knowledge about scrum and agile work
+2. Bring knowledge from this course to future projects 
+3. Feel confident that it’s possible to learn a new code language pretty good during a limited time. 
+
+
+Plan to get to life objectives: 
+Sometimes read the scrum guide and similar litterature. Discuss scrum with experienced people when I get the chance. 
+Be conscious about my experience from this course and apply that in suitable situations.
+Remember that it’s possible. 
+
