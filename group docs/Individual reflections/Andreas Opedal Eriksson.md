@@ -169,3 +169,17 @@ Completing my/our assigned tasks of fetching timestamp data.
 Testing and DeepScan.
 
 
+
+## Individual reflection final week, 28/5 ##
+
+
+
+- What do I want to learn or understand better?
+
+Looking back at my past reflections, it is clear that I have gone from not having a clue about Scrum to having understood a lot about its key aspects. In my early reflections some of my learning objectives included getting a deep understanding about Javascript and the app structure, which is really the opposite of how you would work with the Scrum methodology. Those objectives are huge and do not really have a clear ending point, so I am not sure if I would even have been able to complete a single value adding feature if I would have kept those for the whole project... Luckily I did not, as I later on started focusing on learning about the process and the tasks I had been assigned instead. This strategy worked a lot better, as it was when I started changing this mindset that I could actually start creating value for real - both for the product and for the team in form of process improvement. 
+
+I can now say that I have really gotten a great foundation for working with agile processes, something I would probably not have gotten in the same way had it been a more theoretically oriented course. By actually practicing what I was learning, I could understand the value of the process by myself. Dividing the work done into sprints with short planning horizons have especially been a challenge for me that I have successively learned to appreciate. I am used to setting a long term goal and this result-oriented thinking has lead to me always wanting to have a structured plan on how to reach my goals. With Scrum, you don't have a complete plan. You take each sprint at a time and rarely look beyond the sprint you are currently in. Another great take-away for me is the process of communicating with product owners and end users to come up with valuable features to develop, and updating them on the progress along the way to make sure we are on the right track. This mindset of value-creation in coding is something we have not gotten from previous courses, and it makes the coding so much more meaningful. 
+
+In addition to the process, I have learned a lot about the endeavour of developing an app - all from setting up a working Android Studio development environment to using Git for version control. As this has been my first experience in app development, all of this knowledge have been gained from scratch. Doing software projects in the future, I will be a lot more comfortable with the technical aspects not directly associated with coding than I was before. 
+
+- How can I help someone else, or the entire team, to learn something new?
