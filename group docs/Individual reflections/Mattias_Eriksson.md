@@ -1,5 +1,24 @@
 # Individual Reflection
 
+## Week 8
+- **what do I want to learn or understand better?**
+
+During the project I've learned a lot both about application development when it comes to code and structure, but also about the process. Before the project I had never done anything in react native nor in javascript. It was fun to try and learn a new language since as we've been told a couple of times, with every language you know, the easier the next one becomes to learn. I feel that that learning more about different processes, especially when it comes to agile ones has been one of the most important things I've learned during the project since it seems that it is towards these that many industries are transforming. Therefore I want to continue learning more about agile processes like SCRUM since these may be very useful later in life and also makes you handle more complex problems in a more structured way of thinking.
+
+- **how can I help someone else, or the entire team, to learn something new?**
+
+During the whole of the project I don't really know if I personally have taught someone anything, but I believe that we all have helped each other learn the practises of SCRUM and javascript/react native. I feel that the group project has been a good way of learning these things as it allows more free thinking than some other projects in our education. 
+
+- **what is my contribution towards the team’s application of scrum?**
+
+My contribution towards our application of SCRUM has been quite stable during the whole project, I've been quite an active member of our group in our discussions and meetings and have helped to create user stories for the project. I feel that we've all improved on SCRUM and that by doing and changing our KPIs we've adapted to SCRUM more and more during the project.
+
+- **what is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week's ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation).**
+
+During the whole project I've worked on the graphical representation of our new viev and integrating the graphical parts with the information and code other team members have written together with Max. I am satisfied with how it turned out and I am happy that I was able to contribute as much as I did.
+
+Except code, I have contributed, as said, with user stories and my thoughts on what we should do, like if we should have just displayed subscribed port calls or all of them. 
+
 ## Week 7
 - **what do I want to learn or understand better?**
 
