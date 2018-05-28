@@ -90,10 +90,40 @@ I've been working on the creation of user stories in order to demo our progress 
 Last week I wanted to reach a deeper understanding of the javascript code, something which I believe I have achieved. During next sprint I would like to learn more about testing the code in a correct way, by implemented some sort of method for doing this. 
 
 2. How can I help someone else, or the entire team, to learn something new?
-I can help my programming partner to learn which features that are most important for the product owners in the followint User Stories that we create together.
+I can help my programming partner to learn which features that are most important for the product owners in the following User Stories that we create together.
 
 3. What is my contribution towards the team's application of Scrum?
+Keeping the team on track with daily scrums, and constant reviewing the process making sure we are applying the right resources at the right places.
 
 
 4. What is my contribution towards the team's deliveries?
+I've been working on the Final Report, gathering all of the reviews done in each sprint.
+
+-- Individual Reflection week 8, 18/5 --
+1. What do I want to learn or understand better?
+	
+My learning objectives throughout the course has varied and it's clear that the goals has gone from being more holistic, focusing on the scope and process of the entire project, to being more granular and specific. This seems like a natural evolvement, since the process started off with us having little insight into what the course objectives and the scope of the application. It was difficult to grasp the project, which made it hard to put up reasonable goals. Later on I realized that feeling of uncertainty and not knowing what to expect and what to do, has been a crucial part of the process, since I've learnt to take one small step at a time without having a super clear end goal. As my knowledge about the project has progressed, so have my ability to visualize what needs to be done in a shorter time horizon, without the need to really think about what to do in detail in the upcoming sprints since there has been a fixed day for that each week. 
+
+Each week I've tried to formulate a concrete goal, whether it be learning a technical tool or a soft skill in the agile process. When looking back on the process I feel I have accomplished almost every goal I've set up. When I haven't achieved the goal it has been because I haven't had a clear enough goal - for example "I want to learn how to build an application in Android Studios". This is a relevant goal regarding the project, although not specified enough for me to actually achieve it. It would have been better and easier if I for example set "I want to learn how to build a Gantt-chart with a real time stamp represented as a vertical line", because then I would be able to tell when I was "done" with my goal (by actually building the Gantt-chart). 
+
+As a goal for the future, I would like to have measurable learning objectives in order for me to easier track my progression, as well as keeping both a holistic and granular view of the process. Therefore I will use my knowledge about setting up learning objectives in an agile process by using the "carpaccio method" early on in the project and also setting up "individual" KPI's.
+
+
+2. How can I help someone else, or the entire team, to learn something new?
+
+An interesting thing about working in this team has been getting to know everyone's individual strengths and capabilities. Everyone has been eager to learn and wanting to share their knowledge with the other group members. I think that every team member has completed each other by having different abilities and experience in different fields.
+
+My contribution regarding learning someone something new has mostly been about the agile process, especially in the beginning of the coding process where it is easy to get too focused on the details of the code and forgetting about the key aspect of the course - the process itself. Therefore I've been trying to learn more about Scrum and agile team work and sharing this knowledge during group meetings.
+
+In future projects I would like to test if the group could have an "educational moment" in each sprint, where one group member holds a "mini lesson" about a subject or tool that the team has decided in the sprint before. This process could then rotate each sprint, making sure every member in the team has been responsible for at least one teaching session. This could contribute to the entire team not needing to do deep research in every subject used in the project, while creating a greater value and the feeling of responsibility for each member, which could increase the actual outcome of the project. 
+
+
+3. What is my contribution towards the team's application of Scrum?
+
+As mentioned in the above section, my focus from the beginning has been on really understanding the importance of the agile working process. I've been contributing actively in each group meeting by questioning our methods and reviewing the reason behind the decisions made. 
+
+
+4. What is my contribution towards the team's deliveries?
+I've been working on the Final Report, gathering all of the reviews done in each sprint.
+
 
