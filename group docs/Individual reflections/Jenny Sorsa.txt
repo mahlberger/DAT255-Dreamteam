@@ -1,4 +1,4 @@
--- Individual Reflection week 1 --
+**Individual Reflection week 1**
 
 1. What do I want to learn or understand better?
 Currently I would like to get a better understanding of how to use the git repo along with better understanding of  implementing a scrum of scrum method in the project group. I would also like to learn more about the project specifications and the expectations and demands of the product owner. 
@@ -15,7 +15,7 @@ Since it’s the first week and we haven’t had the project introduction yet, i
 My learning objectives until next week is to get a better understanding of the project and the expectations from the product owner. I want to be able to write down some overall points on what we are supposed to deliver as a finished product (and documentation) in the end of the course. I will achieve this by attending next weeks lectures and continue planning the process together with my team members in our meetings. 
 
 
--- Individual Reflection week 2, 29/3 --
+**Individual Reflection week 2, 29/3**
 1. What do I want to learn or understand better?
 Since the last sprint I've reached a better understanding of how to update the git repo by using it more and reading online about how it works. After attending this week's lectures I've also gotten a better understanding of how to work with scrum. Also, the assignment has been presented which (even though it's not crystal clear) has helped me somewhat understand what is expected of our team during the course.
 
@@ -32,7 +32,7 @@ Furthermore I will keep attenting our meetings where we reflect upon what has be
 4. What is my contribution towards the team’s deliveries? 
 Last sprint's learning objectives was to reach a better understanding of the project scope. I think this has been partially achieved, but I've also understood that a part of the project process is to continiously keep learning new things about the project. Until next reflection I would like to reach an understanding of the source code, get a better picture of how a Pilot station works and keep the team's communication at a good level. By doing research online and read the specification once more I can hopefully achieve this goal and contribute towards the team's deliveries.
 
--- Individual Reflection week 3, 16/4 --
+**Individual Reflection week 3, 16/4**
 1. What do I want to learn or understand better?
 I would like to learn the development environment and understand how to work and build an application in Android Studios. I would also like to learn more about the pilot most important needs in order to create relevant user stories.
 
@@ -46,7 +46,7 @@ Since I've been on vacation and therefore missed all of this sprints team meetin
 Due to a week of vacation my contribution has been very small. I've tried to read in on how to work with javascript and Android Studios and also attended the meeting with the pilot where I tried to identify their needs. During the next sprint I will try to catch up by putting a lot of effort in the process of scrum and the development of the application. My goal until next week is to put more time and effort in the creation of user stories and also get a better understanding of how to work in Android Studios.
 
 
--- Individual Reflection week 4, 23/4 --
+**Individual Reflection week 4, 23/4**
 1. What do I want to learn or understand better?
 I would like to learn how to build a GANTT-chart in React Native and also get a better understanding of the acceptance criteria from the product owners. 
 
@@ -59,7 +59,7 @@ I've been contributing by informing the group about the dialogue with Jean-Pierr
 4. What is my contribution towards the team’s deliveries? 
 I've gotten a better understanding of the application by studying its' various functions, this can hopefully help the team deliver functions deriving from our user stories and tasks. I've also contributed in breaking down Epic's into user stories and deciding which ones to prioritize during the next sprint. My goal last week was to spend more time on the project, which I have done. Next week's goal is to get familiar with javascript in React Native by producing and texting code together with a small group. 
 
--- Individual Reflection week 5, 1/5 --
+**Individual Reflection week 5, 1/5**
 1. What do I want to learn or understand better?
 I would like to learn how to create decent code in the implementation process for our user stories and make sure it works the way we want it to.
 
@@ -72,7 +72,7 @@ This week I have been sick for several days of the sprint, which has unfortunate
 4. What is my contribution towards the team’s deliveries? 
 Since I missed a couple of days due to illness my deliveries were only good in the beginning of the sprint, where I contributed with ideas regarding what to demo for the Product Owners and later on created "print screens" of the design and functions of the user stories we are currently developing. Until next week I would like to improve the process in going from idea to implementation regarding the user stories.
 
--- Individual Reflection week 6, 9/5 --
+**Individual Reflection week 6, 9/5**
 1. What do I want to learn or understand better?
 Last week my learning goal was to learn how to create decent code for our user stories. I believe that a part of that goal is reached, since I felt a greater understanding of how to interpret and create the code needed for our user story. Until next sprint I would like to understand even more code in the process of creating user stories. I also want to start reviewing all of our team reflections in the process in order to get an overview of how the entire project and team work has been.
 
@@ -85,7 +85,7 @@ This week my main focus has been on reviewing the process and reflecting upon th
 4. What is my contribution towards the team’s deliveries? 
 I've been working on the creation of user stories in order to demo our progress to the product owners next sprint.
 
--- Individual Reflection week 7, 14/5 --
+**Individual Reflection week 7, 14/5**
 1. What do I want to learn or understand better?
 Last week I wanted to reach a deeper understanding of the javascript code, something which I believe I have achieved. During next sprint I would like to learn more about testing the code in a correct way, by implemented some sort of method for doing this. 
 
@@ -99,7 +99,7 @@ Keeping the team on track with daily scrums, and constant reviewing the process 
 4. What is my contribution towards the team's deliveries?
 I've been working on the Final Report, gathering all of the reviews done in each sprint.
 
--- Individual Reflection week 8, 18/5 --
+**Individual Reflection week 8, 18/5**
 1. What do I want to learn or understand better?
 	
 My learning objectives throughout the course has varied and it's clear that the goals has gone from being more holistic, focusing on the scope and process of the entire project, to being more granular and specific. This seems like a natural evolvement, since the process started off with us having little insight into what the course objectives and the scope of the application. It was difficult to grasp the project, which made it hard to put up reasonable goals. Later on I realized that feeling of uncertainty and not knowing what to expect and what to do, has been a crucial part of the process, since I've learnt to take one small step at a time without having a super clear end goal. As my knowledge about the project has progressed, so have my ability to visualize what needs to be done in a shorter time horizon, without the need to really think about what to do in detail in the upcoming sprints since there has been a fixed day for that each week. 
