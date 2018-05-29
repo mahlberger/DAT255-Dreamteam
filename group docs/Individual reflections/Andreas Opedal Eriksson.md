@@ -169,3 +169,38 @@ Completing my/our assigned tasks of fetching timestamp data.
 Testing and DeepScan.
 
 
+
+## Individual reflection final week, 28/5 ##
+
+
+
+- What do I want to learn or understand better?
+
+Looking back at my past reflections, it is clear that I have gone from not having a clue about Scrum to having understood a lot about its key aspects. In my early reflections some of my learning objectives included getting a deep understanding about Javascript and the app structure, which is really the opposite of how you would work with the Scrum methodology. Those objectives are huge and do not really have a clear ending point, so I am not sure if I would even have been able to complete a single value adding feature if I would have kept those for the whole project... Luckily I did not, as I later on started focusing on learning about the process and the tasks I had been assigned instead. This strategy worked a lot better, as it was when I started changing this mindset that I could actually start creating value for real - both for the product and for the team in form of process improvement. 
+
+I can now say that I have really gotten a great foundation for working with agile processes, something I would probably not have gotten in the same way had it been a more theoretically oriented course. By actually practicing what I was learning, I could understand the value of the process by myself. Dividing the work done into sprints with short planning horizons have especially been a challenge for me that I have successively learned to appreciate. I am used to setting a long term goal and this result-oriented thinking has lead to me always wanting to have a structured plan on how to reach my goals. With Scrum, you don't have a complete plan. You take each sprint at a time and rarely look beyond the sprint you are currently in. Another great take-away for me is the process of communicating with product owners and end users to come up with valuable features to develop, and updating them on the progress along the way to make sure we are on the right track. This mindset of value-creation in coding is something we have not gotten from previous courses, and it makes the coding much more meaningful. 
+
+In addition to the process, I have learned a lot about the endeavour of developing an app - all from setting up a working Android Studio development environment to using Git for version control. As this has been my first experience in app development, all of this knowledge have been gained from scratch. Doing software projects in the future, I will be a lot more comfortable with the technical aspects not directly associated with coding than I was before. 
+
+- How can I help someone else, or the entire team, to learn something new?
+
+During the project, I believe that we as a team have in general been really good at sharing knowledge with each other. We have not been afraid to ask each other for help and I think that everyone has been very open to sharing knowledge. The key to this has mainly been communication - manifested through our continuous use of daily scrums, various chats for different purposes and mostly coding together at the same location. 
+
+My contribution in helping others has been a lot about the behavioural aspects of the app, as I was the one who spent the most time playing around with the app. This proved useful in several ways when writing code. For instance, as I knew about what views would exist in the code and what their function was, I could the point my peers in the right direction when looking for inspiration in other parts of the code. It also proved very useful when working with fetching timestamp data. In addition to that, I have had a lot of oversight over the user stories and have thereby helped the other teammembers if they were unsure about some of their features. In general, I believe (and hope) that the rest of the team has seen me as an approachable person when they have been in need of feedback or help. From having a background as a tutor and a course assistant, I have been able to apply and further develop my pedagogical capabilities in this course through all the teamwork we have had, and I hope I can bring what I have learned here in this area with me into future projects as well.
+
+- What is my contribution towards the team's application of Scrum?
+
+In the very beginning, I was really involved in setting the sprint structure (as in when to start and end a sprint). I have throughout the project, as mentioned, been very active in writing user stories and giving suggestions on how they could be improved. Early on, I was a key driver in coming up with the very structured "Mutually Exclusive and Collectively Exhaustive" method of dividing the epic into user stories. From that point I have taken a lot of responsibility for the user stories, for instance in terms of them having been broken down into clear tasks and estimating them. I have also taken a lot of responsibility over updating and improving the KPI's. 
+
+In addition to that, I have been very active and participated in all of our sprint reviews, retrospectives and plannings. I believe that I, among others, have been giving valuable input to the process in these meetings. In regards to contact with externals, I was for instance one of the teammembers who presented our initial idea to the product owners to gain feedback on our choice of direction and prioritization of user stories. I have also participated in both meetings with the pilots and took responsibility in translating their wishes into user stories. 
+
+- What is my contribution towards the team's deliveries?
+
+Initially, my programming peer Staffan and I worked on creating a new view to have a foundation for further development. When this was done, we started trying to figure out how to fetch information from timestamps for a given portcall. This proved to be more time-consuming than estimated, mainly due to our lack of knowledge of the app structure and the programming language. But with help from some of the rest of the team, and a lot of help from Pontus, we eventually made it and could implement this crucial piece of code into the view in time for the final presentation. 
+
+- Learning objectives
+
+In future software projects I want to learn more about testing, which I felt was a bit lacking and not really highly prioritized in this project. As we mention in the final reflection, we used a "manual" ad-hoc type of testing during most of the project and started using DeepScan quite late. It would be interesting to learn more about structured testing methods and more sophisticated testing tools in the future.
+
+Another learning objective for future projects is to get better at communicating with the product owners. To completely follow Scrum, the product owners should be present in the sprint plannings to give feedback on the prioritization of features. This could, for obvious reasons, not be done in this project but this type of interaction is something I would enjoy in the future. We also talked about, for future projects, having a KPI that measures the satisfaction of the product owners and I would like to see more about how this would work out.
+
