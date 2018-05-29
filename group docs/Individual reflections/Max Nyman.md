@@ -1,4 +1,20 @@
-### Individual Reflection week 6
+### Individual Reflection week 8
+
+#### 1. What do I want to learn or understand better?
+During this course I’ve learned a lot about the Scrum framework, both theoretically and practically. This has been enabled through the applied approach towards working in a Scrum team within this project. This knowledge is the main outcome for me personally and something I’m very happy to have achieved. In the future I would like to apply this framework in my daily work somehow, either if it’s a software project or not. I would then be very interested in discover how it is to work with this framework in a context where most of the personnel is comfortable with thier respective work assignments. This has not been possible to achieve during this project since it has been a completely new context, both regarding domain of the assignment (piloting) and the programming language.
+
+#### 2. How can I help someone else, or the entire team, to learn something new?
+Throughout the project I’ve tried to contribute with my thoughts, ideas and knowledge to the team as a whole generally and my pair programming partner specifically. In my role as Scrum master I’ve worked hard towards a proper implementation of the Scrum framework, which has worked quite well. In future projects I would like to learn others about the Scrum framework and the practial application of it.
+
+#### 3. What is my contribution towards the team’s application of scrum?
+I’ve been Scrum master and therefore main responsible for the application of the framework. I’ve worked towards this by continuously initiated the daily scrums, the retrospectives and reviews. I’ve also actively worked towards the goal of having vertically sliced user stories, even if it’s been diligently time to time (and thus very tempting to make a more or less horizontal user stories instead). Furthermore it has sometimes been necessary for me to remind other team members about what to focus on (the user stories) and what to not focus on (things that’s not among the user stories).
+
+#### 4. What is my contribution towards the team’s deliveries?
+I’ve been involved in most parts of this project, doing both coordination and produced code. I have been responsible for the contact with PO and the end users (the pilot organization), coordination of the field trip to Sjöfartsverket, creation and evaluation of user stories and lastly creation of some of the visual parts of the pilot view in the app.
+
+---
+
+### Individual Reflection week 7
 
 #### 1. What do I want to learn or understand better?
 How test produced code in order to guarantee it's quality. How to connect the timestamps to actual portcalls.
