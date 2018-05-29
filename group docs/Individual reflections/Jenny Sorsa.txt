@@ -120,10 +120,24 @@ In future projects I would like to test if the group could have an "educational 
 
 3. What is my contribution towards the team's application of Scrum?
 
-As mentioned in the above section, my focus from the beginning has been on really understanding the importance of the agile working process. I've been contributing actively in each group meeting by questioning our methods and reviewing the reason behind the decisions made. 
+As mentioned in the above section, my focus from the beginning has been on really understanding the importance of the agile working process. I've been contributing actively in each group meeting by questioning our methods and reviewing the reason behind the decisions made. By continuously reflecting about what has been done and what to do next, I've gotten a good overview of the project which has helped me identify my strengths in the group. By knowing what I'm better at I have been able to put my effort in the parts that I can do most effectively, avoiding to waste time on things that someone else in the team is better at and can achieve in a much more efficient way. 
+
+In future projects I want to keep learning about Scrum ang agile processes, since I've learned that when working, it is a very effective and fun working method. 
 
 
 4. What is my contribution towards the team's deliveries?
-I've been working on the Final Report, gathering all of the reviews done in each sprint.
+
+During the project I've been working on both the technical development of the application and other material developed in the course. 
+
+In the development process of the actual application, my contribution has consisted of ideas and concretization of user stories from our Epics. Before we could start coding there was a process of breaking the user stories down in tasks and deciding which order the development of those tasks would be in, which was done in Trello. In this process I also created mock-ups of the Gantt-chart we wanted to implement. When the coding process started me and my programming partner Martin started to work on the Gantt-chart timeline, creating, amongst other things, a horizontal representation of each hour of the day and a time stamp telling the correct date at the top. 
+
+I've also taken an active role in the communication between the group and the Product Owners and the examiners of the course, in order for the group to stay on track with the project and getting important input from the PO's. The information I've gathered from meeting PO's and examiners I have later shared with the group, making sure we've taking it into consideration and, if possible, implementing it in our process. 
+
+In the later part of the project I've taken responsibility in our final presentation and our final reflection, making sure we have visual aids for demonstrating our final result as well as creating an extensive final report. 
+
+Even though every person in the group has had their own tasks and responsibilities, all of the above mentioned parts of the project has been done in close collaboration with the other team members. In the beginning of the project the team decided that our development process would be optimal if everyone cooperated as much as possible, helping each other to move forward in the process. I feel I have been able to both help others and get help from my team members, which has been of importance for my contribution in the team's deliveries.
+
+In future projects I would like to have more communication towards the PO's, making sure that me and the entire group understands the needs of the end user. By collaborating closely with the client, one can learn much more than just the coding and internal process of the team. I would like to combine previous experience in working with company clients in projects with my new experience in agile processes and app-development, since that area is new for me.
+
 
 
